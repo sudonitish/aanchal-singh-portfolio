@@ -2,25 +2,65 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #4f4f4f;
+
+  --color-brand: #5f5138;
+  --color-accent: #7bcad8;
+  --color-accent-strong: #56b8c9;
+  --color-accent-teal: #3c838c;
+  --color-ink: #3c3831;
+  --color-body: #4f4f4f;
+
+  --color-surface-1: #efefef;
+  --color-surface-2: #fee2b3;
+  --color-surface-3: #eef5e8;
+  --color-surface-4: #f3f3f3;
+  --color-surface-navy: #111f3f;
+  --color-surface-dark: #1a1a1a;
+
+  --color-bento-blue: #bad5e3;
+  --color-bento-yellow: #ffd75a;
+  --color-bento-yellow-soft: #ffe38c;
+  --color-bento-black: #000000;
+  --color-bento-cobalt: #0057ff;
+  --color-bento-mint: #d3fff9;
+  --color-bento-mint-dark: #004a40;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-body);
+  --font-display: var(--font-heading);
+  --font-cursive: var(--font-cursive);
+  --font-display-script: var(--font-display-script);
+  --font-badge: var(--font-badge);
   --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-brand: var(--color-brand);
+  --color-accent: var(--color-accent);
+  --color-accent-strong: var(--color-accent-strong);
+  --color-accent-teal: var(--color-accent-teal);
+  --color-ink: var(--color-ink);
+  --color-body: var(--color-body);
+
+  --color-surface-1: var(--color-surface-1);
+  --color-surface-2: var(--color-surface-2);
+  --color-surface-3: var(--color-surface-3);
+  --color-surface-4: var(--color-surface-4);
+  --color-surface-navy: var(--color-surface-navy);
+  --color-surface-dark: var(--color-surface-dark);
+
+  --color-bento-blue: var(--color-bento-blue);
+  --color-bento-yellow: var(--color-bento-yellow);
+  --color-bento-yellow-soft: var(--color-bento-yellow-soft);
+  --color-bento-black: var(--color-bento-black);
+  --color-bento-cobalt: var(--color-bento-cobalt);
+  --color-bento-mint: var(--color-bento-mint);
+  --color-bento-mint-dark: var(--color-bento-mint-dark);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
