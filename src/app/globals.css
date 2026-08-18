@@ -5,6 +5,21 @@
   --foreground: #4f4f4f;
 
   --color-brand: #5f5138;
+  --color-brand-foreground: #fcfcfc;
+  --color-hero-from: #a1f0ff;
+  --color-hero-to: #ebe2d4;
+  --color-logo-hover: #b8860b;
+  --color-gold: #a9824f;
+  --color-maroon: #863234;
+  --color-badge-border: #251548;
+  --color-overlay-tint: #0d2b1f;
+  --color-overlay-tint-light: #ddd0f8;
+  --color-title-on-dark: #e4fbff;
+  --color-title-on-light: #402800;
+  --color-footer-fallback: #bfe8ee;
+
+  --radius-card: 20px;
+  --radius-pill: 9999px;
   --color-accent: #7bcad8;
   --color-accent-strong: #56b8c9;
   --color-accent-teal: #3c838c;
@@ -35,9 +50,25 @@
   --font-cursive: var(--font-cursive);
   --font-display-script: var(--font-display-script);
   --font-badge: var(--font-badge);
+  --font-brush: var(--font-brush);
   --font-mono: var(--font-geist-mono);
 
   --color-brand: var(--color-brand);
+  --color-brand-foreground: var(--color-brand-foreground);
+  --color-hero-from: var(--color-hero-from);
+  --color-hero-to: var(--color-hero-to);
+  --color-logo-hover: var(--color-logo-hover);
+  --color-gold: var(--color-gold);
+  --color-maroon: var(--color-maroon);
+  --color-badge-border: var(--color-badge-border);
+  --color-overlay-tint: var(--color-overlay-tint);
+  --color-overlay-tint-light: var(--color-overlay-tint-light);
+  --color-title-on-dark: var(--color-title-on-dark);
+  --color-title-on-light: var(--color-title-on-light);
+  --color-footer-fallback: var(--color-footer-fallback);
+
+  --radius-card: var(--radius-card);
+  --radius-pill: var(--radius-pill);
   --color-accent: var(--color-accent);
   --color-accent-strong: var(--color-accent-strong);
   --color-accent-teal: var(--color-accent-teal);
@@ -63,4 +94,17 @@
 body {
   background: var(--background);
   color: var(--foreground);
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.marquee-track {
+  animation: marquee 18s linear infinite;
 }

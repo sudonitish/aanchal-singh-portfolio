@@ -8,7 +8,7 @@ export default function LatestWork() {
 
   return (
     <div className="flex flex-col gap-[30px]">
-      <SectionHeading label={homePage.latestWorkLabel} viewAllHref="/work" />
+      <SectionHeading label={homePage.latestWorkLabel} />
       <div className="flex flex-col gap-[30px]">
         <div className="aspect-[1281/620] w-full">
           <ProjectCard project={first} />

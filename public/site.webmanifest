@@ -1,0 +1,14 @@
+{
+  "name": "Aanchal Singh",
+  "short_name": "Aanchal Singh",
+  "icons": [
+    {
+      "src": "/logos/logo.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "theme_color": "#5f5138",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}

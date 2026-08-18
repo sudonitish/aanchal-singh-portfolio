@@ -18,7 +18,7 @@ export default function SectionHeading({
       {viewAllHref && (
         <Link
           href={viewAllHref}
-          className="text-[14px] leading-[15px] font-semibold whitespace-nowrap text-body capitalize transition-colors hover:text-brand"
+          className="text-[14px] leading-[15px] font-semibold whitespace-nowrap text-body capitalize underline transition-colors hover:text-brand"
         >
           View all
         </Link>

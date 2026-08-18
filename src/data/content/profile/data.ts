@@ -5,11 +5,17 @@ export interface ContactLink {
   href: string;
 }
 
+export interface HeadlineParts {
+  pre: string;
+  emphasis: string;
+  post: string;
+}
+
 export interface PersonalInfo {
   name: string;
   role: string;
   tagline: string;
-  headline: string;
+  headline: HeadlineParts;
   subtext: string;
   bio: string;
   resumeHref: string;
@@ -20,7 +26,11 @@ export const personalInfo: PersonalInfo = {
   name: "Aanchal Singh",
   role: "UX/UI Designer",
   tagline: "Creator. Dancer. explorer.",
-  headline: "Hey! I’m Aanchal Singh - a creator removing confusion \nfor a living.",
+  headline: {
+    pre: "Hey! I’m Aanchal Singh - a ",
+    emphasis: "creator",
+    post: " removing confusion\nfor a living.",
+  },
   subtext:
     "Currently serving a UX/UI designer turning complexity into calm, usable experiences. I obsess over flow, clarity, and interfaces that just work - so users don't have to think twice.",
   bio: "I'm Aanchal Singh - a UX/UI designer who enjoys turning complexity into calm and confusion into flow. I believe good design shouldn't demand attention; it should quietly earn trust.",

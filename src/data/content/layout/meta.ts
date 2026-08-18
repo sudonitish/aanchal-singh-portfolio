@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { SITE_URL } from "@/data/config/constants";
+import { assets } from "@/data/config/assets";
 import { personalInfo } from "@/data/content/profile/data";
 
 export const metaDetails: Metadata = {
@@ -53,11 +54,9 @@ export const metaDetails: Metadata = {
     },
   },
   icons: {
-    icon: [
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-    ],
-    apple: "/apple-touch-icon.png",
+    icon: [{ url: assets.logo, type: "image/svg+xml" }],
+    shortcut: assets.logo,
+    apple: [{ url: assets.logo, type: "image/svg+xml" }],
   },
   manifest: "/site.webmanifest",
 };

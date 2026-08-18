@@ -4,6 +4,7 @@ import {
   Cedarville_Cursive,
   Akaya_Kanadaka,
   Outfit,
+  Caveat_Brush,
 } from "next/font/google";
 import Footer from "@/components/layout/Footer";
 import { metaDetails, viewPortDetails } from "@/data/content/layout/meta";
@@ -36,6 +37,12 @@ const badgeFont = Outfit({
   subsets: ["latin"],
 });
 
+const brushFont = Caveat_Brush({
+  variable: "--font-brush",
+  subsets: ["latin"],
+  weight: "400",
+});
+
 export const metadata = metaDetails;
 export const viewport = viewPortDetails;
 
@@ -43,7 +50,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bodyFont.variable} ${headingFont.variable} ${cursiveFont.variable} ${displayScriptFont.variable} ${badgeFont.variable} h-full antialiased`}
+      className={`${bodyFont.variable} ${headingFont.variable} ${cursiveFont.variable} ${displayScriptFont.variable} ${badgeFont.variable} ${brushFont.variable} h-full antialiased`}
     >
       <body className="w-full min-h-full flex flex-col bg-white text-body">
         <main className="flex-1">{children}</main>
@@ -52,3 +59,4 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     </html>
   );
 }
+
