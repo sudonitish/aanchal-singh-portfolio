@@ -32,7 +32,7 @@ export default function Home() {
       />
       <Hero />
       <WorkExperience />
-      <Container className="flex flex-col gap-[150px] py-16">
+      <Container className="flex flex-col gap-16 py-10 sm:gap-24 sm:py-16 lg:gap-[150px]">
         <LatestWork />
         <VisualsPreview />
       </Container>

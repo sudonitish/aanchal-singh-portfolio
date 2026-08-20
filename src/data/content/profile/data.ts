@@ -6,7 +6,8 @@ export interface ContactLink {
 }
 
 export interface HeadlineParts {
-  pre: string;
+  line1: string;
+  line2Prefix: string;
   emphasis: string;
   post: string;
 }
@@ -27,7 +28,8 @@ export const personalInfo: PersonalInfo = {
   role: "UX/UI Designer",
   tagline: "Creator. Dancer. explorer.",
   headline: {
-    pre: "Hey! I’m Aanchal Singh - a ",
+    line1: "Hey! I’m Aanchal Singh",
+    line2Prefix: "- a ",
     emphasis: "creator",
     post: " removing confusion\nfor a living.",
   },

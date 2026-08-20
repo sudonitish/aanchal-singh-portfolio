@@ -30,7 +30,7 @@ export const projectsMeta: ProjectMeta[] = [
     tag: "UX Case Study",
     description:
       "A scalable marketing site and design system for a Zoho implementation partner.",
-    cardImage: "/card-zoho.png",
+    cardImage: "/assets/homepage/zoho.jpg",
     cardBg: "bg-surface-2",
     tone: "light",
     live: true,
@@ -42,7 +42,7 @@ export const projectsMeta: ProjectMeta[] = [
     tag: "UX Case Study",
     description:
       "A stock screening tool that helps investors filter and discover high quality stocks.",
-    cardImage: "/card-value-research.png",
+    cardImage: "/assets/homepage/value-research.jpg",
     cardBg: "bg-black",
     tone: "dark",
     live: true,
@@ -54,7 +54,7 @@ export const projectsMeta: ProjectMeta[] = [
     tag: "UX Case Study",
     description:
       "Designing an intuitive scheduling system that empowers users to send messages at the perfect time.",
-    cardImage: "/card-whatsapp.png",
+    cardImage: "/assets/homepage/whatsapp.jpg",
     cardBg: "bg-surface-navy",
     tone: "dark",
     live: false,
@@ -65,7 +65,7 @@ export const projectsMeta: ProjectMeta[] = [
     name: "Redesigning NTES: India's Train Tracking App",
     tag: "UX Case Study",
     description: "A redesign of India's train tracking experience.",
-    cardImage: "/card-ntes.png",
+    cardImage: "/assets/homepage/ntes.jpg",
     cardBg: "bg-surface-4",
     tone: "dark",
     live: false,
@@ -77,7 +77,7 @@ export const projectsMeta: ProjectMeta[] = [
     tag: "UX Case Study",
     description:
       "Designing a single destination where sports enthusiasts shop for gear, prep for adventures, and never switch apps again.",
-    cardImage: "/card-chase.png",
+    cardImage: "/assets/homepage/chase.jpg",
     cardBg: "bg-surface-3",
     tone: "dark",
     live: false,

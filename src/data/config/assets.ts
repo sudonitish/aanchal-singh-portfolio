@@ -1,8 +1,10 @@
 export const assets = {
-  logo: "/logos/logo.svg",
-  heroVideo: "/hero-bg.mp4",
-  footerBg: "/images/footer-bg.jpg",
-  workLogosDir: "/logos/company",
-  musicIcon: "/icons/music.svg",
-  headphoneCoffeeIcon: "/icons/headphone-coffee.svg",
+  logo: "/assets/logos/logo.svg",
+  heroVideo: "/assets/homepage/hero-bg.mp4",
+  footerBg: "/assets/images/footer-bg.png",
+  workLogosDir: "/assets/logos/company",
+  musicIcon: "/assets/icons/music.svg",
+  headphoneCoffeeIcon: "/assets/icons/headphone-coffee.svg",
+  arrowIcon: "/assets/icons/Arrow.svg",
+  confettiLinesIcon: "/assets/icons/confetti-lines.svg",
 };
