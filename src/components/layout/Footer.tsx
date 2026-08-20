@@ -105,7 +105,7 @@ function SongsWithTakeMeBack({ isMobile }: { isMobile: boolean | null }) {
 
   return (
     <div className="group grid place-items-center">
-      <div className="col-start-1 row-start-1 flex items-center gap-5 transition-opacity duration-300 group-hover:opacity-0">
+      <div className="z-0 col-start-1 row-start-1 flex items-center gap-5 transition-opacity duration-300 group-hover:opacity-0">
         <Image
           src={assets.musicIcon}
           alt=""
@@ -126,15 +126,16 @@ function SongsWithTakeMeBack({ isMobile }: { isMobile: boolean | null }) {
           aria-hidden
         />
       </div>
-      <a
-        href="#"
-        className="pointer-events-none col-start-1 row-start-1 flex items-center justify-center gap-[11px] opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100"
+      <button
+        type="button"
+        onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        className="pointer-events-none relative z-10 col-start-1 row-start-1 flex cursor-pointer items-center justify-center gap-[11px] opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100"
       >
         <span className="font-cursive text-[40px] leading-6 text-accent-teal">
           {footerContent.takeMeBack}
         </span>
         <Image src={assets.arrowIcon} alt="" width={40} height={40} aria-hidden />
-      </a>
+      </button>
     </div>
   );
 }
