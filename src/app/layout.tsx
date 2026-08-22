@@ -7,6 +7,7 @@ import {
   Caveat_Brush,
 } from "next/font/google";
 import Footer from "@/components/layout/Footer";
+import Nav from "@/components/layout/Nav";
 import { metaDetails, viewPortDetails } from "@/data/content/layout/meta";
 import "./globals.css";
 
@@ -53,6 +54,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${bodyFont.variable} ${headingFont.variable} ${cursiveFont.variable} ${displayScriptFont.variable} ${badgeFont.variable} ${brushFont.variable} h-full antialiased`}
     >
       <body className="w-full min-h-full flex flex-col bg-white text-body">
+        <div className="px-6 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
+          <Nav />
+        </div>
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

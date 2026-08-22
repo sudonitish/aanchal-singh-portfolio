@@ -40,6 +40,22 @@
   --color-bento-cobalt: #0057ff;
   --color-bento-mint: #d3fff9;
   --color-bento-mint-dark: #004a40;
+
+  --color-about-cream: #fbf5e4;
+  --color-about-cream-ink: #83725b;
+  --color-about-cream-body: #91826d;
+  --color-about-purple: #f6e9f8;
+  --color-about-purple-ink: #7d4386;
+  --color-about-purple-body: #86598d;
+  --color-about-navy: #111f3f;
+  --color-about-navy-ink: #e6f1ff;
+  --color-about-navy-body: #cbd6ef;
+  --color-about-peach: #fcebdb;
+  --color-about-peach-ink: #7a5332;
+  --color-about-peach-body: #936b4a;
+  --color-about-forest: #1e3022;
+  --color-about-forest-ink: #9ac0a2;
+  --color-about-forest-body: #d3e5d4;
 }
 
 @theme inline {
@@ -89,6 +105,22 @@
   --color-bento-cobalt: var(--color-bento-cobalt);
   --color-bento-mint: var(--color-bento-mint);
   --color-bento-mint-dark: var(--color-bento-mint-dark);
+
+  --color-about-cream: var(--color-about-cream);
+  --color-about-cream-ink: var(--color-about-cream-ink);
+  --color-about-cream-body: var(--color-about-cream-body);
+  --color-about-purple: var(--color-about-purple);
+  --color-about-purple-ink: var(--color-about-purple-ink);
+  --color-about-purple-body: var(--color-about-purple-body);
+  --color-about-navy: var(--color-about-navy);
+  --color-about-navy-ink: var(--color-about-navy-ink);
+  --color-about-navy-body: var(--color-about-navy-body);
+  --color-about-peach: var(--color-about-peach);
+  --color-about-peach-ink: var(--color-about-peach-ink);
+  --color-about-peach-body: var(--color-about-peach-body);
+  --color-about-forest: var(--color-about-forest);
+  --color-about-forest-ink: var(--color-about-forest-ink);
+  --color-about-forest-body: var(--color-about-forest-body);
 }
 
 body {

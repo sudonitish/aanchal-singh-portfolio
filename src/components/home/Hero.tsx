@@ -1,6 +1,5 @@
 "use client";
 
-import Nav from "@/components/layout/Nav";
 import Button from "@/components/ui/Button";
 import { personalInfo } from "@/data/content/profile/data";
 import { homePage } from "@/data/content/home/data";
@@ -42,9 +41,7 @@ export default function Hero() {
       </video>
 
       <div className="col-start-1 row-start-1 flex h-full flex-col px-6 pt-8 pb-8 sm:px-10 sm:pt-12 sm:pb-10 lg:px-[150px] lg:pt-20 lg:pb-0">
-        <Nav />
-
-        <div className="mt-10 flex max-w-full flex-col gap-4 sm:mt-14 lg:mt-20 lg:max-w-[911px] lg:gap-[25px]">
+        <div className="flex max-w-full flex-col gap-4 sm:gap-4 lg:max-w-[911px] lg:gap-[25px]">
           <div className="flex flex-col gap-2 lg:gap-2.5">
             <p className="font-heading text-[12px] leading-[14px] tracking-[2px] text-black/60 uppercase sm:text-[14px]">
               {personalInfo.tagline}

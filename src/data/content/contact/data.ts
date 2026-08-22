@@ -1,12 +1,23 @@
 import { personalInfo } from "@/data/content/profile/data";
 
+export const contactPage = {
+  eyebrow: "Get In Touch",
+  heading: "Let's talk",
+  intro:
+    "Reach out via email, phone, or LinkedIn - or take a look at recent work and visuals below.",
+};
+
 export interface BentoCard {
   id: string;
-  label: string;
   href: string;
   bg: string;
   textClass: string;
-  span?: "sm" | "md" | "lg";
+  row: 1 | 2;
+  flex: number;
+  variant: "arrow" | "chip" | "label" | "dual";
+  chipBg?: string;
+  primary?: string;
+  secondary?: string;
 }
 
 const email = personalInfo.contact.find((c) => c.type === "email")!;
@@ -17,50 +28,65 @@ const resume = personalInfo.contact.find((c) => c.type === "resume")!;
 export const bentoCards: BentoCard[] = [
   {
     id: "linkedin",
-    label: linkedin.label,
     href: linkedin.href,
     bg: "bg-bento-blue",
     textClass: "text-ink",
-    span: "md",
+    row: 1,
+    flex: 1.6,
+    variant: "arrow",
   },
   {
     id: "phone",
-    label: phone.value,
     href: phone.href,
     bg: "bg-bento-yellow",
     textClass: "text-[#947000]",
-    span: "sm",
+    row: 1,
+    flex: 1,
+    variant: "chip",
+    chipBg: "bg-bento-yellow-soft",
+    primary: phone.value,
   },
   {
     id: "email",
-    label: email.value,
     href: email.href,
     bg: "bg-surface-4",
     textClass: "text-ink",
-    span: "lg",
+    row: 1,
+    flex: 1.4,
+    variant: "chip",
+    chipBg: "bg-[#FFD3CF]",
+    primary: email.value,
   },
   {
     id: "visuals",
-    label: "Take a look",
     href: "/visuals",
     bg: "bg-bento-black",
     textClass: "text-white",
-    span: "sm",
+    row: 2,
+    flex: 1,
+    variant: "label",
+    primary: "Take a look",
   },
   {
     id: "work",
-    label: "See my work",
     href: "/work",
     bg: "bg-bento-cobalt",
     textClass: "text-white",
-    span: "sm",
+    row: 2,
+    flex: 1,
+    variant: "label",
+    primary: "See my work",
   },
   {
     id: "resume",
-    label: resume.label,
     href: resume.href,
     bg: "bg-bento-mint",
-    textClass: "text-[#004A40]",
-    span: "lg",
+    textClass: "text-bento-mint-dark",
+    row: 2,
+    flex: 1.5,
+    variant: "dual",
+    chipBg: "bg-bento-mint-dark",
+    primary: resume.value,
+    secondary: "Download Now",
   },
 ];
