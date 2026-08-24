@@ -25,6 +25,7 @@
   --color-accent-teal: #3c838c;
   --color-ink: #3c3831;
   --color-body: #4f4f4f;
+  --color-muted: #8c8c8c;
 
   --color-surface-1: #efefef;
   --color-surface-2: #fee2b3;
@@ -90,6 +91,7 @@
   --color-accent-teal: var(--color-accent-teal);
   --color-ink: var(--color-ink);
   --color-body: var(--color-body);
+  --color-muted: var(--color-muted);
 
   --color-surface-1: var(--color-surface-1);
   --color-surface-2: var(--color-surface-2);
@@ -139,4 +141,18 @@ body {
 
 .marquee-track {
   animation: marquee 18s linear infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
 }

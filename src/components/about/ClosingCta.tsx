@@ -19,8 +19,21 @@ export default function ClosingCta() {
         </span>
 
         <div className="flex flex-col gap-6">
-          <h2 className="max-w-[900px] text-[36px] leading-[44px] font-extrabold tracking-[-0.02em] text-[#F8F5F0] sm:text-[52px] sm:leading-[64px] lg:text-[75px] lg:leading-[97px]">
-            {closingCta.heading}
+          <h2 className="max-w-[900px] text-[36px] leading-[44px] font-extrabold tracking-[-1.938px] text-[#F8F5F0] sm:text-[52px] sm:leading-[64px] lg:text-[75px] lg:leading-[97px]">
+            {closingCta.headingFragments.map((fragment, index) => (
+              <span
+                key={index}
+                className={
+                  fragment.variant === "accent"
+                    ? "text-accent-strong"
+                    : fragment.variant === "muted-italic"
+                      ? "text-white/40 italic"
+                      : undefined
+                }
+              >
+                {fragment.text}
+              </span>
+            ))}
           </h2>
           <p className="max-w-[720px] text-[18px] leading-[28px] text-white/55 sm:text-[24px] sm:leading-[37px]">
             {closingCta.subtext}

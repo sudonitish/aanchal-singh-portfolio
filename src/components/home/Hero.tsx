@@ -1,5 +1,6 @@
 "use client";
 
+import Nav from "@/components/layout/Nav";
 import Button from "@/components/ui/Button";
 import { personalInfo } from "@/data/content/profile/data";
 import { homePage } from "@/data/content/home/data";
@@ -41,16 +42,18 @@ export default function Hero() {
       </video>
 
       <div className="col-start-1 row-start-1 flex h-full flex-col px-6 pt-8 pb-8 sm:px-10 sm:pt-12 sm:pb-10 lg:px-[150px] lg:pt-20 lg:pb-0">
-        <div className="flex max-w-full flex-col gap-4 sm:gap-4 lg:max-w-[911px] lg:gap-[25px]">
+        <Nav />
+
+        <div className="mt-10 flex max-w-full flex-col gap-4 sm:mt-14 lg:mt-20 lg:max-w-[911px] lg:gap-[25px]">
           <div className="flex flex-col gap-2 lg:gap-2.5">
             <p className="font-heading text-[12px] leading-[14px] tracking-[2px] text-black/60 uppercase sm:text-[14px]">
               {personalInfo.tagline}
             </p>
-            <h1 className="font-sans text-[32px] leading-[38px] font-semibold tracking-[-1px] whitespace-pre-line text-body sm:text-[44px] sm:leading-[52px] sm:tracking-[-2px] lg:text-[60px] lg:leading-[70px] lg:tracking-[-3px]">
+            <h1 className="font-sans text-[26px] leading-[32px] font-semibold tracking-[-0.5px] whitespace-normal text-body sm:text-[44px] sm:leading-[52px] sm:tracking-[-2px] sm:whitespace-pre-line lg:text-[60px] lg:leading-[70px] lg:tracking-[-3px]">
               {personalInfo.headline.line1}
               <br />
               {personalInfo.headline.line2Prefix}
-              <span className="font-brush text-[42px] leading-[38px] font-normal tracking-[-1px] sm:text-[58px] sm:leading-[52px] sm:tracking-[-2px] lg:text-[80px] lg:leading-[70px] lg:tracking-[-3px]">
+              <span className="font-brush text-[42px] leading-[38px] font-normal tracking-[-0.5px] sm:text-[58px] sm:leading-[52px] sm:tracking-[-2px] lg:text-[80px] lg:leading-[70px] lg:tracking-[-3px]">
                 {personalInfo.headline.emphasis}
               </span>
               {personalInfo.headline.post}
