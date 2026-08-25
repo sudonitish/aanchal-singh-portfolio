@@ -18,7 +18,7 @@ export default function HowIDesign() {
     <section className="flex flex-col gap-[30px]">
       <SectionHeading label={designPrinciplesHeading.eyebrow ?? ""} />
 
-      <div className="flex flex-col justify-between gap-8 lg:flex-row lg:gap-[80px]">
+      <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center lg:gap-[80px]">
         <h2 className="max-w-[420px] text-[36px] leading-[44px] font-bold text-surface-dark sm:text-[48px] sm:leading-[58px] lg:text-[60px] lg:leading-[76px]">
           {designPrinciplesHeading.title}
         </h2>

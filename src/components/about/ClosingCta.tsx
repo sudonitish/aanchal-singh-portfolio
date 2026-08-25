@@ -8,9 +8,16 @@ export default function ClosingCta() {
     >
       <div
         aria-hidden
-        className="pointer-events-none absolute top-10 right-10 hidden h-[71px] w-[71px] items-center justify-center rounded-full border border-accent-strong/50 sm:flex"
+        className="pointer-events-none absolute right-[12%] bottom-[18.77%] hidden h-[71px] w-[71px] rounded-full border border-accent-strong/50 sm:block"
+      />
+
+      <div
+        aria-hidden
+        className="pointer-events-none absolute top-[5.7%] right-[9.9%] hidden grid-cols-6 gap-[11px] sm:grid"
       >
-        <span className="text-2xl text-white">:)</span>
+        {Array.from({ length: 18 }).map((_, i) => (
+          <span key={i} className="h-[5px] w-[5px] rounded-full bg-accent-strong/50" />
+        ))}
       </div>
 
       <div className="relative flex flex-col gap-[30px]">

@@ -6,37 +6,48 @@ export default function Expectations() {
     <section className="flex flex-col gap-[30px]">
       <SectionHeading label={expectationsHeading.eyebrow ?? ""} />
 
-      <div className="relative py-10">
-        <span
+      <div className="group relative py-10">
+        <svg
           aria-hidden
-          className="pointer-events-none absolute top-0 left-1/2 hidden -translate-x-1/2 text-[220px] font-extrabold text-[#F5F1FD] select-none sm:block lg:text-[300px]"
-          style={{ letterSpacing: "-4.69%" }}
+          viewBox="0 0 1000 280"
+          preserveAspectRatio="none"
+          className="pointer-events-none absolute top-0 left-0 aspect-[1000/280] w-full select-none"
         >
-          DESIGN
-        </span>
+          <text
+            x="0"
+            y="230"
+            textLength="1000"
+            lengthAdjust="spacingAndGlyphs"
+            fontSize="260"
+            fontWeight="800"
+            className="fill-[#F5F1FD] transition-colors duration-300 group-hover:fill-[#FDF6E3]"
+          >
+            DESIGN
+          </text>
+        </svg>
 
-        <div className="relative grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative grid gap-4 pt-16 sm:grid-cols-2 sm:pt-28 lg:grid-cols-4 lg:pt-36">
           {expectations.map((item) => (
             <div
               key={item.category}
-              className="relative flex flex-col justify-between overflow-hidden rounded-[14px] border border-[#DBDBDB] bg-white p-[30px]"
+              className="relative overflow-hidden rounded-[14px] border border-[#DBDBDB] bg-white transition-[background-color,transform,box-shadow] duration-300 hover:-translate-y-1 hover:bg-[#F5F1FD] hover:shadow-xl"
               style={{ minHeight: 290 }}
             >
               <span
                 aria-hidden
-                className="absolute top-0 right-[18px] text-[60px] leading-[95px] font-normal tracking-tight text-black/[0.07]"
+                className="absolute top-0 right-[18px] text-[60px] leading-[95px] font-normal tracking-[-5.675px] text-black/[0.07]"
               >
                 {item.index}
               </span>
-              <div className="flex flex-col gap-3">
-                <span className="text-[10px] font-semibold tracking-[2px] text-black/[0.28] uppercase">
-                  {item.category}
-                </span>
-                <p className="text-[18px] leading-[23px] font-bold tracking-[-0.02em] text-surface-dark">
-                  {item.heading}
-                </p>
-              </div>
-              <p className="text-[14px] leading-[21px] text-muted">{item.body}</p>
+              <span className="absolute top-[48px] left-[30px] text-[10px] font-semibold tracking-[2px] text-black/[0.28] uppercase">
+                {item.category}
+              </span>
+              <p className="absolute top-[83px] left-[30px] w-[175px] text-[18px] leading-[23px] font-bold tracking-[-0.312px] text-surface-dark">
+                {item.heading}
+              </p>
+              <p className="absolute top-[178px] left-[30px] max-w-[calc(100%-60px)] text-[14px] leading-[21px] text-muted">
+                {item.body}
+              </p>
             </div>
           ))}
         </div>

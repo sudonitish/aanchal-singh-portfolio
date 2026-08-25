@@ -19,15 +19,15 @@ export default function MoreAboutMe() {
         {moreAboutMe.map((item) => (
           <div
             key={item.category}
-            className="flex flex-col gap-3 border-b border-black/[0.08] py-9 sm:flex-row sm:items-start sm:gap-10"
+            className="flex flex-col gap-3 border-b border-black/[0.08] px-4 py-9 -mx-4 transition-colors duration-200 hover:bg-about-cream/40 sm:flex-row sm:items-start sm:justify-between sm:gap-6"
           >
-            <span className="w-6 shrink-0 text-xs font-bold text-black/40">
+            <span className="w-[26px] shrink-0 text-xs font-bold text-black/40">
               {item.index}
             </span>
             <span className="w-[140px] shrink-0 text-xs font-semibold tracking-[1.8px] text-black/40 uppercase">
               {item.category}
             </span>
-            <div className="flex max-w-[644px] flex-col gap-3">
+            <div className="flex flex-col gap-3 sm:flex-1 lg:w-[644px] lg:flex-none">
               <p className="text-[20px] leading-[26px] font-bold tracking-[-0.015em] text-surface-dark">
                 {item.heading}
               </p>

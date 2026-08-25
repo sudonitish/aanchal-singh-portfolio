@@ -13,7 +13,7 @@ const placeholderTiles = Array.from({ length: 23 }, (_, i) => i);
 export default function VisualsPage() {
   return (
     <>
-      <div className="px-6 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
+      <div className="px-5 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
         <Nav />
       </div>
       <Container className="flex flex-col gap-16 py-10 sm:gap-20 sm:py-16">

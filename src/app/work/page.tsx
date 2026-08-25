@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function WorkPage() {
   return (
     <>
-      <div className="px-6 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
+      <div className="px-5 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
         <Nav />
       </div>
       <section className="mx-auto max-w-6xl px-6 py-24">

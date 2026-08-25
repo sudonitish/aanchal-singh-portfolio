@@ -11,7 +11,7 @@ export default function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className="flex items-center gap-4">
-      <span className="text-[14px] leading-[15px] font-bold tracking-[2.5px] whitespace-nowrap text-accent-strong uppercase">
+      <span className="text-[14px] leading-[15px] font-bold tracking-[2.5px] whitespace-normal text-accent-strong uppercase">
         {label}
       </span>
       <span className="h-px flex-1 bg-black/10" />

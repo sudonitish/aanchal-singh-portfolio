@@ -41,7 +41,7 @@ export default function Hero() {
         <source src={assets.heroVideo} type="video/mp4" />
       </video>
 
-      <div className="col-start-1 row-start-1 flex h-full flex-col px-6 pt-8 pb-8 sm:px-10 sm:pt-12 sm:pb-10 lg:px-[150px] lg:pt-20 lg:pb-0">
+      <div className="col-start-1 row-start-1 flex h-full flex-col px-5 pt-8 pb-8 sm:px-10 sm:pt-12 sm:pb-10 lg:px-[150px] lg:pt-20 lg:pb-0">
         <Nav />
 
         <div className="mt-10 flex max-w-full flex-col gap-4 sm:mt-14 lg:mt-20 lg:max-w-[911px] lg:gap-[25px]">
