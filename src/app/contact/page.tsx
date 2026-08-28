@@ -20,25 +20,17 @@ export default function ContactPage() {
         <Nav />
       </div>
       <Container className="flex flex-col gap-16 py-10 sm:gap-20 sm:py-16">
-        <div className="flex flex-col gap-4">
-          <span className="text-sm font-semibold tracking-wide text-accent-strong uppercase">
-            {contactPage.eyebrow}
-          </span>
-          <h1 className="text-4xl font-semibold text-ink sm:text-5xl">
-            {contactPage.heading}
-          </h1>
-          <p className="max-w-2xl text-lg text-body">{contactPage.intro}</p>
-        </div>
+        <h1 className="sr-only">{contactPage.heading}</h1>
 
         <div className="flex flex-col gap-5 rounded-card border border-[#E9E9E9] p-4 sm:p-8">
-          <div className="flex flex-wrap gap-5">
-            {row1.map((card) => (
-              <BentoCard key={card.id} card={card} />
+          <div className="grid grid-cols-2 gap-5 lg:flex lg:flex-row">
+            {row1.map((card, i) => (
+              <BentoCard key={card.id} card={card} spanFull={i === row1.length - 1 && row1.length % 2 === 1} />
             ))}
           </div>
-          <div className="flex flex-wrap gap-5">
-            {row2.map((card) => (
-              <BentoCard key={card.id} card={card} />
+          <div className="grid grid-cols-2 gap-5 lg:flex lg:flex-row">
+            {row2.map((card, i) => (
+              <BentoCard key={card.id} card={card} spanFull={i === row2.length - 1 && row2.length % 2 === 1} />
             ))}
           </div>
         </div>

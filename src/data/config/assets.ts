@@ -9,6 +9,19 @@ export const assets = {
   confettiLinesIcon: "/assets/icons/confetti-lines.svg",
 };
 
+const CONTACT_DIR = "/assets/contact";
+
+export const contactAssets = {
+  iconLinkedin: `${CONTACT_DIR}/icon-linkedin.svg`,
+  iconPhone: `${CONTACT_DIR}/icon-phone.svg`,
+  iconEmail: `${CONTACT_DIR}/icon-email.svg`,
+  iconVisuals: `${CONTACT_DIR}/icon-visuals.svg`,
+  iconVisualsHovered: `${CONTACT_DIR}/icon-visuals-hovered.svg`,
+  iconWork: `${CONTACT_DIR}/icon-work.svg`,
+  iconWorkHovered: `${CONTACT_DIR}/icon-work-hovered.svg`,
+  iconResume: `${CONTACT_DIR}/icon-resume.svg`,
+};
+
 const ABOUT_DIR = "/assets/aboutpage";
 
 export const aboutAssets = {
