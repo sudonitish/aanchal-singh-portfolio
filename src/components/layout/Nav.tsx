@@ -30,12 +30,21 @@ export default function Nav() {
       {navLinks
         .filter((link) => link.enabled)
         .map((link) => {
-          const isActive =
-            pathname === link.href || (link.href === "/work" && pathname === "/");
+          const isHashLink = link.href.startsWith("/#");
+          const isActive = isHashLink ? pathname === "/" : pathname === link.href;
           return (
             <Link
               key={link.href}
               href={link.href}
+              onClick={(e) => {
+                if (!isHashLink || pathname !== "/") return;
+                const id = link.href.slice(2);
+                const target = document.getElementById(id);
+                if (!target) return;
+                e.preventDefault();
+                target.scrollIntoView({ behavior: "smooth" });
+                history.pushState(null, "", link.href);
+              }}
               className={`flex h-[22px] shrink-0 items-center justify-center rounded-[6px] px-1.5 text-[12px] leading-[18px] font-semibold transition-colors sm:h-[25px] sm:px-2 sm:text-[14px] sm:leading-[21px] ${isActive ? "text-brand" : "text-accent hover:text-brand"
                 }`}
             >

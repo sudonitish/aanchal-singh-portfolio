@@ -90,7 +90,7 @@ export const bentoCards: BentoCard[] = [
   },
   {
     id: "work",
-    href: "/work",
+    href: "/#work",
     bg: "bg-[#0057FF]",
     row: 2,
     flex: 1,

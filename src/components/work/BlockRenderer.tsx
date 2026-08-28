@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Block } from "@/lib/content";
 
 interface BlockRendererProps {
@@ -86,6 +87,57 @@ export default function BlockRenderer({ blocks }: BlockRendererProps) {
                     </p>
                   </div>
                 ))}
+              </div>
+            );
+
+          case "image":
+            return (
+              <Image
+                key={index}
+                src={block.src}
+                alt={block.alt}
+                width={block.width}
+                height={block.height}
+                className="h-auto w-full rounded-[20px]"
+              />
+            );
+
+          case "placeholder":
+            return (
+              <div
+                key={index}
+                className="flex aspect-video w-full flex-col items-center justify-center gap-3 rounded-[20px] bg-surface-4"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  width="40"
+                  height="40"
+                  fill="none"
+                  className="text-body/40"
+                >
+                  <rect
+                    x="3"
+                    y="3"
+                    width="18"
+                    height="18"
+                    rx="2"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                  />
+                  <circle cx="8.5" cy="8.5" r="1.5" fill="currentColor" />
+                  <path
+                    d="M21 15l-5-5-11 11"
+                    stroke="currentColor"
+                    strokeWidth="1.5"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                {block.label && (
+                  <span className="text-sm font-medium text-body/60">
+                    {block.label}
+                  </span>
+                )}
               </div>
             );
 

@@ -36,9 +36,24 @@ export interface ListBlock {
   items: ListItem[];
 }
 
+export interface ImageBlock {
+  type: "image";
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
+export interface PlaceholderBlock {
+  type: "placeholder";
+  label?: string;
+}
+
 export type Block =
   | HeadingBlock
   | ParagraphBlock
   | StatCardsBlock
   | QuoteBlock
-  | ListBlock;
+  | ListBlock
+  | ImageBlock
+  | PlaceholderBlock;

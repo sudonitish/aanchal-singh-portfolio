@@ -10,7 +10,7 @@ import { useDeviceType } from "@/hooks/useDeviceType";
 function HeroCta({ primaryClassName = "" }: { primaryClassName?: string }) {
   return (
     <>
-      <Button href="/work" variant="solid" className={primaryClassName}>
+      <Button href="/#work" variant="solid" className={primaryClassName}>
         {homePage.heroCta.primary}
       </Button>
       <Button href={personalInfo.resumeHref} variant="outline">

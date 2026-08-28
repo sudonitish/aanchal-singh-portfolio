@@ -26,7 +26,7 @@ export default async function ProjectPage({ params }: PageProps) {
 
   const jsonLd = getProjectJsonLd(slug);
   const breadcrumbJsonLd = getBreadcrumbJsonLd([
-    { name: "Work", href: "/work" },
+    { name: "Work", href: "/#work" },
     { name: project.name, href: `/work/${slug}` },
   ]);
 
