@@ -149,13 +149,13 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative mx-4 mt-10 mb-4 flex min-h-[320px] items-center justify-center overflow-hidden rounded-card bg-cover bg-bottom px-4 py-10 sm:mt-20 sm:min-h-[400px] sm:px-6"
+      className="relative mx-4 mt-10 mb-4 min-h-[320px] overflow-hidden rounded-card bg-cover bg-bottom px-4 py-10 sm:mt-20 sm:min-h-[400px] sm:px-6"
       style={{
         backgroundImage: `url(${assets.footerBg})`,
         backgroundColor: "var(--color-footer-fallback)",
       }}
     >
-      <div className="flex w-full min-w-0 max-w-[1840px] flex-col items-center gap-10 sm:gap-[55px] sm:py-10">
+      <div className="flex w-full min-w-0 flex-col items-center gap-10 sm:gap-[55px] sm:py-10">
         <div className="flex w-full min-w-0 flex-col items-center gap-5 sm:gap-[25px]">
           <EndMessage isMobile={isMobile} />
 

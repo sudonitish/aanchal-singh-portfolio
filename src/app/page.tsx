@@ -3,7 +3,6 @@ import Hero from "@/components/home/Hero";
 import WorkExperience from "@/components/home/WorkExperience";
 import LatestWork from "@/components/home/LatestWork";
 import VisualsPreview from "@/components/home/VisualsPreview";
-import Container from "@/components/ui/Container";
 import { personalInfo } from "@/data/content/profile/data";
 import { SITE_URL } from "@/data/config/constants";
 
@@ -32,10 +31,10 @@ export default function Home() {
       />
       <Hero />
       <WorkExperience />
-      <Container className="flex flex-col gap-16 py-10 sm:gap-24 sm:py-16 lg:gap-[150px]">
+      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-24 sm:py-16 lg:gap-[150px] min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[320px]">
         <LatestWork />
         <VisualsPreview />
-      </Container>
+      </div>
     </>
   );
 }

@@ -46,7 +46,7 @@ export default function ProjectCard({ project, size = "grid" }: ProjectCardProps
         <div className="flex justify-end p-3 sm:p-6">
           {project.live && (
             <span
-              className={`font-badge z-10 flex items-center gap-1.5 rounded-card border bg-black/[0.02] px-2.5 py-1.5 text-[12px] leading-[16px] sm:px-3 sm:py-2 sm:text-[14px] sm:leading-[18px] ${tone.badge}`}
+              className={`font-badge z-10 flex items-center gap-1.5 rounded-card border bg-black/[0.02] px-2.5 py-1.5 text-[12px] leading-[16px] backdrop-blur-md sm:px-3 sm:py-2 sm:text-[14px] sm:leading-[18px] ${tone.badge}`}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               {projectCardCopy.liveLabel}

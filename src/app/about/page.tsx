@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Container from "@/components/ui/Container";
 import AboutIntro from "@/components/about/AboutIntro";
 import HowIDesign from "@/components/about/HowIDesign";
 import MoreAboutMe from "@/components/about/MoreAboutMe";
@@ -18,13 +17,13 @@ export default function AboutPage() {
   return (
     <>
       <AboutIntro />
-      <Container className="flex flex-col gap-20 py-10 sm:gap-28 sm:py-16 lg:gap-[150px]">
+      <div className="flex flex-col gap-20 px-5 py-10 sm:gap-28 sm:py-16 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[246px] lg:gap-[150px]">
         <HowIDesign />
         <MoreAboutMe />
         <Expectations />
         <Tools />
         <ClosingCta />
-      </Container>
+      </div>
     </>
   );
 }

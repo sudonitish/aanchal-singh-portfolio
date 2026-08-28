@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Nav from "@/components/layout/Nav";
-import Container from "@/components/ui/Container";
 import BentoCard from "@/components/contact/BentoCard";
 import { bentoCards, contactPage } from "@/data/content/contact/data";
 
@@ -16,10 +15,10 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="px-5 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
+      <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-10">
         <Nav />
       </div>
-      <Container className="flex flex-col gap-16 py-10 sm:gap-20 sm:py-16">
+      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-20 sm:py-16 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[246px]">
         <h1 className="sr-only">{contactPage.heading}</h1>
 
         <div className="flex flex-col gap-5 rounded-card border border-[#E9E9E9] p-4 sm:p-8">
@@ -34,7 +33,7 @@ export default function ContactPage() {
             ))}
           </div>
         </div>
-      </Container>
+      </div>
     </>
   );
 }

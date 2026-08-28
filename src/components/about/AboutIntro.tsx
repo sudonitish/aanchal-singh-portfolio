@@ -34,11 +34,11 @@ export default function AboutIntro() {
         aria-hidden
       />
 
-      <div className="relative flex flex-1 flex-col px-5 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
+      <div className="relative flex flex-1 flex-col px-5 pt-6 sm:pt-8 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-10">
         <Nav />
 
-        <div className="flex flex-1 flex-col items-center justify-center gap-12 py-12 sm:py-16 lg:items-start lg:justify-center lg:py-20 lg:pt-40">
-          <div className="flex w-full flex-col gap-4 lg:w-[50%]">
+        <div className="flex flex-1 flex-col items-center justify-center gap-12 py-12 sm:py-16 min-[1200px]:items-start min-[1200px]:justify-center min-[1200px]:py-20 min-[1200px]:pt-40">
+          <div className="flex w-full flex-col gap-4 min-[1200px]:w-[50%]">
             <span className="font-heading text-[16px] leading-[16px] font-medium tracking-normal text-body uppercase">
               {aboutPage.eyebrow}
             </span>
@@ -54,13 +54,13 @@ export default function AboutIntro() {
             </p>
           </div>
 
-          <div className="w-full lg:hidden">
+          <div className="w-full min-[1200px]:hidden">
             <PortraitCollage />
           </div>
         </div>
       </div>
 
-      <div className="hidden lg:absolute lg:top-12 lg:right-[40px] lg:block lg:w-[820px]">
+      <div className="hidden min-[1200px]:absolute min-[1200px]:top-12 min-[1200px]:right-[40px] min-[1200px]:block min-[1200px]:w-[620px] min-[1654px]:w-[820px]">
         <PortraitCollage />
       </div>
     </section>

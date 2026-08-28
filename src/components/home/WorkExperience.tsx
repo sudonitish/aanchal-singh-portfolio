@@ -4,7 +4,7 @@ import { homePage } from "@/data/content/home/data";
 
 export default function WorkExperience() {
   return (
-    <div className="mx-auto flex w-full max-w-[940px] flex-col items-center gap-5 px-6 py-10">
+    <div className="flex w-full flex-col items-center gap-5 px-5 py-10 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[320px]">
       <p className="text-[14px] leading-8 font-bold text-black/60">
         {homePage.workExperienceLabel}
       </p>

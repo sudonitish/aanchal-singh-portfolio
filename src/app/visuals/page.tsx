@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Nav from "@/components/layout/Nav";
-import Container from "@/components/ui/Container";
 
 export const metadata: Metadata = {
   title: "Visuals",
@@ -8,15 +8,15 @@ export const metadata: Metadata = {
   alternates: { canonical: "/visuals" },
 };
 
-const placeholderTiles = Array.from({ length: 23 }, (_, i) => i);
+const placeholderTiles = Array.from({ length: 22 }, (_, i) => i);
 
 export default function VisualsPage() {
   return (
     <>
-      <div className="px-5 pt-6 sm:px-10 sm:pt-8 lg:px-[150px] lg:pt-10">
+      <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-10">
         <Nav />
       </div>
-      <Container className="flex flex-col gap-16 py-10 sm:gap-20 sm:py-16">
+      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-20 sm:py-16 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px]">
         <div className="flex flex-col gap-5">
           <h1 className="text-4xl font-semibold text-ink sm:text-5xl lg:text-[60px]">
             Design Showcase
@@ -28,8 +28,25 @@ export default function VisualsPage() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          <div className="flex aspect-[502/350] items-center justify-center rounded-card border border-[#FBECD6] bg-white">
-            <div className="h-[75%] w-[75%] rounded-2xl bg-surface-1" aria-hidden />
+          <div className="relative aspect-[502/350] overflow-hidden rounded-card border border-[#FBECD6] bg-white">
+            <Image
+              src="/assets/visuals/visual-1.png"
+              alt=""
+              fill
+              aria-hidden
+              className="object-cover"
+              sizes="(min-width: 1024px) 33vw, 50vw"
+            />
+          </div>
+          <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
+            <Image
+              src="/assets/visuals/visual-2.png"
+              alt=""
+              fill
+              aria-hidden
+              className="object-cover"
+              sizes="(min-width: 1024px) 33vw, 50vw"
+            />
           </div>
           {placeholderTiles.map((tile) => (
             <div
@@ -39,7 +56,7 @@ export default function VisualsPage() {
             />
           ))}
         </div>
-      </Container>
+      </div>
     </>
   );
 }
