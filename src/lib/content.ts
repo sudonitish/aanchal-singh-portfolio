@@ -1,8 +1,16 @@
+import type {
+  CaseStudyIconName,
+  PainPointIconName,
+  PlatformIconName,
+} from "@/components/work/CaseStudyIcons";
+
 export interface HeadingBlock {
   type: "heading";
   eyebrow?: string;
   title: string;
+  subtitle?: string;
   description?: string;
+  descriptionLead?: string;
 }
 
 export interface ParagraphBlock {
@@ -13,6 +21,7 @@ export interface ParagraphBlock {
 export interface StatCard {
   label: string;
   text: string;
+  icon?: CaseStudyIconName;
 }
 
 export interface StatCardsBlock {
@@ -29,10 +38,24 @@ export interface ListItem {
   index?: string;
   title: string;
   text: string;
+  icon?: CaseStudyIconName;
+  painPointIcon?: PainPointIconName;
+  platform?: PlatformIconName;
+  strengths?: string[];
+  weaknesses?: string[];
+  features?: string[];
+  lines?: string[];
 }
 
 export interface ListBlock {
   type: "list";
+  variant?:
+    | "chips"
+    | "logoCards"
+    | "painPointCards"
+    | "iconCards"
+    | "plainCards"
+    | "taskCards";
   items: ListItem[];
 }
 
@@ -49,6 +72,21 @@ export interface PlaceholderBlock {
   label?: string;
 }
 
+export interface ThankYouBlock {
+  type: "thankYou";
+  text: string;
+}
+
+export interface CardGroupBlock {
+  type: "cardGroup";
+  blocks: Block[];
+}
+
+export interface DividerBlock {
+  type: "divider";
+  withDot?: boolean;
+}
+
 export type Block =
   | HeadingBlock
   | ParagraphBlock
@@ -56,4 +94,7 @@ export type Block =
   | QuoteBlock
   | ListBlock
   | ImageBlock
-  | PlaceholderBlock;
+  | PlaceholderBlock
+  | ThankYouBlock
+  | CardGroupBlock
+  | DividerBlock;

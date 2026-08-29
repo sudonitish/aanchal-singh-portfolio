@@ -5,8 +5,9 @@ import {
   Akaya_Kanadaka,
   Outfit,
   Caveat_Brush,
+  DM_Sans,
 } from "next/font/google";
-import Footer from "@/components/layout/Footer";
+import ConditionalFooter from "@/components/layout/ConditionalFooter";
 import { metaDetails, viewPortDetails } from "@/data/content/layout/meta";
 import "./globals.css";
 
@@ -43,6 +44,11 @@ const brushFont = Caveat_Brush({
   weight: "400",
 });
 
+const dmSansFont = DM_Sans({
+  variable: "--font-dm-sans",
+  subsets: ["latin"],
+});
+
 export const metadata = metaDetails;
 export const viewport = viewPortDetails;
 
@@ -50,11 +56,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${bodyFont.variable} ${headingFont.variable} ${cursiveFont.variable} ${displayScriptFont.variable} ${badgeFont.variable} ${brushFont.variable} h-full antialiased`}
+      className={`${bodyFont.variable} ${headingFont.variable} ${cursiveFont.variable} ${displayScriptFont.variable} ${badgeFont.variable} ${brushFont.variable} ${dmSansFont.variable} h-full antialiased`}
     >
       <body className="w-full min-h-full flex flex-col bg-white text-body">
         <main className="flex-1">{children}</main>
-        <Footer />
+        <ConditionalFooter />
       </body>
     </html>
   );
