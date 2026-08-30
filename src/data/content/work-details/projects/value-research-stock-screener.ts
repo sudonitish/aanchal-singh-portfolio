@@ -1,0 +1,178 @@
+import type { Block } from "@/lib/content";
+
+export const valueResearchContent: Block[] = [
+  {
+    type: "list",
+    variant: "chips",
+    items: [
+      { title: "Company", text: "Value Research", icon: "company" },
+      { title: "Role", text: "UX/UI Designer", icon: "user" },
+      { title: "Duration", text: "4 Weeks", icon: "calendar" },
+      { title: "Tools", text: "Figma", icon: "wrench" },
+    ],
+  },
+  {
+    type: "divider",
+    withDot: true,
+  },
+  {
+    type: "image",
+    src: "/assets/work/value-research-stock-screener/new-vs-old-design.png",
+    alt: "New design vs old design of the Value Research stock screener",
+    width: 1720,
+    height: 876,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "heading",
+    title: "Overview",
+    description:
+      "Value Research is one of India's most trusted mutual-fund and stock research platforms. Its stock screener is where an investor turns a universe of 150-200+ securities into a shortlist worth researching. I led its redesign across web and mobile. The old screener worked. It just optimized for the wrong thing — showing every data point rather than helping someone decide. This is how I reframed it, and what changed.",
+  },
+  {
+    type: "image",
+    src: "/assets/work/value-research-stock-screener/old-design-desktop.png",
+    alt: "Old design of the stock screener on desktop",
+    width: 1720,
+    height: 692,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "heading",
+    title: "The Problem",
+    description:
+      "A screener exists to narrow. The old one did the opposite - it showed everything, at equal weight, and left the narrowing to the user. The old screener wasn't badly built. It was optimized for the wrong verb - \"show me all the data\" when the user was asking \"help me decide what to look at.\"",
+  },
+  {
+    type: "list",
+    items: [
+      {
+        title: "Everything at equal weight",
+        text: "13 columns by default, 8 of them historical price extremes styled like the price itself. Nothing was prioritized.",
+      },
+      {
+        title: "Reading meant scrubbing",
+        text: "The table ran off-screen; reading one stock meant scrolling left–right and losing your row.",
+      },
+      {
+        title: "Mobile scroll trap",
+        text: "13 columns through 390px; scroll to a metric and the company name slid away.",
+      },
+      {
+        title: "Numbers without meaning",
+        text: "52-week low and high sat in separate columns, with nothing showing where today's price fell between them.",
+      },
+      {
+        title: "Fixed density",
+        text: "Momentum trader and value investor saw the identical wall; neither could shape it to their question.",
+      },
+      {
+        title: "Invisible filters & edges",
+        text: "“3 filters applied,” but not which three. No screen-reader header semantics, no empty or paywall states.",
+      },
+    ],
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "image",
+    src: "/assets/work/value-research-stock-screener/new-design-mobile.png",
+    alt: "Redesigned stock screener on mobile: predefined screens, saved screens, and the column picker",
+    width: 1720,
+    height: 793,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "heading",
+    title: "The Solution",
+  },
+  {
+    type: "quote",
+    quotes: [
+      "The old screener made the user do the tool's job - holding context in their head, doing mental math, remembering what they'd filtered. The redesign hung on one rule: design for the decision, not the database. Every move removes a different kind of mental effort.",
+    ],
+  },
+  {
+    type: "list",
+    items: [
+      {
+        title: "1. Keep the stock in front of you → removes memory load.",
+        text: "The old table scrolled sideways and you'd lose which company's number you were reading, so you had to hold the row in your head while scrolling - worst on mobile. I froze the identity (name, sector, rating) and let only the metrics scroll; on mobile that's a fixed-left, scroll-right split. The interface keeps the context so working memory doesn't have to.",
+      },
+      {
+        title: "2. Let people shape the table → removes visual search load.",
+        text: "Everyone saw the same ~13 columns at equal weight, so every glance meant scanning past columns you didn't care about to find the two you did. A searchable column picker (grouped by returns, valuation, rating), a density toggle, and saved screens as one-tap pills let each user strip the table down to their question. Less on screen, less to filter out, faster to the signal.",
+      },
+      {
+        title: "3. Make the hidden things visible → removes recall and interpretation load.",
+        text: "Filters were a silent “3 applied” (you had to remember what was constraining the list), raw metrics assumed you knew what they meant, and the empty and paywall states didn't exist. Now the filter builder shows exactly what's applied with a live count of stocks remaining, tooltips explain each metric in place, and the range visual shows where a price sits in its band, so the answer is on screen instead of reconstructed in your head.",
+      },
+    ],
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "image",
+    src: "/assets/work/value-research-stock-screener/new-design-desktop-filters.png",
+    alt: "Redesigned stock screener on desktop: applied filters and density control",
+    width: 1720,
+    height: 536,
+  },
+  {
+    type: "image",
+    src: "/assets/work/value-research-stock-screener/new-design-desktop-columns.png",
+    alt: "Redesigned stock screener on desktop: predefined screens grid and the add-columns picker",
+    width: 1720,
+    height: 536,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "heading",
+    title: "Conclusion",
+    description:
+      "The hard part wasn't visual - the old screener already looked like a Value Research product. It was resisting the instinct that a research tool proves its worth by showing more. Showing everything isn't power; it just hands the work of prioritizing back to the person who came to the tool to prioritize. So the redesign is subtractive where it counts and additive where it helps. None of the moves are flashy. Together they change what the screener is for - from a place that displays data to one that helps you decide.",
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "heading",
+    title: "Illustrations",
+  },
+  {
+    type: "image",
+    src: "/assets/work/value-research-stock-screener/illustrations.png",
+    alt: "Hand-drawn financial illustrations used across empty and onboarding states",
+    width: 1720,
+    height: 571,
+  },
+  {
+    type: "divider",
+  },
+  {
+    type: "heading",
+    title: "Components",
+  },
+  {
+    type: "image",
+    src: "/assets/work/value-research-stock-screener/component-library.png",
+    alt: "Component library: filters, save screen dialog, and rating controls",
+    width: 1720,
+    height: 1113,
+  },
+  {
+    type: "thankYou",
+    text: "Thank you",
+    accentColor: "#FD8093",
+  },
+];

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { Block } from "@/lib/content";
+import InterviewFindings from "@/components/work/InterviewFindings";
 import {
   CaseStudyIcon,
   CaseStudyIconBadge,
@@ -458,6 +459,18 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               </div>
             );
 
+          case "interviewFindings":
+            return (
+              <InterviewFindings
+                key={index}
+                eyebrow={block.eyebrow}
+                heading={block.heading}
+                description={block.description}
+                findings={block.findings}
+                accentColor={block.accentColor}
+              />
+            );
+
           case "cardGroup":
             return (
               <div
@@ -478,7 +491,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                   {block.text}
                 </h2>
                 <div className="w-12 sm:w-24 lg:w-[170px]">
-                  <ThankYouHand size="100%" />
+                  <ThankYouHand size="100%" accentColor={block.accentColor} />
                 </div>
               </div>
             );

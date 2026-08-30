@@ -75,6 +75,7 @@ export interface PlaceholderBlock {
 export interface ThankYouBlock {
   type: "thankYou";
   text: string;
+  accentColor?: string;
 }
 
 export interface CardGroupBlock {
@@ -87,6 +88,15 @@ export interface DividerBlock {
   withDot?: boolean;
 }
 
+export interface InterviewFindingsBlock {
+  type: "interviewFindings";
+  eyebrow?: string;
+  heading: string;
+  description: string;
+  findings: { pill: string; title: string; description: string }[];
+  accentColor?: string;
+}
+
 export type Block =
   | HeadingBlock
   | ParagraphBlock
@@ -97,4 +107,5 @@ export type Block =
   | PlaceholderBlock
   | ThankYouBlock
   | CardGroupBlock
-  | DividerBlock;
+  | DividerBlock
+  | InterviewFindingsBlock;

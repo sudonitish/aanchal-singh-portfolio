@@ -29,7 +29,7 @@ export const projectsMeta: ProjectMeta[] = [
     name: "Designing a Scalable Marketing Experience for a Zoho Implementation Partner",
     tag: "UX Case Study",
     description:
-      "A scalable marketing site and design system for a Zoho implementation partner.",
+      "A landing page and four service pages — from raw content documents into a conversion-focused system.",
     cardImage: "/assets/homepage/zoho.jpg",
     cardBg: "bg-surface-2",
     tone: "light",
@@ -38,10 +38,9 @@ export const projectsMeta: ProjectMeta[] = [
   },
   {
     slug: "value-research-stock-screener",
-    name: "Value Research Stock Screener",
+    name: "Designing for the Decision, Not the Database",
     tag: "UX Case Study",
-    description:
-      "A stock screening tool that helps investors filter and discover high quality stocks.",
+    description: "Redesigning the Value Research stock screener.",
     cardImage: "/assets/homepage/value-research.jpg",
     cardBg: "bg-black",
     tone: "dark",
@@ -64,7 +63,7 @@ export const projectsMeta: ProjectMeta[] = [
     slug: "ntes-train-tracking-app",
     name: "Redesigning NTES: India's Train Tracking App",
     tag: "UX Case Study",
-    description: "A redesign of India's train tracking experience.",
+    description: "Indian Railways' digital face needed a makeover. Badly.",
     cardImage: "/assets/homepage/ntes.jpg",
     cardBg: "bg-surface-4",
     tone: "dark",
