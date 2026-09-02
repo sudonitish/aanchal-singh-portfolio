@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
+import type { CSSProperties } from "react";
 import { notFound } from "next/navigation";
 import BlockRenderer from "@/components/work/BlockRenderer";
-import Container from "@/components/ui/Container";
 import { projectsMeta } from "@/data/content/work/data";
 import { getProjectBySlug } from "@/data/content/work-details/data";
 import { getProjectMetadata, getProjectJsonLd } from "@/data/content/work-details/meta";
@@ -48,7 +48,10 @@ export default async function ProjectPage({ params }: PageProps) {
           aria-hidden
           className="pointer-events-none absolute left-1/2 top-[195px] h-[161px] w-screen -translate-x-1/2 bg-[#FBECD6] blur-[140px]"
         />
-        <Container className="relative py-24">
+        <div
+          className="relative px-5 py-24 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[var(--wide-gutter)]"
+          style={{ "--wide-gutter": `${project.wideGutter ?? 150}px` } as CSSProperties}
+        >
           <article>
             <div className="relative flex flex-col items-center gap-5 text-center">
               <span className="font-dm-sans flex items-center gap-2 rounded-full border border-[#06B6D4]/80 px-[21px] py-[9px] text-base font-semibold text-[#06B6D4]">
@@ -67,7 +70,7 @@ export default async function ProjectPage({ params }: PageProps) {
               <BlockRenderer blocks={project.content} />
             </div>
           </article>
-        </Container>
+        </div>
       </div>
     </>
   );

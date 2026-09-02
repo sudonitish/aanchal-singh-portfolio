@@ -13,7 +13,13 @@ interface BlockRendererProps {
   blocks: Block[];
 }
 
-function SectionDivider({ withDot = false }: { withDot?: boolean }) {
+function SectionDivider({
+  withDot = false,
+  dotColor = "#06B6D4",
+}: {
+  withDot?: boolean;
+  dotColor?: string;
+}) {
   const fade =
     "linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(148,163,184,0.2) 50%, rgba(0,0,0,0) 100%)";
   if (!withDot) {
@@ -24,7 +30,10 @@ function SectionDivider({ withDot = false }: { withDot?: boolean }) {
   return (
     <div aria-hidden className="flex items-center gap-4">
       <div className="h-px flex-1" style={{ background: fade }} />
-      <div className="h-2 w-2 shrink-0 rounded-full bg-[#06B6D4]" />
+      <div
+        className="h-2 w-2 shrink-0 rounded-full"
+        style={{ background: dotColor }}
+      />
       <div className="h-px flex-1" style={{ background: fade }} />
     </div>
   );
@@ -44,7 +53,13 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
   {
     switch (block.type) {
           case "divider":
-            return <SectionDivider key={index} withDot={block.withDot} />;
+            return (
+              <SectionDivider
+                key={index}
+                withDot={block.withDot}
+                dotColor={block.dotColor}
+              />
+            );
 
           case "paragraph":
             return (
@@ -70,7 +85,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                   </p>
                 )}
                 {block.description && (
-                  <p className="max-w-3xl text-[18px] leading-[22px] text-[#8C8C8C]">
+                  <p className="max-w-3xl text-[18px] leading-[22px] whitespace-pre-line text-[#8C8C8C]">
                     {block.descriptionLead && (
                       <>
                         <span className="font-bold text-black">
@@ -469,6 +484,78 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 findings={block.findings}
                 accentColor={block.accentColor}
               />
+            );
+
+          case "problemSolution":
+            return (
+              <div key={index} className="flex flex-col gap-10">
+                <div
+                  className="flex flex-col gap-5 rounded-[24px] border p-6 sm:p-10"
+                  style={{
+                    background:
+                      "linear-gradient(94.48deg, rgba(255,255,255,0.031) 0.33%, rgba(0,0,0,0.093) 40.78%, rgba(0,0,0,0.093) 100%)",
+                    borderColor: "#DDDDDD",
+                  }}
+                >
+                  <div
+                    className="flex h-14 w-14 items-center justify-center rounded-2xl"
+                    style={{ background: "rgba(0,0,0,0.2)" }}
+                  >
+                    <CaseStudyIconBadge
+                      name="triangleWarning"
+                      size={28}
+                      color="#000000"
+                      bare
+                    />
+                  </div>
+                  <h3 className="text-2xl leading-9 font-bold text-black">
+                    {block.problem.title}
+                  </h3>
+                  <p className="text-base leading-[26px] whitespace-pre-line text-[#8C8C8C]">
+                    {block.problem.description}
+                  </p>
+                  <div className="flex flex-col gap-2.5">
+                    {block.problem.points.map((point) => (
+                      <p key={point.label} className="text-base leading-[26px] text-black">
+                        <span className="font-semibold">{point.label}</span>
+                        {" — "}
+                        <span className="font-medium">{point.text}</span>
+                      </p>
+                    ))}
+                  </div>
+                </div>
+                <div
+                  className="flex flex-col gap-5 rounded-[24px] border p-6 sm:p-10"
+                  style={{
+                    background:
+                      "linear-gradient(135deg, rgba(255,255,255,0.05) 0%, rgba(216,251,120,0.15) 36.26%, rgba(216,251,120,0.15) 100%)",
+                    borderColor: "#EEFFC7",
+                  }}
+                >
+                  <div
+                    className="flex h-14 w-14 items-center justify-center rounded-2xl"
+                    style={{ background: "rgba(216,251,120,0.3)" }}
+                  >
+                    <CaseStudyIconBadge
+                      name="circleCheck"
+                      size={28}
+                      color="#AABE72"
+                      bare
+                    />
+                  </div>
+                  <h3 className="text-2xl leading-9 font-bold text-black">
+                    {block.solution.title}
+                  </h3>
+                  <p className="text-base leading-[26px] text-[#8C8C8C]">
+                    {block.solution.description}
+                  </p>
+                  {block.solution.note && (
+                    <p className="text-base leading-[26px] font-semibold text-black">
+                      {block.solution.note}
+                    </p>
+                  )}
+                </div>
+              </div>
             );
 
           case "cardGroup":

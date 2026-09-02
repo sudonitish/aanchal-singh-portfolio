@@ -86,6 +86,21 @@ export interface CardGroupBlock {
 export interface DividerBlock {
   type: "divider";
   withDot?: boolean;
+  dotColor?: string;
+}
+
+export interface ProblemSolutionBlock {
+  type: "problemSolution";
+  problem: {
+    title: string;
+    description: string;
+    points: { label: string; text: string }[];
+  };
+  solution: {
+    title: string;
+    description: string;
+    note?: string;
+  };
 }
 
 export interface InterviewFindingsBlock {
@@ -108,4 +123,5 @@ export type Block =
   | ThankYouBlock
   | CardGroupBlock
   | DividerBlock
-  | InterviewFindingsBlock;
+  | InterviewFindingsBlock
+  | ProblemSolutionBlock;

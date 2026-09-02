@@ -13,13 +13,37 @@ export const chaseContent: Block[] = [
   {
     type: "divider",
     withDot: true,
+    dotColor: "#000000",
   },
   {
     type: "heading",
-    eyebrow: "The Spark",
-    title: "What happens when an athlete needs a new badminton racket and a camping backpack — but every app only solves half the problem?",
+    title: "The Spark",
     description:
-      "Sports enthusiasts live multi-sport lives. They play badminton on Tuesday, plan a weekend trek on Wednesday, and browse running shoes on the commute home. Yet every existing platform forces them to switch apps for every need. Chase was born from a single question: what if one platform could serve your entire active lifestyle — from the court to the campsite?",
+      "What happens when an athlete needs a new badminton racket and a camping backpack — but every app only solves half the problem?\n\nSports enthusiasts live multi-sport lives. They play badminton on Tuesday, plan a weekend trek on Wednesday, and browse running shoes on the commute home. Yet every existing platform forces them to silo these needs across multiple apps, multiple carts, and multiple checkout flows.\n\nChase was born from a single question: What if one platform could serve your entire active lifestyle — from the court to the campsite?",
+  },
+  {
+    type: "problemSolution",
+    problem: {
+      title: "The Problem",
+      description:
+        "Sports enthusiasts lack a unified platform that lets them move seamlessly from shopping for sport-specific equipment to preparing for outdoor adventures — without app-switching, without duplicated effort, and without compromising on product information.\n\nTwo core tensions surfaced early:",
+      points: [
+        {
+          label: "Fragmentation",
+          text: "Users bounce between 3–4 apps to cover their gear needs. Each switch introduces friction, breaks context, and increases the likelihood of abandoned purchases.",
+        },
+        {
+          label: "Information deficit",
+          text: "Budget-conscious buyers want to make smart upgrades, but scattered product data, inconsistent specs, and unreliable reviews make informed decision-making nearly impossible.",
+        },
+      ],
+    },
+    solution: {
+      title: "The Solution",
+      description:
+        "Chase is a mobile commerce platform that consolidates sports equipment, adventure gear, and athletic apparel into a single, curated experience — backed by transparent product information, reliable reviews, and flexible checkout.",
+      note: "A deeper look at the solution unfolds through the design process below.",
+    },
   },
   {
     type: "divider",

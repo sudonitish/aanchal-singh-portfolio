@@ -16,6 +16,8 @@ export interface ProjectMeta {
   tone: "light" | "dark";
   live: boolean;
   featured: boolean;
+  /** Horizontal page padding at the 1500px+ breakpoint, in px. Defaults to 150. */
+  wideGutter?: number;
 }
 
 export interface Project extends ProjectMeta {
@@ -58,6 +60,7 @@ export const projectsMeta: ProjectMeta[] = [
     tone: "dark",
     live: false,
     featured: true,
+    wideGutter: 225,
   },
   {
     slug: "ntes-train-tracking-app",
@@ -81,5 +84,6 @@ export const projectsMeta: ProjectMeta[] = [
     tone: "dark",
     live: false,
     featured: true,
+    wideGutter: 245,
   },
 ];

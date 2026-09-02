@@ -162,13 +162,15 @@ export type CaseStudyIconName = keyof typeof caseStudyIcons;
 export function CaseStudyIcon({
   name,
   size = 20,
+  color,
 }: {
   name: CaseStudyIconName;
   size?: number;
+  color?: string;
 }) {
   const icon = caseStudyIcons[name];
   return (
-    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={{ color: icon.color }} aria-hidden>
+    <svg width={size} height={size} viewBox="0 0 20 20" fill="none" style={{ color: color ?? icon.color }} aria-hidden>
       {icon.path}
     </svg>
   );
@@ -177,15 +179,20 @@ export function CaseStudyIcon({
 export function CaseStudyIconBadge({
   name,
   size = 56,
+  color,
+  bare = false,
 }: {
   name: CaseStudyIconName;
   size?: number;
+  color?: string;
+  bare?: boolean;
 }) {
   const icon = caseStudyIcons[name];
+  const strokeColor = color ?? icon.color;
   return (
     <svg width={size} height={size} viewBox="0 0 56 56" fill="none" aria-hidden>
-      <path d={badgeBg} fill={icon.color} fillOpacity="0.2" />
-      <g style={{ color: icon.color }}>{icon.path}</g>
+      {!bare && <path d={badgeBg} fill={color ?? icon.color} fillOpacity="0.2" />}
+      <g style={{ color: strokeColor }}>{icon.path}</g>
     </svg>
   );
 }
