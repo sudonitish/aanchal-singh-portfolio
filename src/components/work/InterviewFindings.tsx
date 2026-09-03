@@ -27,13 +27,17 @@ export default function InterviewFindings({
   const current = findings[active];
 
   return (
-    <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
-      <div className="flex flex-col gap-5 text-left">
-        {eyebrow && (
-          <span className="text-sm font-bold tracking-[0.15em] text-accent-strong uppercase">
+    <div className="flex flex-col gap-10">
+      {eyebrow && (
+        <div className="flex items-center gap-5">
+          <span className="shrink-0 text-xs leading-4 font-semibold tracking-[2.4px] text-[#5A7A1A] uppercase">
             {eyebrow}
           </span>
-        )}
+          <span className="h-px flex-1 bg-black/[0.08]" />
+        </div>
+      )}
+      <div className="grid gap-6 lg:grid-cols-2 lg:items-stretch">
+      <div className="flex flex-col gap-5 text-left">
         <h2 className="text-2xl font-extrabold leading-[1.2] text-black sm:text-3xl">
           {heading}
         </h2>
@@ -87,6 +91,7 @@ export default function InterviewFindings({
             />
           ))}
         </div>
+      </div>
       </div>
     </div>
   );

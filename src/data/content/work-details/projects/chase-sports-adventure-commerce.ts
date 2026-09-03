@@ -22,35 +22,14 @@ export const chaseContent: Block[] = [
       "What happens when an athlete needs a new badminton racket and a camping backpack — but every app only solves half the problem?\n\nSports enthusiasts live multi-sport lives. They play badminton on Tuesday, plan a weekend trek on Wednesday, and browse running shoes on the commute home. Yet every existing platform forces them to silo these needs across multiple apps, multiple carts, and multiple checkout flows.\n\nChase was born from a single question: What if one platform could serve your entire active lifestyle — from the court to the campsite?",
   },
   {
-    type: "problemSolution",
-    problem: {
-      title: "The Problem",
-      description:
-        "Sports enthusiasts lack a unified platform that lets them move seamlessly from shopping for sport-specific equipment to preparing for outdoor adventures — without app-switching, without duplicated effort, and without compromising on product information.\n\nTwo core tensions surfaced early:",
-      points: [
-        {
-          label: "Fragmentation",
-          text: "Users bounce between 3–4 apps to cover their gear needs. Each switch introduces friction, breaks context, and increases the likelihood of abandoned purchases.",
-        },
-        {
-          label: "Information deficit",
-          text: "Budget-conscious buyers want to make smart upgrades, but scattered product data, inconsistent specs, and unreliable reviews make informed decision-making nearly impossible.",
-        },
-      ],
-    },
-    solution: {
-      title: "The Solution",
-      description:
-        "Chase is a mobile commerce platform that consolidates sports equipment, adventure gear, and athletic apparel into a single, curated experience — backed by transparent product information, reliable reviews, and flexible checkout.",
-      note: "A deeper look at the solution unfolds through the design process below.",
-    },
+    type: "image",
+    src: "/assets/work/chase-sports-adventure-commerce/problem-solution-reference.png",
+    alt: "The Problem and The Solution",
+    width: 1429,
+    height: 744,
   },
   {
     type: "divider",
-  },
-  {
-    type: "heading",
-    title: "My Design Process",
   },
   {
     type: "image",
@@ -63,11 +42,16 @@ export const chaseContent: Block[] = [
     type: "divider",
   },
   {
-    type: "heading",
-    eyebrow: "Research",
-    title: "01 / Audience & 02 / Method",
-    description:
-      "Research combined competitive analysis of multi-category commerce apps with direct interviews across badminton, camping, and running communities.",
+    type: "researchHeader",
+    title: "Research",
+    stat: "5 interviews · 4 audience segments · 4 key insights",
+    sectionLabel: "01 / Audience",
+    image: {
+      src: "/assets/work/chase-sports-adventure-commerce/audience-segments.png",
+      alt: "Four audience segments: Competitive Athletes, Outdoor Adventurers, Casual Sports Fans, Weekend Warriors",
+      width: 1332,
+      height: 383,
+    },
   },
   {
     type: "interviewFindings",
@@ -118,17 +102,7 @@ export const chaseContent: Block[] = [
     height: 595,
   },
   {
-    type: "quote",
-    quotes: [
-      "From pixels to performance, I need gear that matches my hustle. Give me the facts, the fit, and the finest value, and I'll be ready to play.",
-    ],
-  },
-  {
     type: "divider",
-  },
-  {
-    type: "heading",
-    title: "Empathy Map",
   },
   {
     type: "image",
@@ -141,10 +115,11 @@ export const chaseContent: Block[] = [
     type: "divider",
   },
   {
-    type: "heading",
-    title: "User Journey Map",
-    description:
-      "Raj's goal: find and purchase an affordable, high-performance badminton racket and a durable camping bag without juggling multiple platforms. Mapped across Awareness, Research, Evaluation, Purchase, Delivery, and Usage — surfacing pain points like inconsistent product info, lengthy checkout, and the recurring frustration of never finding everything in one cart.",
+    type: "image",
+    src: "/assets/work/chase-sports-adventure-commerce/user-journey-map.png",
+    alt: "User journey map across Awareness, Research, Evaluation, Purchase, Delivery, and Usage",
+    width: 1429,
+    height: 1017,
   },
   {
     type: "divider",
@@ -182,7 +157,7 @@ export const chaseContent: Block[] = [
     type: "heading",
     title: "High Fidelity Frames",
     description:
-      "The final designs bring together the research insights, IA decisions, and visual system into a polished, production-ready interface. The dark UI with lime-green accents creates a bold, energetic aesthetic suited to an active lifestyle brand.",
+      "The final designs bring together the research insights, IA decisions, and visual system into a polished, production-ready interface. The dark UI with lime-green accents creates a bold, energetic aesthetic that matches the brand's active lifestyle positioning — while maintaining strong contrast and readability.",
   },
   {
     type: "image",
@@ -195,12 +170,6 @@ export const chaseContent: Block[] = [
     type: "divider",
   },
   {
-    type: "heading",
-    title: "Style Guide",
-    description:
-      "Typography: Plus Jakarta Sans (headings), Inter (body). Grid: 8 columns, 16px margin, 16px gutter. Primary palette: #4F4F4F, #D8FB78, #EEF3DA. Secondary palette: #0E0E10, #DDE5C0, #F9FBF1.",
-  },
-  {
     type: "image",
     src: "/assets/work/chase-sports-adventure-commerce/style-guide.png",
     alt: "Style guide covering colors, typography, grid system, and iconography",
@@ -211,10 +180,10 @@ export const chaseContent: Block[] = [
     type: "divider",
   },
   {
-    type: "heading",
+    type: "reflectionHeader",
+    eyebrow: "03 / Reflection",
     title: "What this project taught me",
-    description:
-      "Designing for overlapping-but-distinct user needs (sport vs. adventure gear) sharpened how I think about information architecture that scales across categories without becoming generic.",
+    stat: "4 reflections · 3 weeks of learning",
   },
   {
     type: "image",
@@ -226,5 +195,6 @@ export const chaseContent: Block[] = [
   {
     type: "thankYou",
     text: "Thank you",
+    accentColor: "#DAE1BE",
   },
 ];

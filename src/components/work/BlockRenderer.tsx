@@ -283,7 +283,9 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                       className="flex gap-4 rounded-[24px] border border-[#06B6D4]/20 bg-white p-5 sm:p-6"
                     >
                       {item.painPointIcon && (
-                        <PainPointIconBadge name={item.painPointIcon} size={48} />
+                        <div className="shrink-0">
+                          <PainPointIconBadge name={item.painPointIcon} size={48} />
+                        </div>
                       )}
                       <div className="flex flex-col gap-2">
                         <h3 className="font-dm-sans text-lg font-bold leading-[27px] text-black">
@@ -486,6 +488,66 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               />
             );
 
+          case "researchHeader":
+            return (
+              <div key={index} className="flex flex-col gap-[70px]">
+                <div className="flex flex-col items-start gap-4 border-b border-black/[0.08] pb-3 sm:flex-row sm:items-center sm:justify-between sm:gap-6">
+                  <h2 className="text-[32px] leading-[48px] font-extrabold text-[#1A202C] sm:text-[40px]">
+                    {block.title}
+                  </h2>
+                  <div className="flex items-center gap-3">
+                    <span className="h-0.5 w-8 shrink-0 bg-[#1A202C]/20" />
+                    <span className="text-sm leading-5 font-medium text-[#8C8C8C]">
+                      {block.stat}
+                    </span>
+                  </div>
+                </div>
+                <div className="flex flex-col gap-10">
+                  <div className="flex items-center gap-5">
+                    <span className="shrink-0 text-xs leading-4 font-semibold tracking-[2.4px] text-[#5A7A1A] uppercase">
+                      {block.sectionLabel}
+                    </span>
+                    <span className="h-px flex-1 bg-black/[0.08]" />
+                  </div>
+                  {block.image && (
+                    <Image
+                      src={block.image.src}
+                      alt={block.image.alt}
+                      width={block.image.width}
+                      height={block.image.height}
+                      className="h-auto w-full rounded-[20px]"
+                    />
+                  )}
+                </div>
+              </div>
+            );
+
+          case "reflectionHeader":
+            return (
+              <div
+                key={index}
+                className="flex flex-col items-start justify-between gap-8 border-b border-black/[0.08] pb-4 sm:flex-row sm:items-center"
+              >
+                <div className="flex flex-col gap-[30px]">
+                  <div className="flex items-center gap-5">
+                    <span className="shrink-0 text-xs leading-4 font-semibold tracking-[2.4px] text-[#5A7A1A] uppercase">
+                      {block.eyebrow}
+                    </span>
+                    <span className="h-px flex-1 bg-black/[0.08]" />
+                  </div>
+                  <h2 className="text-[32px] leading-[48px] font-extrabold text-[#1A202C] sm:text-[40px] sm:leading-[50px]">
+                    {block.title}
+                  </h2>
+                </div>
+                <div className="flex shrink-0 items-center gap-3">
+                  <span className="h-0.5 w-8 shrink-0 bg-[#1A202C]/20" />
+                  <span className="text-sm leading-5 font-medium whitespace-nowrap text-[#8C8C8C]">
+                    {block.stat}
+                  </span>
+                </div>
+              </div>
+            );
+
           case "problemSolution":
             return (
               <div key={index} className="flex flex-col gap-10">
@@ -516,11 +578,14 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                   </p>
                   <div className="flex flex-col gap-2.5">
                     {block.problem.points.map((point) => (
-                      <p key={point.label} className="text-base leading-[26px] text-black">
-                        <span className="font-semibold">{point.label}</span>
-                        {" — "}
-                        <span className="font-medium">{point.text}</span>
-                      </p>
+                      <div key={point.label} className="flex flex-col gap-2.5">
+                        <p className="text-base leading-[26px] font-semibold text-black">
+                          {point.label}
+                        </p>
+                        <p className="text-base leading-[26px] font-medium text-black">
+                          {point.text}
+                        </p>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -572,7 +637,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
             return (
               <div
                 key={index}
-                className="flex flex-col items-center justify-center gap-4 py-10 sm:flex-row sm:gap-[25px]"
+                className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:gap-[25px]"
               >
                 <h2 className="font-badge text-5xl font-bold text-black opacity-75 sm:text-8xl lg:text-[150px]">
                   {block.text}

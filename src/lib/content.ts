@@ -89,6 +89,26 @@ export interface DividerBlock {
   dotColor?: string;
 }
 
+export interface ResearchHeaderBlock {
+  type: "researchHeader";
+  title: string;
+  stat: string;
+  sectionLabel: string;
+  image?: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  };
+}
+
+export interface ReflectionHeaderBlock {
+  type: "reflectionHeader";
+  eyebrow: string;
+  title: string;
+  stat: string;
+}
+
 export interface ProblemSolutionBlock {
   type: "problemSolution";
   problem: {
@@ -124,4 +144,6 @@ export type Block =
   | CardGroupBlock
   | DividerBlock
   | InterviewFindingsBlock
-  | ProblemSolutionBlock;
+  | ProblemSolutionBlock
+  | ResearchHeaderBlock
+  | ReflectionHeaderBlock;

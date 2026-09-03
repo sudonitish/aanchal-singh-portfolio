@@ -68,111 +68,11 @@ export const whatsappSchedulingContent: Block[] = [
       "I conducted a competitive market analysis of other messaging apps like Telegram and Facebook Messenger, both of which have message scheduling features. The analysis focused on understanding the strengths and weaknesses of these features and identifying opportunities to create a superior user experience within WhatsApp.",
   },
   {
-    type: "list",
-    variant: "logoCards",
-    items: [
-      {
-        title: "Telegram",
-        text: "",
-        platform: "telegram",
-        strengths: [
-          "Global Reach and Accessibility",
-          "Strong Focus on Privacy and Security",
-          "Channels and Group features",
-          "Multi-Device Sync",
-          "Desktop and Web Versions",
-          "Customization - Users can create and use custom themes, stickers, and GIFs.",
-        ],
-        weaknesses: [
-          "Smaller User Base",
-          "Customization Overload",
-          "Content Moderation Issues",
-          "Inconsistent Notifications",
-        ],
-        features: [
-          "Message scheduling",
-          "Voice and video calls",
-          "Multimedia Sharing",
-          "Group Chats",
-          "Business and Customer Interaction",
-          "Customization and Personalization",
-        ],
-      },
-      {
-        title: "Facebook Messenger",
-        text: "",
-        platform: "facebook",
-        strengths: [
-          "Wide range of interactive features like stickers and games.",
-          "Large user base",
-          "Integration with the Facebook/Meta ecosystem",
-        ],
-        weaknesses: [
-          "Lack of Default Encryption",
-          "Intrusive Ads",
-          "Dependence on Facebook",
-          "Spam and Unwanted Messages",
-          "High Data Usage",
-          "Privacy Concerns - collects a significant amount of user data.",
-        ],
-        features: [
-          "Voice and video calls",
-          "Multimedia Sharing",
-          "Group Chats",
-          "Business and Customer Interaction",
-          "Customization and Personalization",
-        ],
-      },
-      {
-        title: "WeChat",
-        text: "",
-        platform: "wechat",
-        strengths: [
-          "Extensive range of services, integrated payment system (WeChat Pay)",
-          "Enjoys a massive user base in China",
-        ],
-        weaknesses: [
-          "Notification Overload",
-          "Limited International Reach (Largest user base is in China)",
-          "Data Collection",
-          "Privacy concerns - Government Monitoring",
-          "Content Censorship",
-          "Feature Bloat",
-        ],
-        features: [
-          "Voice and video calls",
-          "Multimedia Sharing",
-          "Group Chats",
-          "Business and Customer Interaction",
-          "Customization and Personalization",
-        ],
-      },
-      {
-        title: "Signal",
-        text: "",
-        platform: "signal",
-        strengths: [
-          "Strong focus on privacy and security with end-to-end encryption for all messages and calls.",
-          "Strong endorsement from privacy advocates.",
-        ],
-        weaknesses: [
-          "Smaller User Base",
-          "Limited Features",
-          "Complexity for Non-Technical Users",
-          "Region-Specific Restrictions",
-          "File Size sharing Limits",
-          "Group Size Limits",
-        ],
-        features: [
-          "Message scheduling",
-          "Voice and video calls",
-          "Multimedia Sharing",
-          "Group Chats",
-          "Business and Customer Interaction",
-          "Customization and Personalization",
-        ],
-      },
-    ],
+    type: "image",
+    src: "/assets/work/whatsapp-scheduling/messaging-platform-comparison.png",
+    alt: "Messaging platform comparison: Telegram, Facebook, WeChat, and Signal — strengths, weaknesses, and features",
+    width: 1470,
+    height: 763,
   },
   {
     type: "divider",
@@ -347,53 +247,11 @@ export const whatsappSchedulingContent: Block[] = [
     type: "divider",
   },
   {
-    type: "cardGroup",
-    blocks: [
-      {
-        type: "heading",
-        title: "Usability Testing & Validation",
-        description:
-          "I was able to test 5 users remotely. I sent them the prototype link, explained the project background and presented them with a scenario to schedule a reminder message: compose the message as usual, then long-press send to reveal scheduling options; choose a custom date and time with an intuitive picker; then view, edit, or cancel scheduled messages from a dedicated section in the chat info menu.",
-      },
-      {
-        type: "list",
-        variant: "taskCards",
-        items: [
-          {
-            title: "Task 1: Compose",
-            text: "Users will write their message as usual, then long-press the send button to reveal scheduling options.",
-            painPointIcon: "pen",
-          },
-          {
-            title: "Task 2: Schedule",
-            text: "Users will choose a custom date and time with an intuitive picker interface.",
-            painPointIcon: "clockPurple",
-          },
-          {
-            title: "Task 3: Manage",
-            text: "View, edit, or cancel scheduled messages from a dedicated section in the chat info menu.",
-            painPointIcon: "checkSmall",
-          },
-        ],
-      },
-      {
-        type: "statCards",
-        cards: [
-          { label: "Task Completion Rate", text: "92%" },
-          { label: "Avg. Time to Schedule", text: "8.2s" },
-          { label: "Ease of Use Rating", text: "4.7 / 5" },
-          { label: "Would Use Regularly", text: "96%" },
-        ],
-      },
-      {
-        type: "quote",
-        quotes: [
-          "This is so simple to use. I was done typing my message and scheduling it in less than 60 seconds!",
-          "Scheduling a message felt really smooth and quick. I didn't have to think twice—it just worked the way I expected.",
-          "I'd definitely use this often. The whole flow is clear, and setting the time took just a few seconds without any confusion.",
-        ],
-      },
-    ],
+    type: "image",
+    src: "/assets/work/whatsapp-scheduling/usability-testing-validation.png",
+    alt: "Usability testing and validation: testing methodology, tasks, completion metrics, and user quotes",
+    width: 1428,
+    height: 984,
   },
   {
     type: "divider",
