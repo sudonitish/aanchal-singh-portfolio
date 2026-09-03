@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import type { Block } from "@/lib/content";
 import InterviewFindings from "@/components/work/InterviewFindings";
 import {
@@ -11,7 +12,11 @@ import {
 
 interface BlockRendererProps {
   blocks: Block[];
+  wideGutter?: number;
 }
+
+const SECTION_PADDING_CLASS =
+  "px-5 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[var(--wide-gutter)]";
 
 function SectionDivider({
   withDot = false,
@@ -39,12 +44,26 @@ function SectionDivider({
   );
 }
 
-export default function BlockRenderer({ blocks }: BlockRendererProps) {
+export default function BlockRenderer({ blocks, wideGutter = 150 }: BlockRendererProps) {
   return (
     <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20">
-      {blocks.map((block, index) => (
-        <BlockItem key={index} block={block} index={index} />
-      ))}
+      {blocks.map((block, index) => {
+        const isSelfPadded =
+          block.type === "image" &&
+          (block.fullBleed || block.paddingX || block.paddingY || block.background);
+        if (isSelfPadded) {
+          return <BlockItem key={index} block={block} index={index} />;
+        }
+        return (
+          <div
+            key={index}
+            className={SECTION_PADDING_CLASS}
+            style={{ "--wide-gutter": `${wideGutter}px` } as CSSProperties}
+          >
+            <BlockItem block={block} index={index} />
+          </div>
+        );
+      })}
     </div>
   );
 }
@@ -425,10 +444,9 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
             );
           }
 
-          case "image":
-            return (
+          case "image": {
+            const image = (
               <Image
-                key={index}
                 src={block.src}
                 alt={block.alt}
                 width={block.width}
@@ -436,6 +454,37 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 className="h-auto w-full rounded-[20px]"
               />
             );
+            if (!block.background && !block.paddingX && !block.paddingY) {
+              return <div key={index}>{image}</div>;
+            }
+            return (
+              <div
+                key={index}
+                className={[
+                  block.fullBleed
+                    ? "relative left-1/2 w-screen -translate-x-1/2"
+                    : "",
+                  block.paddingX
+                    ? "px-5 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[var(--section-x)]"
+                    : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                style={
+                  {
+                    background: block.background,
+                    paddingTop: block.paddingY,
+                    paddingBottom: block.paddingY,
+                    "--section-x": block.paddingX
+                      ? `${block.paddingX}px`
+                      : undefined,
+                  } as CSSProperties
+                }
+              >
+                {image}
+              </div>
+            );
+          }
 
           case "placeholder":
             return (

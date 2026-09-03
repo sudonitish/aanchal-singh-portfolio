@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import type { CSSProperties } from "react";
 import { notFound } from "next/navigation";
 import BlockRenderer from "@/components/work/BlockRenderer";
 import { projectsMeta } from "@/data/content/work/data";
@@ -48,12 +47,9 @@ export default async function ProjectPage({ params }: PageProps) {
           aria-hidden
           className="pointer-events-none absolute left-1/2 top-[195px] h-[161px] w-screen -translate-x-1/2 bg-[#FBECD6] blur-[140px]"
         />
-        <div
-          className="relative px-5 py-24 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[var(--wide-gutter)]"
-          style={{ "--wide-gutter": `${project.wideGutter ?? 150}px` } as CSSProperties}
-        >
+        <div className="relative py-24">
           <article>
-            <div className="relative flex flex-col items-center gap-5 text-center">
+            <div className="relative mx-auto flex max-w-[1080px] flex-col items-center gap-5 text-center">
               <span className="font-dm-sans flex items-center gap-2 rounded-full border border-[#06B6D4]/80 px-[21px] py-[9px] text-base font-semibold text-[#06B6D4]">
                 <span className="h-2 w-2 rounded-full bg-[#06B6D4]" />
                 {project.tag}
@@ -67,7 +63,7 @@ export default async function ProjectPage({ params }: PageProps) {
             </div>
 
             <div className="mt-20">
-              <BlockRenderer blocks={project.content} />
+              <BlockRenderer blocks={project.content} wideGutter={project.wideGutter ?? 150} />
             </div>
           </article>
         </div>

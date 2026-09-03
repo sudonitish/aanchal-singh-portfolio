@@ -65,6 +65,10 @@ export interface ImageBlock {
   alt: string;
   width: number;
   height: number;
+  background?: string;
+  paddingX?: number;
+  paddingY?: number;
+  fullBleed?: boolean;
 }
 
 export interface PlaceholderBlock {
