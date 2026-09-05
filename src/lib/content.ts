@@ -69,6 +69,34 @@ export interface ImageBlock {
   paddingX?: number;
   paddingY?: number;
   fullBleed?: boolean;
+  rounded?: boolean;
+  noGapAfter?: boolean;
+}
+
+export interface ImageGridBlock {
+  type: "imageGrid";
+  images: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  }[];
+}
+
+export interface ImageStackBlock {
+  type: "imageStack";
+  background?: string;
+  gap?: number;
+  fullBleed?: boolean;
+  paddingX?: number;
+  paddingY?: number;
+  noGapAfter?: boolean;
+  images: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  }[];
 }
 
 export interface PlaceholderBlock {
@@ -127,6 +155,15 @@ export interface ProblemSolutionBlock {
   };
 }
 
+export interface BriefHeaderBlock {
+  type: "briefHeader";
+  eyebrow: string;
+  eyebrowColor?: string;
+  title: string;
+  description: string;
+  layout?: "split" | "stacked";
+}
+
 export interface InterviewFindingsBlock {
   type: "interviewFindings";
   eyebrow?: string;
@@ -150,4 +187,7 @@ export type Block =
   | InterviewFindingsBlock
   | ProblemSolutionBlock
   | ResearchHeaderBlock
-  | ReflectionHeaderBlock;
+  | ReflectionHeaderBlock
+  | BriefHeaderBlock
+  | ImageGridBlock
+  | ImageStackBlock;

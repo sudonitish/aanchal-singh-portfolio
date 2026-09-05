@@ -16,7 +16,7 @@ interface BlockRendererProps {
 }
 
 const SECTION_PADDING_CLASS =
-  "px-5 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[var(--wide-gutter)]";
+  "px-5 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[min(120px,var(--wide-gutter))] min-[1500px]:px-[var(--wide-gutter)]";
 
 function SectionDivider({
   withDot = false,
@@ -46,18 +46,31 @@ function SectionDivider({
 
 export default function BlockRenderer({ blocks, wideGutter = 150 }: BlockRendererProps) {
   return (
-    <div className="flex flex-col gap-12 sm:gap-16 lg:gap-20">
+    <div className="flex flex-col">
       {blocks.map((block, index) => {
         const isSelfPadded =
-          block.type === "image" &&
-          (block.fullBleed || block.paddingX || block.paddingY || block.background);
+          (block.type === "image" &&
+            (block.fullBleed || block.paddingX || block.paddingY || block.background)) ||
+          (block.type === "imageStack" && block.fullBleed);
+        const prev = blocks[index - 1];
+        const noGap =
+          index > 0 &&
+          prev &&
+          (prev.type === "image" || prev.type === "imageStack") &&
+          prev.noGapAfter;
+        const spacingClass =
+          index === 0 || noGap ? "" : "mt-12 sm:mt-16 lg:mt-20";
         if (isSelfPadded) {
-          return <BlockItem key={index} block={block} index={index} />;
+          return (
+            <div key={index} className={spacingClass}>
+              <BlockItem block={block} index={index} />
+            </div>
+          );
         }
         return (
           <div
             key={index}
-            className={SECTION_PADDING_CLASS}
+            className={`${spacingClass} ${SECTION_PADDING_CLASS}`}
             style={{ "--wide-gutter": `${wideGutter}px` } as CSSProperties}
           >
             <BlockItem block={block} index={index} />
@@ -451,10 +464,14 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 alt={block.alt}
                 width={block.width}
                 height={block.height}
-                className="h-auto w-full rounded-[20px]"
+                className={
+                  block.rounded === false
+                    ? "h-auto w-full"
+                    : "h-auto w-full rounded-[20px]"
+                }
               />
             );
-            if (!block.background && !block.paddingX && !block.paddingY) {
+            if (!block.background && !block.paddingX && !block.paddingY && !block.fullBleed) {
               return <div key={index}>{image}</div>;
             }
             return (
@@ -467,21 +484,96 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                   block.paddingX
                     ? "px-5 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[var(--section-x)]"
                     : "",
+                  block.paddingY
+                    ? "py-10 min-[640px]:py-16 min-[1020px]:py-20 min-[1200px]:py-24 min-[1500px]:py-[var(--section-y)]"
+                    : "",
                 ]
                   .filter(Boolean)
                   .join(" ")}
                 style={
                   {
                     background: block.background,
-                    paddingTop: block.paddingY,
-                    paddingBottom: block.paddingY,
                     "--section-x": block.paddingX
                       ? `${block.paddingX}px`
+                      : undefined,
+                    "--section-y": block.paddingY
+                      ? `${block.paddingY}px`
                       : undefined,
                   } as CSSProperties
                 }
               >
                 {image}
+              </div>
+            );
+          }
+
+          case "imageGrid":
+            return (
+              <div
+                key={index}
+                className="grid grid-cols-1 items-end gap-6 sm:grid-cols-2"
+              >
+                {block.images.map((img) => (
+                  <Image
+                    key={img.src}
+                    src={img.src}
+                    alt={img.alt}
+                    width={img.width}
+                    height={img.height}
+                    className="h-auto w-full"
+                  />
+                ))}
+              </div>
+            );
+
+          case "imageStack": {
+            const stack = (
+              <div
+                className={[
+                  "flex flex-col",
+                  block.paddingX ? SECTION_PADDING_CLASS : "",
+                  block.paddingY
+                    ? "py-10 min-[640px]:py-16 min-[1020px]:py-20 min-[1200px]:py-24 min-[1500px]:py-[var(--section-y)]"
+                    : "",
+                ]
+                  .filter(Boolean)
+                  .join(" ")}
+                style={
+                  {
+                    background: block.background,
+                    backgroundSize: block.background?.startsWith("url(") ? "cover" : undefined,
+                    backgroundPosition: block.background?.startsWith("url(") ? "center" : undefined,
+                    gap: `clamp(24px, 5vw, ${block.gap ?? 60}px)`,
+                    "--wide-gutter": block.paddingX
+                      ? `${block.paddingX}px`
+                      : undefined,
+                    "--section-y": block.paddingY
+                      ? `${block.paddingY}px`
+                      : undefined,
+                  } as CSSProperties
+                }
+              >
+                {block.images.map((img) => (
+                  <Image
+                    key={img.src}
+                    src={img.src}
+                    alt={img.alt}
+                    width={img.width}
+                    height={img.height}
+                    className="h-auto w-full"
+                  />
+                ))}
+              </div>
+            );
+            if (!block.fullBleed) {
+              return <div key={index}>{stack}</div>;
+            }
+            return (
+              <div
+                key={index}
+                className="relative left-1/2 w-screen -translate-x-1/2"
+              >
+                {stack}
               </div>
             );
           }
@@ -524,6 +616,89 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 )}
               </div>
             );
+
+          case "briefHeader": {
+            const eyebrowEl = (
+              <span
+                style={{
+                  fontFamily: "Inter",
+                  fontStyle: "normal",
+                  fontWeight: 600,
+                  fontSize: "10px",
+                  lineHeight: "15px",
+                  display: "flex",
+                  alignItems: "center",
+                  letterSpacing: "1px",
+                  textTransform: "uppercase",
+                  color: block.eyebrowColor ?? "#C4501A",
+                }}
+              >
+                {block.eyebrow}
+              </span>
+            );
+            const titleEl = (
+              <h2
+                className="max-w-full"
+                style={{
+                  fontFamily: "Inter",
+                  fontStyle: "normal",
+                  fontWeight: 600,
+                  fontSize: "clamp(32px, 5vw, 65px)",
+                  lineHeight: "120%",
+                  letterSpacing: "0px",
+                  color: "rgba(0, 0, 0, 1)",
+                }}
+              >
+                {block.title}
+              </h2>
+            );
+            const descriptionEl = (
+              <p
+                className="max-w-full"
+                style={{
+                  fontFamily: "Inter",
+                  fontStyle: "normal",
+                  fontWeight: 400,
+                  fontSize: "18px",
+                  lineHeight: "150%",
+                  color: "#384149",
+                }}
+              >
+                {block.description}
+              </p>
+            );
+
+            if (block.layout === "stacked") {
+              return (
+                <div
+                  key={index}
+                  className="grid w-full grid-cols-1 gap-[30px] text-left lg:grid-cols-[1fr_1fr] lg:gap-x-[109px] lg:gap-y-[30px]"
+                  style={{ fontFamily: "Inter" }}
+                >
+                  <div className="flex flex-col items-start gap-[15px]">
+                    {eyebrowEl}
+                    {titleEl}
+                  </div>
+                  <div aria-hidden className="hidden lg:block" />
+                  {descriptionEl}
+                </div>
+              );
+            }
+
+            return (
+              <div
+                key={index}
+                className="grid w-full grid-cols-1 gap-[30px] text-left lg:grid-cols-[1fr_1fr] lg:gap-x-[109px] lg:gap-y-[30px]"
+                style={{ fontFamily: "Inter" }}
+              >
+                <div className="flex flex-col items-start gap-[15px] lg:col-span-2">
+                  {eyebrowEl}
+                </div>
+                {titleEl}
+                {descriptionEl}
+              </div>
+            );
+          }
 
           case "interviewFindings":
             return (

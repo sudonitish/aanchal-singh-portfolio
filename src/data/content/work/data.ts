@@ -37,6 +37,7 @@ export const projectsMeta: ProjectMeta[] = [
     tone: "light",
     live: true,
     featured: true,
+    wideGutter: 100,
   },
   {
     slug: "value-research-stock-screener",

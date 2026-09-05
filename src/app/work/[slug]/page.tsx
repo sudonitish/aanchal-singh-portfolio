@@ -49,7 +49,7 @@ export default async function ProjectPage({ params }: PageProps) {
         />
         <div className="relative py-24">
           <article>
-            <div className="relative mx-auto flex max-w-[1080px] flex-col items-center gap-5 text-center">
+            <div className="relative mx-auto flex max-w-[1120px] flex-col items-center gap-5 px-5 text-center">
               <span className="font-dm-sans flex items-center gap-2 rounded-full border border-[#06B6D4]/80 px-[21px] py-[9px] text-base font-semibold text-[#06B6D4]">
                 <span className="h-2 w-2 rounded-full bg-[#06B6D4]" />
                 {project.tag}
