@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/visuals" },
 };
 
-const placeholderTiles = Array.from({ length: 22 }, (_, i) => i);
+const placeholderTiles = Array.from({ length: 20 }, (_, i) => i);
 
 export default function VisualsPage() {
   return (
@@ -41,6 +41,26 @@ export default function VisualsPage() {
           <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
             <Image
               src="/assets/visuals/visual-2.png"
+              alt=""
+              fill
+              aria-hidden
+              className="object-cover"
+              sizes="(min-width: 1024px) 33vw, 50vw"
+            />
+          </div>
+          <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
+            <Image
+              src="/assets/visuals/visual-3.png"
+              alt=""
+              fill
+              aria-hidden
+              className="object-cover"
+              sizes="(min-width: 1024px) 33vw, 50vw"
+            />
+          </div>
+          <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
+            <Image
+              src="/assets/visuals/visual-4.png"
               alt=""
               fill
               aria-hidden

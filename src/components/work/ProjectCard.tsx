@@ -23,10 +23,7 @@ const toneClasses = {
 
 export default function ProjectCard({ project, size = "grid" }: ProjectCardProps) {
   const tone = toneClasses[project.tone];
-  const barHeight =
-    size === "featured"
-      ? "min-h-[60px] sm:h-[75px]"
-      : "min-h-[90px] sm:h-[145px]";
+  const barHeight = "min-h-[60px] sm:h-[75px]";
 
   return (
     <Link

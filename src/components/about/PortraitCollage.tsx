@@ -33,7 +33,7 @@ export default function PortraitCollage() {
           fill
           sizes="(min-width: 1024px) 30vw, 60vw"
           className="object-contain"
-          priority
+          loading="lazy"
         />
       </div>
 

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Nav from "@/components/layout/Nav";
 import BlockRenderer from "@/components/work/BlockRenderer";
 import { projectsMeta } from "@/data/content/work/data";
 import { getProjectBySlug } from "@/data/content/work-details/data";
@@ -43,6 +44,9 @@ export default async function ProjectPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <div className="relative">
+        <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-10">
+          <Nav />
+        </div>
         <div
           aria-hidden
           className="pointer-events-none absolute left-1/2 top-[195px] h-[161px] w-screen -translate-x-1/2 bg-[#FBECD6] blur-[140px]"
