@@ -49,7 +49,8 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[195px] h-[161px] w-screen -translate-x-1/2 bg-[#FBECD6] blur-[140px]"
+          className="pointer-events-none absolute left-1/2 top-[335px] h-[161px] w-screen -translate-x-1/2 blur-[70px]"
+          style={{ background: project.heroBg ?? "rgba(251, 236, 214, 1)" }}
         />
         <div className="relative py-24">
           <article>

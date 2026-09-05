@@ -18,6 +18,8 @@ export interface ProjectMeta {
   featured: boolean;
   /** Horizontal page padding at the 1500px+ breakpoint, in px. Defaults to 150. */
   wideGutter?: number;
+  /** Case study page hero glow background color. Defaults to rgba(251, 236, 214, 1). */
+  heroBg?: string;
 }
 
 export interface Project extends ProjectMeta {
@@ -38,6 +40,7 @@ export const projectsMeta: ProjectMeta[] = [
     live: true,
     featured: true,
     wideGutter: 100,
+    heroBg: "rgba(37, 103, 128, 0.5)",
   },
   {
     slug: "value-research-stock-screener",
@@ -50,6 +53,7 @@ export const projectsMeta: ProjectMeta[] = [
     live: true,
     featured: true,
     wideGutter: 100,
+    heroBg: "rgba(252, 74, 100, 0.5)",
   },
   {
     slug: "whatsapp-message-scheduling",
@@ -63,6 +67,7 @@ export const projectsMeta: ProjectMeta[] = [
     live: false,
     featured: true,
     wideGutter: 225,
+    heroBg: "rgba(251, 236, 214, 1)",
   },
   {
     slug: "ntes-train-tracking-app",
@@ -74,6 +79,7 @@ export const projectsMeta: ProjectMeta[] = [
     tone: "dark",
     live: false,
     featured: true,
+    heroBg: "rgba(255, 231, 205, 1)",
   },
   {
     slug: "chase-sports-adventure-commerce",
@@ -87,5 +93,6 @@ export const projectsMeta: ProjectMeta[] = [
     live: false,
     featured: true,
     wideGutter: 245,
+    heroBg: "rgba(229, 255, 156, 1)",
   },
 ];
