@@ -49,6 +49,7 @@ export const projectsMeta: ProjectMeta[] = [
     tone: "dark",
     live: true,
     featured: true,
+    wideGutter: 100,
   },
   {
     slug: "whatsapp-message-scheduling",

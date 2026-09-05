@@ -652,18 +652,29 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 {block.title}
               </h2>
             );
-            const descriptionEl = (
-              <p
-                className="max-w-full"
-                style={{
-                  fontFamily: "Inter",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: "18px",
-                  lineHeight: "150%",
-                  color: "#384149",
-                }}
-              >
+            const paragraphStyle = {
+              fontFamily: "Inter",
+              fontStyle: "normal",
+              fontWeight: 400,
+              fontSize: "18px",
+              lineHeight: "150%",
+              color: "#384149",
+            } as const;
+            const descriptionEl = Array.isArray(block.description) ? (
+              <div className="flex max-w-full flex-col gap-[30px]">
+                {block.description.map((paragraph, i) => (
+                  <p key={i} style={paragraphStyle}>
+                    {paragraph}
+                  </p>
+                ))}
+              </div>
+            ) : (
+              <p className="max-w-full" style={paragraphStyle}>
+                {block.descriptionLead && (
+                  <span style={{ fontWeight: 600, color: "#000000" }}>
+                    {block.descriptionLead}{" "}
+                  </span>
+                )}
                 {block.description}
               </p>
             );
@@ -691,14 +702,212 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 className="grid w-full grid-cols-1 gap-[30px] text-left lg:grid-cols-[1fr_1fr] lg:gap-x-[109px] lg:gap-y-[30px]"
                 style={{ fontFamily: "Inter" }}
               >
-                <div className="flex flex-col items-start gap-[15px] lg:col-span-2">
-                  {eyebrowEl}
-                </div>
+                {block.eyebrow && (
+                  <div className="flex flex-col items-start gap-[15px] lg:col-span-2">
+                    {eyebrowEl}
+                  </div>
+                )}
                 {titleEl}
                 {descriptionEl}
               </div>
             );
           }
+
+          case "splitList":
+            return (
+              <div
+                key={index}
+                className="grid w-full grid-cols-1 gap-[30px] text-left lg:grid-cols-[591fr_825fr] lg:gap-[266px]"
+                style={{ fontFamily: "Inter" }}
+              >
+                <div className="flex h-full flex-col items-start gap-[30px]">
+                  <div className="flex flex-col items-start gap-[15px]">
+                    {block.eyebrow && (
+                      <span
+                        style={{
+                          fontFamily: "Inter",
+                          fontStyle: "normal",
+                          fontWeight: 600,
+                          fontSize: "10px",
+                          lineHeight: "15px",
+                          display: "flex",
+                          alignItems: "center",
+                          letterSpacing: "1px",
+                          textTransform: "uppercase",
+                          color: block.eyebrowColor ?? "#C4501A",
+                        }}
+                      >
+                        {block.eyebrow}
+                      </span>
+                    )}
+                    <h2
+                      style={{
+                        fontFamily: "Inter",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        fontSize: "clamp(32px, 5vw, 65px)",
+                        lineHeight: "120%",
+                        color: "rgba(0, 0, 0, 1)",
+                      }}
+                    >
+                      {block.title}
+                    </h2>
+                  </div>
+                  {block.description && (
+                    <div className="flex flex-1 flex-col items-start justify-between gap-[30px]">
+                      {Array.isArray(block.description) ? (
+                        block.description.map((paragraph, i) =>
+                          i === 0 ? (
+                            <p
+                              key={i}
+                              style={{
+                                fontFamily: "Inter",
+                                fontStyle: "normal",
+                                fontWeight: 400,
+                                fontSize: "18px",
+                                lineHeight: "150%",
+                                color: "#384149",
+                              }}
+                            >
+                              {paragraph}
+                            </p>
+                          ) : (
+                            <div
+                              key={i}
+                              className="flex flex-row items-center gap-[15px]"
+                            >
+                              <div
+                                className="h-full w-[5px] shrink-0 self-stretch"
+                                style={{ background: "rgba(252, 74, 100, 1)" }}
+                              />
+                              <p
+                                style={{
+                                  fontFamily: "Inter",
+                                  fontStyle: "normal",
+                                  fontWeight: 500,
+                                  fontSize: "18px",
+                                  lineHeight: "120%",
+                                  color: "#8C8C8C",
+                                }}
+                              >
+                                {paragraph}
+                              </p>
+                            </div>
+                          ),
+                        )
+                      ) : (
+                        <p
+                          style={{
+                            fontFamily: "Inter",
+                            fontStyle: "normal",
+                            fontWeight: 400,
+                            fontSize: "18px",
+                            lineHeight: "150%",
+                            color: "#384149",
+                          }}
+                        >
+                          {block.description}
+                        </p>
+                      )}
+                    </div>
+                  )}
+                </div>
+                <div className="flex flex-col items-start gap-[15px]">
+                  {block.items.map((item) => (
+                    <p
+                      key={item.label}
+                      style={{
+                        fontFamily: "Inter",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        fontSize: "18px",
+                        lineHeight: "150%",
+                        color: "#000000",
+                      }}
+                    >
+                      {item.label}
+                      {item.text && (
+                        <span style={{ fontWeight: 400, color: "#384149" }}>
+                          {" "}
+                          — {item.text}
+                        </span>
+                      )}
+                    </p>
+                  ))}
+                </div>
+              </div>
+            );
+
+          case "leadList":
+            return (
+              <div
+                key={index}
+                className="grid w-full grid-cols-1 gap-[30px] text-left lg:grid-cols-[1fr_1fr] lg:gap-x-[109px]"
+                style={{ fontFamily: "Inter" }}
+              >
+                <div className="flex flex-col items-start gap-[30px]">
+                  <h2
+                  style={{
+                    fontFamily: "Inter",
+                    fontStyle: "normal",
+                    fontWeight: 600,
+                    fontSize: "clamp(32px, 5vw, 65px)",
+                    lineHeight: "120%",
+                    color: "rgba(0, 0, 0, 1)",
+                  }}
+                >
+                  {block.title}
+                </h2>
+                <div className="flex w-full flex-col items-start gap-[30px]">
+                  {block.lead && (
+                    <p
+                      style={{
+                        fontFamily: "Inter",
+                        fontStyle: "normal",
+                        fontWeight: 600,
+                        fontSize: "18px",
+                        lineHeight: "150%",
+                        color: "#000000",
+                      }}
+                    >
+                      {block.lead}
+                    </p>
+                  )}
+                  {block.items.map((item) => (
+                    <div
+                      key={item.label}
+                      className="flex w-full flex-col items-start gap-[15px]"
+                    >
+                      <p
+                        style={{
+                          fontFamily: "Inter",
+                          fontStyle: "normal",
+                          fontWeight: 600,
+                          fontSize: "18px",
+                          lineHeight: "120%",
+                          color: "#212427",
+                        }}
+                      >
+                        {item.label}
+                      </p>
+                      <p
+                        style={{
+                          fontFamily: "Inter",
+                          fontStyle: "normal",
+                          fontWeight: 400,
+                          fontSize: "18px",
+                          lineHeight: "120%",
+                          color: "#384149",
+                        }}
+                      >
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              </div>
+            );
 
           case "interviewFindings":
             return (

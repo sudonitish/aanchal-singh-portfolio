@@ -160,8 +160,25 @@ export interface BriefHeaderBlock {
   eyebrow: string;
   eyebrowColor?: string;
   title: string;
-  description: string;
+  description: string | string[];
   layout?: "split" | "stacked";
+  descriptionLead?: string;
+}
+
+export interface SplitListBlock {
+  type: "splitList";
+  eyebrow?: string;
+  eyebrowColor?: string;
+  title: string;
+  description?: string | string[];
+  items: { label: string; text: string }[];
+}
+
+export interface LeadListBlock {
+  type: "leadList";
+  title: string;
+  lead?: string;
+  items: { label: string; text: string }[];
 }
 
 export interface InterviewFindingsBlock {
@@ -190,4 +207,6 @@ export type Block =
   | ReflectionHeaderBlock
   | BriefHeaderBlock
   | ImageGridBlock
-  | ImageStackBlock;
+  | ImageStackBlock
+  | SplitListBlock
+  | LeadListBlock;
