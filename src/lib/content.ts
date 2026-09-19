@@ -11,6 +11,10 @@ export interface HeadingBlock {
   subtitle?: string;
   description?: string;
   descriptionLead?: string;
+  tightSpacingAfter?: boolean;
+  noSpacingAfter?: boolean;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface ParagraphBlock {
@@ -63,6 +67,7 @@ export interface ImageBlock {
   type: "image";
   src: string;
   alt: string;
+  label?: string;
   width: number;
   height: number;
   background?: string;
@@ -71,6 +76,8 @@ export interface ImageBlock {
   fullBleed?: boolean;
   rounded?: boolean;
   noGapAfter?: boolean;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface ImageGridBlock {
@@ -81,6 +88,8 @@ export interface ImageGridBlock {
     width: number;
     height: number;
   }[];
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface ImageStackBlock {
@@ -91,11 +100,14 @@ export interface ImageStackBlock {
   paddingX?: number;
   paddingY?: number;
   noGapAfter?: boolean;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
   images: {
     src: string;
     alt: string;
     width: number;
     height: number;
+    widthPercent?: number;
   }[];
 }
 
@@ -119,6 +131,8 @@ export interface DividerBlock {
   type: "divider";
   withDot?: boolean;
   dotColor?: string;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface ResearchHeaderBlock {
@@ -163,6 +177,8 @@ export interface BriefHeaderBlock {
   description: string | string[];
   layout?: "split" | "stacked";
   descriptionLead?: string;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface SplitListBlock {
@@ -172,6 +188,8 @@ export interface SplitListBlock {
   title: string;
   description?: string | string[];
   items: { label: string; text: string }[];
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface LeadListBlock {
@@ -188,6 +206,8 @@ export interface InterviewFindingsBlock {
   description: string;
   findings: { pill: string; title: string; description: string }[];
   accentColor?: string;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export type Block =

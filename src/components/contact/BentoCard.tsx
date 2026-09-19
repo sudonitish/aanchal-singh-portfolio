@@ -19,14 +19,14 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
     <Link
       href={card.href}
       style={{ flexGrow: card.flex, flexBasis: 260 }}
-      className={`group relative flex flex-col items-center justify-center gap-4 overflow-hidden rounded-card p-6 transition-colors duration-300 ease-out lg:min-w-[260px] lg:flex-1 lg:gap-[13px] lg:p-[19px] ${
+      className={`group relative flex flex-col items-center justify-center gap-[13px] overflow-hidden rounded-card p-[19px] transition-colors duration-300 ease-out lg:min-w-[260px] lg:flex-1 ${
         spanFull ? "col-span-2" : ""
       } ${height} ${card.bg} ${
         hasHoverIcon ? "hover:bg-white" : ""
       } ${card.variant === "arrow" && card.hover?.text ? "hover:bg-[#DFF4FF]" : ""}`}
     >
       <div
-        className={`flex flex-col items-center gap-4 transition-transform duration-300 ease-out ${
+        className={`flex flex-col items-center gap-[13px] transition-transform duration-300 ease-out ${
           isEmail ? "group-hover:scale-[1.28]" : ""
         } ${card.variant === "label" && card.primary ? "absolute inset-0 m-auto h-fit w-fit" : ""}`}
       >
@@ -108,7 +108,7 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
       {card.variant === "arrow" && (
         <>
           {card.hover?.text && (
-            <span className="pointer-events-none absolute inset-0 flex items-center justify-center px-6 text-center font-body text-[40px] font-semibold italic tracking-[-3px] text-[#20719A] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100">
+            <span className="pointer-events-none absolute inset-0 flex items-center justify-center px-[19px] text-center font-body text-[32px] font-semibold italic tracking-[-3px] text-[#20719A] opacity-0 transition-opacity duration-300 ease-out group-hover:opacity-100">
               {card.hover.text}
             </span>
           )}

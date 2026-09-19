@@ -43,7 +43,7 @@ export default function ProjectCard({ project, size = "grid" }: ProjectCardProps
         <div className="flex justify-end p-3 sm:p-[19px]">
           {project.live && (
             <span
-              className={`font-badge z-10 flex items-center gap-1.5 rounded-card border bg-black/[0.02] px-2.5 py-1.5 text-[12px] leading-[16px] backdrop-blur-md sm:px-[10px] sm:py-[6px] sm:text-[11px] sm:leading-[14px] ${tone.badge}`}
+              className={`font-badge z-10 flex items-center gap-[5px] rounded-card border bg-black/[0.02] px-2.5 py-1.5 text-[10px] leading-[13px] backdrop-blur-md sm:px-[10px] sm:py-[6px] ${tone.badge}`}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               {projectCardCopy.liveLabel}
@@ -59,7 +59,7 @@ export default function ProjectCard({ project, size = "grid" }: ProjectCardProps
           >
             {project.name}
           </h3>
-          <span className="shrink-0 rounded-full bg-white px-4 py-1.5 text-[13px] leading-[18px] font-medium text-black shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md sm:px-4 sm:py-[6px] sm:text-[11px]">
+          <span className="shrink-0 rounded-full bg-white px-4 py-1.5 text-[10px] leading-[14px] font-medium text-black shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md sm:px-4 sm:py-[6px] sm:text-[11px]">
             {projectCardCopy.viewLabel}
           </span>
         </div>

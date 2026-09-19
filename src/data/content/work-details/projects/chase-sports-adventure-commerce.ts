@@ -20,6 +20,8 @@ export const chaseContent: Block[] = [
     title: "The Spark",
     description:
       "What happens when an athlete needs a new badminton racket and a camping backpack — but every app only solves half the problem?\n\nSports enthusiasts live multi-sport lives. They play badminton on Tuesday, plan a weekend trek on Wednesday, and browse running shoes on the commute home. Yet every existing platform forces them to silo these needs across multiple apps, multiple carts, and multiple checkout flows.\n\nChase was born from a single question: What if one platform could serve your entire active lifestyle — from the court to the campsite?",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -27,9 +29,8 @@ export const chaseContent: Block[] = [
     alt: "The Problem and The Solution",
     width: 1429,
     height: 744,
-  },
-  {
-    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -37,9 +38,8 @@ export const chaseContent: Block[] = [
     alt: "Design process: Empathize, Define, Ideate, Prototype, Test",
     width: 1441,
     height: 446,
-  },
-  {
-    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "researchHeader",
@@ -86,13 +86,13 @@ export const chaseContent: Block[] = [
       },
     ],
     accentColor: "#D8FB78",
-  },
-  {
-    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "heading",
     title: "User Persona",
+    spacingAfter: 30,
   },
   {
     type: "image",
@@ -100,9 +100,8 @@ export const chaseContent: Block[] = [
     alt: "Persona: Raj Sharma, 26, Marketing Manager, Delhi",
     width: 842,
     height: 595,
-  },
-  {
-    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -112,17 +111,11 @@ export const chaseContent: Block[] = [
     height: 1508,
   },
   {
-    type: "divider",
-  },
-  {
     type: "image",
     src: "/assets/work/chase-sports-adventure-commerce/user-journey-map.png",
     alt: "User journey map across Awareness, Research, Evaluation, Purchase, Delivery, and Usage",
     width: 1429,
     height: 1017,
-  },
-  {
-    type: "divider",
   },
   {
     type: "heading",
@@ -136,12 +129,10 @@ export const chaseContent: Block[] = [
     height: 960,
   },
   {
-    type: "divider",
-  },
-  {
     type: "heading",
     title: "Low - Mid Fidelity Wireframes",
     description: "Low-fidelity wireframes validated the core layout decisions.",
+    spacingAfter: 32,
   },
   {
     type: "image",
@@ -149,15 +140,15 @@ export const chaseContent: Block[] = [
     alt: "Low to mid fidelity wireframes for home, category, product, cart, and checkout screens",
     width: 1429,
     height: 1888,
-  },
-  {
-    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "heading",
     title: "High Fidelity Frames",
     description:
       "The final designs bring together the research insights, IA decisions, and visual system into a polished, production-ready interface. The dark UI with lime-green accents creates a bold, energetic aesthetic that matches the brand's active lifestyle positioning — while maintaining strong contrast and readability.",
+    spacingAfter: 32,
   },
   {
     type: "image",
@@ -165,9 +156,8 @@ export const chaseContent: Block[] = [
     alt: "High fidelity frames for the Chase sports and adventure commerce app",
     width: 1429,
     height: 2220,
-  },
-  {
-    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -175,9 +165,8 @@ export const chaseContent: Block[] = [
     alt: "Style guide covering colors, typography, grid system, and iconography",
     width: 1429,
     height: 3042,
-  },
-  {
-    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "reflectionHeader",

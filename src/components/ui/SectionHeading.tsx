@@ -10,15 +10,15 @@ export default function SectionHeading({
   viewAllHref,
 }: SectionHeadingProps) {
   return (
-    <div className="flex items-center gap-4">
-      <span className="text-[14px] leading-[15px] font-bold tracking-[2.5px] whitespace-normal text-accent-strong uppercase sm:text-[11px] sm:leading-[12px]">
+    <div className="flex items-center gap-[13px]">
+      <span className="text-[11px] leading-[12px] font-bold tracking-[2.5px] whitespace-normal text-accent-strong uppercase">
         {label}
       </span>
       <span className="h-px flex-1 translate-y-[1px] bg-black/10" />
       {viewAllHref && (
         <Link
           href={viewAllHref}
-          className="text-[14px] leading-[15px] font-semibold whitespace-nowrap text-body capitalize underline transition-colors hover:text-brand sm:text-[11px] sm:leading-[12px]"
+          className="text-[11px] leading-[12px] font-semibold whitespace-nowrap text-body capitalize underline transition-colors hover:text-brand"
         >
           View all
         </Link>

@@ -21,10 +21,9 @@ export const ntesContent: Block[] = [
     alt: "NTES redesign, before the 90-seconds section",
     width: 1663,
     height: 897,
-    paddingX: 154,
-  },
-  {
-    type: "divider",
+    paddingX: 123,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -32,10 +31,9 @@ export const ntesContent: Block[] = [
     alt: "Redesign vs current website comparison of the National Train Enquiry System",
     width: 1576,
     height: 446,
-    paddingX: 172,
-  },
-  {
-    type: "divider",
+    paddingX: 138,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -44,12 +42,12 @@ export const ntesContent: Block[] = [
     width: 1353,
     height: 789,
     background: "var(--color-azure-6, rgba(7, 14, 22, 1))",
-    paddingX: 284,
-    paddingY: 144,
+    paddingX: 227,
+    paddingY: 115,
     fullBleed: true,
-  },
-  {
-    type: "divider",
+    rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -57,10 +55,9 @@ export const ntesContent: Block[] = [
     alt: "Findings overview: visual hierarchy, navigation priority, accessibility and display ads",
     width: 1599,
     height: 3420,
-    paddingX: 172,
-  },
-  {
-    type: "divider",
+    paddingX: 138,
+    spacingAfter: 254,
+    spacingAfterMobile: 127,
   },
   {
     type: "image",
@@ -68,7 +65,9 @@ export const ntesContent: Block[] = [
     alt: "For 20 million people, small changes compound",
     width: 1576,
     height: 414,
-    paddingX: 172,
+    paddingX: 138,
+    spacingAfter: 254,
+    spacingAfterMobile: 127,
   },
   {
     type: "divider",
@@ -79,16 +78,9 @@ export const ntesContent: Block[] = [
     alt: "NTES redesign shown on laptop and phone",
     width: 1513,
     height: 3257,
-    paddingX: 204,
-  },
-  {
-    type: "divider",
-  },
-  {
-    type: "heading",
-    title: "Screen Designs",
-    description:
-      "Home, PNR Status, Find Trains and Live Tracking — redesigned side by side with the current NTES flows, desktop and mobile.",
+    paddingX: 163,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",

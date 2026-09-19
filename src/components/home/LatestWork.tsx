@@ -24,13 +24,13 @@ export default function LatestWork() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-[30px]">
+    <div className="flex flex-col gap-6">
       <SectionHeading label={homePage.latestWorkLabel} />
-      <div className="flex flex-col gap-[30px]">
+      <div className="flex flex-col gap-6">
         <div ref={featuredRef} className="aspect-[4/3] w-full sm:aspect-[1281/620]">
           <ProjectCard project={first} size="featured" />
         </div>
-        <div className="grid gap-[30px] sm:grid-cols-2">
+        <div className="grid gap-6 sm:grid-cols-2">
           {rest.map((project) => (
             <div
               key={project.slug}

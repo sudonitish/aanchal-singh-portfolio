@@ -4,10 +4,10 @@ import { toolsLabel, tools } from "@/data/content/about/data";
 
 export default function Tools() {
   return (
-    <section className="flex flex-col gap-[30px]">
+    <section className="flex flex-col gap-6">
       <SectionHeading label={toolsLabel} />
 
-      <div className="flex flex-wrap items-center gap-6 sm:gap-7">
+      <div className="flex flex-wrap items-center gap-[19px] sm:gap-[22px]">
         {tools.map((tool) => (
           <div
             key={tool.name}

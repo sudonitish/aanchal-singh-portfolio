@@ -15,24 +15,24 @@ export default function HowIDesign() {
   const [questions, simplify, flow, intent, effortless] = designPrinciples.items;
 
   return (
-    <section className="flex flex-col gap-[30px]">
+    <section className="flex flex-col gap-6">
       <SectionHeading label={designPrinciplesHeading.eyebrow ?? ""} />
 
       <div className="flex flex-col justify-between gap-8 lg:flex-row lg:items-center lg:gap-16">
         <h2 className="max-w-[420px] text-[36px] leading-[44px] font-bold text-surface-dark sm:text-[38px] sm:leading-[46px] lg:text-[48px] lg:leading-[61px]">
           {designPrinciplesHeading.title}
         </h2>
-        <p className="max-w-[463px] text-[14px] leading-[25px] text-muted">
+        <p className="max-w-[463px] text-[11px] leading-5 text-muted">
           {designPrinciplesHeading.description}
         </p>
       </div>
 
-      <div className="flex flex-col gap-4 sm:flex-row">
+      <div className="flex flex-col gap-[13px] sm:flex-row">
         <DesignCard src={CARD_IMAGES[0]} alt={questions.title} aspect="462/387" className="flex-1" />
         <DesignCard src={CARD_IMAGES[1]} alt={simplify.title} aspect="462/387" className="flex-1" />
         <DesignCard src={CARD_IMAGES[2]} alt={flow.title} aspect="462/387" className="flex-1" />
       </div>
-      <div className="flex flex-col gap-4 sm:flex-row">
+      <div className="flex flex-col gap-[13px] sm:flex-row">
         <DesignCard src={CARD_IMAGES[3]} alt={intent.title} aspect="824/387" className="sm:flex-[1.41]" />
         <DesignCard src={CARD_IMAGES[4]} alt={effortless.title} aspect="584/387" className="sm:flex-1" />
       </div>

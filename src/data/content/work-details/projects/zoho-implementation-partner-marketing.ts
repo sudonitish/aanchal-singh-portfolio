@@ -15,6 +15,8 @@ export const zohoContent: Block[] = [
     type: "divider",
     withDot: true,
     dotColor: "rgba(196, 80, 26, 1)",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -24,22 +26,20 @@ export const zohoContent: Block[] = [
     height: 800,
     fullBleed: true,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
-  {
-    type: "divider",
-  },
-  {
+    {
     type: "briefHeader",
     eyebrow: "THE BRIEF",
     eyebrowColor: "#C4501A",
     title: "From 40 Pages of Copy to a Strategic Interface",
     description:
       "Dynamic Mavens wins clients through a process-first approach: mapping operations before building, documenting decisions, and being honest when Zoho isn't a fit. But their website was built on a generic template that buried their value. I was handed five dense content documents, total 40 pages of text, without any visual hierarchy or layout direction. I translated this wall of copy into a structured interface designed for immediate trust, high scannability, and clear conversion paths.",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
-  {
-    type: "divider",
-  },
-  {
+    {
     type: "briefHeader",
     layout: "stacked",
     eyebrow: "THE PROBLEM",
@@ -47,6 +47,8 @@ export const zohoContent: Block[] = [
     title: "What the old design was doing wrong",
     description:
       "Before starting the redesign, I audited the existing website to understand where users were likely struggling.",
+    spacingAfter: 32,
+    spacingAfterMobile: 16,
   },
   {
     type: "image",
@@ -55,28 +57,28 @@ export const zohoContent: Block[] = [
     width: 1720,
     height: 412,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
-  {
-    type: "divider",
-  },
-  {
+    {
     type: "image",
     src: "/assets/work/zoho-implementation-partner-marketing/business-user-goals.png",
     alt: "Business goals and user goals shown on the redesigned landing page",
     width: 1720,
     height: 660,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
-  {
-    type: "divider",
-  },
-  {
+    {
     type: "image",
     src: "/assets/work/zoho-implementation-partner-marketing/conversion-funnel-ia.png",
     alt: "Information architecture: the website designed as a conversion funnel",
     width: 1720,
     height: 774,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -85,11 +87,10 @@ export const zohoContent: Block[] = [
     width: 1720,
     height: 947,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
-  {
-    type: "divider",
-  },
-  {
+    {
     type: "imageGrid",
     images: [
       {
@@ -105,6 +106,8 @@ export const zohoContent: Block[] = [
         height: 732,
       },
     ],
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -118,8 +121,8 @@ export const zohoContent: Block[] = [
     type: "imageStack",
     background: "rgba(243, 229, 220, 1)",
     fullBleed: true,
-    paddingX: 100,
-    paddingY: 150,
+    paddingX: 80,
+    paddingY: 120,
     noGapAfter: true,
     images: [
       {
@@ -149,11 +152,12 @@ export const zohoContent: Block[] = [
   {
     type: "imageStack",
     background: "url(/assets/work/zoho-implementation-partner-marketing/sequence-2-bg.svg)",
-    gap: 150,
+    gap: 120,
     fullBleed: true,
-    paddingX: 100,
-    paddingY: 150,
-    noGapAfter: true,
+    paddingX: 80,
+    paddingY: 120,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
     images: [
       {
         src: "/assets/work/zoho-implementation-partner-marketing/sequence-2-a.png",
@@ -166,6 +170,7 @@ export const zohoContent: Block[] = [
         alt: "Repeatable pattern sequence, part 2b",
         width: 1383,
         height: 161,
+        widthPercent: 91,
       },
     ],
   },
@@ -177,11 +182,10 @@ export const zohoContent: Block[] = [
     height: 682,
     fullBleed: true,
     rounded: false,
+    spacingAfter: 240,
+    spacingAfterMobile: 120,
   },
-  {
-    type: "divider",
-  },
-  {
+    {
     type: "thankYou",
     text: "Thank you",
     accentColor: "#C4501A",

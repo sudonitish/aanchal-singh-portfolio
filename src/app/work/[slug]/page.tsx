@@ -44,30 +44,30 @@ export default async function ProjectPage({ params }: PageProps) {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <div className="relative">
-        <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-10">
+        <div className="px-5 pt-6 sm:pt-[26px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-8">
           <Nav />
         </div>
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[335px] h-[161px] w-screen -translate-x-1/2 blur-[70px]"
+          className="pointer-events-none absolute left-1/2 top-[220px] h-[161px] w-screen -translate-x-1/2 blur-[90px]"
           style={{ background: project.heroBg ?? "rgba(251, 236, 214, 1)" }}
         />
         <div className="relative py-24">
           <article>
-            <div className="relative mx-auto flex max-w-[1120px] flex-col items-center gap-5 px-5 text-center">
-              <span className="font-dm-sans flex items-center gap-2 rounded-full border border-[#06B6D4]/80 px-[21px] py-[9px] text-base font-semibold text-[#06B6D4]">
+            <div className="relative mx-auto flex max-w-[1120px] flex-col items-center gap-4 px-5 text-center">
+              <span className="font-dm-sans flex items-center gap-1.5 rounded-full border border-[#06B6D4]/80 px-[17px] py-[7px] text-[13px] font-semibold text-[#06B6D4]">
                 <span className="h-2 w-2 rounded-full bg-[#06B6D4]" />
                 {project.tag}
               </span>
-              <h1 className="text-[32px] font-extrabold leading-[1.15] text-black sm:text-6xl lg:text-[72px] lg:leading-[87px]">
+              <h1 className="text-[32px] font-extrabold leading-[1.15] text-black sm:text-[48px] lg:text-[58px] lg:leading-[70px]">
                 {project.name}
               </h1>
-              <p className="max-w-2xl text-[18px] leading-[22px] text-[#8C8C8C]">
+              <p className="max-w-2xl text-[14px] leading-[18px] text-[#8C8C8C]">
                 {project.overview}
               </p>
             </div>
 
-            <div className="mt-20">
+            <div className="mt-16">
               <BlockRenderer blocks={project.content} wideGutter={project.wideGutter ?? 150} />
             </div>
           </article>

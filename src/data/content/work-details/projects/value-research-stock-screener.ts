@@ -15,6 +15,8 @@ export const valueResearchContent: Block[] = [
     type: "divider",
     withDot: true,
     dotColor: "rgba(252, 74, 100, 1)",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -23,6 +25,8 @@ export const valueResearchContent: Block[] = [
     width: 1720,
     height: 876,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "briefHeader",
@@ -33,6 +37,8 @@ export const valueResearchContent: Block[] = [
       "Value Research is one of India's most trusted mutual-fund and stock research platforms. Its stock screener is where an investor turns a universe of 150-200+ securities into a shortlist worth researching. I led its redesign across web and mobile.",
       "The old screener worked. It just optimized for the wrong thing — showing every data point rather than helping someone decide. This is how I reframed it, and what changed.",
     ],
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -41,6 +47,8 @@ export const valueResearchContent: Block[] = [
     width: 1720,
     height: 692,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "splitList",
@@ -75,14 +83,19 @@ export const valueResearchContent: Block[] = [
         text: "“3 filters applied,” but not which three. No screen-reader header semantics, no empty or paywall states.",
       },
     ],
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
     src: "/assets/work/value-research-stock-screener/new-design-mobile.png",
+    label: "New Design",
     alt: "Redesigned stock screener on mobile: predefined screens, saved screens, and the column picker",
     width: 1720,
     height: 793,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "leadList",
@@ -103,6 +116,8 @@ export const valueResearchContent: Block[] = [
         text: "Filters were a silent “3 applied” (you had to remember what was constraining the list), raw metrics assumed you knew what they meant, and the empty and paywall states didn't exist. Now the filter builder shows exactly what's applied with a live count of stocks remaining, tooltips explain each metric in place, and the range visual shows where a price sits in its band, so the answer is on screen instead of reconstructed in your head.",
       },
     ],
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
@@ -111,6 +126,8 @@ export const valueResearchContent: Block[] = [
     width: 1720,
     height: 536,
     rounded: false,
+    spacingAfter: 60,
+    spacingAfterMobile: 30,
   },
   {
     type: "image",
@@ -119,6 +136,8 @@ export const valueResearchContent: Block[] = [
     width: 1720,
     height: 536,
     rounded: false,
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "briefHeader",
@@ -128,30 +147,30 @@ export const valueResearchContent: Block[] = [
     descriptionLead: "The hard part wasn't visual -",
     description:
       "the old screener already looked like a Value Research product. It was resisting the instinct that a research tool proves its worth by showing more. Showing everything isn't power; it just hands the work of prioritizing back to the person who came to the tool to prioritize. So the redesign is subtractive where it counts and additive where it helps. None of the moves are flashy. Together they change what the screener is for - from a place that displays data to one that helps you decide.",
-  },
-  {
-    type: "heading",
-    title: "Illustrations",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
     src: "/assets/work/value-research-stock-screener/illustrations.png",
+    label: "Illustrations",
     alt: "Hand-drawn financial illustrations used across empty and onboarding states",
     width: 1720,
     height: 571,
     rounded: false,
-  },
-  {
-    type: "heading",
-    title: "Components",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
   },
   {
     type: "image",
     src: "/assets/work/value-research-stock-screener/component-library.png",
+    label: "Components",
     alt: "Component library: filters, save screen dialog, and rating controls",
     width: 1720,
     height: 1113,
     rounded: false,
+    spacingAfter: 240,
+    spacingAfterMobile: 120,
   },
   {
     type: "thankYou",

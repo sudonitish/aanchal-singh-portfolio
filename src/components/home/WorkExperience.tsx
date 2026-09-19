@@ -4,11 +4,11 @@ import { homePage } from "@/data/content/home/data";
 
 export default function WorkExperience() {
   return (
-    <div className="flex w-full flex-col items-center gap-5 px-5 py-10 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[256px]">
-      <p className="text-[14px] leading-8 font-bold text-black/60 sm:text-[11px] sm:leading-[26px]">
+    <div className="flex w-full flex-col items-center gap-4 px-5 py-10 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[256px]">
+      <p className="text-[11px] leading-[26px] font-bold text-black/60">
         {homePage.workExperienceLabel}
       </p>
-      <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-[35px]">
+      <div className="flex flex-wrap items-center justify-center gap-6 sm:gap-7">
         {clientLogos.map((logo) => (
           <Image
             key={logo.name}

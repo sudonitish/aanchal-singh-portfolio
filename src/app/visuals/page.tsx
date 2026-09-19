@@ -17,7 +17,7 @@ export default function VisualsPage() {
         <Nav />
       </div>
       <div className="flex flex-col gap-16 px-5 py-10 sm:gap-16 sm:py-[51px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px]">
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-4">
           <h1 className="text-4xl font-semibold text-ink sm:text-[38px] lg:text-[48px]">
             Design Showcase
           </h1>
@@ -27,7 +27,7 @@ export default function VisualsPage() {
           </p>
         </div>
 
-        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div className="relative aspect-[502/350] overflow-hidden rounded-card border border-[#FBECD6] bg-white">
             <Image
               src="/assets/visuals/visual-1.png"
@@ -73,7 +73,7 @@ export default function VisualsPage() {
               key={tile}
               className="flex aspect-[502/350] items-center justify-center rounded-card bg-surface-4"
             >
-              <span className="font-dm-sans text-lg font-semibold text-[#6b6d75] sm:text-[14px]">
+              <span className="font-dm-sans text-[14px] font-semibold text-[#6b6d75]">
                 Coming soon...
               </span>
             </div>

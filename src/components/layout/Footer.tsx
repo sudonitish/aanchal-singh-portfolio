@@ -12,12 +12,12 @@ function SongsTrack() {
   return (
     <>
       {footerContent.songs.map((song, index) => (
-        <span key={song} className="flex items-center gap-2">
-          <span className="font-display-script text-[20px] leading-6 text-accent-teal sm:text-[30px]">
+        <span key={song} className="flex items-center gap-1.5">
+          <span className="font-display-script text-[20px] leading-[19px] text-accent-teal sm:text-[24px]">
             {song}
           </span>
           {index < footerContent.songs.length - 1 && (
-            <span className="h-1.5 w-1.5 rounded-full bg-accent-teal" aria-hidden />
+            <span className="h-[5px] w-[5px] rounded-full bg-accent-teal" aria-hidden />
           )}
         </span>
       ))}
@@ -27,9 +27,9 @@ function SongsTrack() {
 
 function MarqueeTrack() {
   return (
-    <div className="marquee-track flex w-max flex-nowrap items-center gap-2">
+    <div className="marquee-track flex w-max flex-nowrap items-center gap-1.5">
       <SongsTrack />
-      <span className="h-1.5 w-1.5 rounded-full bg-accent-teal" aria-hidden />
+      <span className="h-[5px] w-[5px] rounded-full bg-accent-teal" aria-hidden />
       <SongsTrack />
     </div>
   );
@@ -40,20 +40,20 @@ function EndMessage({ isMobile }: { isMobile: boolean | null }) {
 
   if (isMobile) {
     return (
-      <p className="flex max-w-full flex-wrap items-center justify-center gap-2 px-2 text-center">
-        <span className="font-sans text-[13px] leading-5 font-medium text-accent-teal">
+      <p className="flex max-w-full flex-wrap items-center justify-center gap-1.5 px-1.5 text-center">
+        <span className="font-sans text-[10px] leading-4 font-medium text-accent-teal">
           {footerContent.endMessage.pre}
         </span>
-        <span className="flex items-baseline gap-1">
-          <span className="font-cursive text-[20px] leading-5 text-gold">
+        <span className="flex items-baseline gap-[3px]">
+          <span className="font-cursive text-base leading-4 text-gold">
             {footerContent.endMessage.emphasis}
           </span>
           <Image
             src={assets.confettiLinesIcon}
             alt=""
-            width={29.2}
-            height={39.58}
-            className="h-5 w-4"
+            width={23}
+            height={32}
+            className="h-4 w-[13px]"
             aria-hidden
           />
         </span>
@@ -97,7 +97,7 @@ function SongsWithTakeMeBack({ isMobile }: { isMobile: boolean | null }) {
 
   if (isMobile) {
     return (
-      <div className="w-[260px] overflow-hidden">
+      <div className="w-[208px] overflow-hidden">
         <MarqueeTrack />
       </div>
     );
@@ -164,7 +164,7 @@ export default function Footer() {
               <a
                 key={link.type}
                 href={link.href}
-                className="inline-flex items-center gap-1.5 font-sans text-[14px] leading-6 font-semibold text-accent-teal transition-colors hover:text-brand sm:text-[16px]"
+                className="inline-flex items-center gap-[5px] font-sans text-[11px] leading-[19px] font-semibold text-accent-teal transition-colors hover:text-brand sm:text-[13px]"
               >
                 {link.label}
                 <ArrowUpRightIcon />
@@ -173,24 +173,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex w-full flex-col items-center gap-6 sm:flex-row sm:justify-between sm:gap-[13px]">
-          <span className="flex items-center gap-2 px-4 py-2 font-sans text-[12px] leading-5 font-medium text-ink backdrop-blur-[2px] sm:gap-[10px] sm:px-4 sm:py-2 sm:text-[14px]">
+        <div className="flex w-full flex-col items-center gap-[19px] sm:flex-row sm:justify-between sm:gap-[19px]">
+          <span className="flex items-center gap-1.5 px-[13px] py-1.5 font-sans text-[10px] leading-4 font-medium text-ink backdrop-blur-[2px] sm:gap-[10px] sm:px-[13px] sm:py-1.5 sm:text-[11px]">
             {footerContent.madeWithLabel}
             <Image
               src={assets.headphoneCoffeeIcon}
               alt=""
-              width={81}
-              height={30}
-              className="h-6 w-[65px] sm:h-6 sm:w-[65px]"
+              width={65}
+              height={24}
+              className="h-[19px] w-[52px] sm:h-[19px] sm:w-[52px]"
               aria-hidden
             />
           </span>
 
-          <div className="px-4 py-2 backdrop-blur-[2px] sm:px-4 sm:py-2">
+          <div className="px-[13px] py-1.5 backdrop-blur-[2px] sm:px-[13px] sm:py-1.5">
             <SongsWithTakeMeBack isMobile={isMobile} />
           </div>
 
-          <span className="px-4 py-2 font-sans text-[12px] leading-5 font-medium text-ink backdrop-blur-[2px] sm:px-4 sm:py-2 sm:text-[14px]">
+          <span className="px-[13px] py-1.5 font-sans text-[10px] leading-4 font-medium text-ink backdrop-blur-[2px] sm:px-[13px] sm:py-1.5 sm:text-[11px]">
             &copy; {START_YEAR} Aanchal.Portfolio
           </span>
         </div>

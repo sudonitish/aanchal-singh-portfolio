@@ -66,6 +66,7 @@ export const whatsappSchedulingContent: Block[] = [
     subtitle: "COMPETITIVE MARKET ANALYSIS",
     description:
       "I conducted a competitive market analysis of other messaging apps like Telegram and Facebook Messenger, both of which have message scheduling features. The analysis focused on understanding the strengths and weaknesses of these features and identifying opportunities to create a superior user experience within WhatsApp.",
+    tightSpacingAfter: true,
   },
   {
     type: "image",
@@ -84,6 +85,7 @@ export const whatsappSchedulingContent: Block[] = [
       "To Gain a better understanding of user needs, I conducted user interviews",
     description:
       "with 5 WhatsApp users, including professionals, students and general users. The interviews focused on their communication habits, the challenges they face with scheduling messages and their expectations of such a feature.",
+    tightSpacingAfter: true,
   },
   {
     type: "list",
@@ -119,6 +121,7 @@ export const whatsappSchedulingContent: Block[] = [
     title: "User Personas",
     description:
       "With the knowledge and insights gained from the interviews, personas were created to understand the unique qualities, preferences and behaviours of the people most likely to benefit from the added feature.",
+    tightSpacingAfter: true,
   },
   {
     type: "image",
@@ -196,6 +199,7 @@ export const whatsappSchedulingContent: Block[] = [
     title: "User Flow",
     description:
       "I created a user flow chart to show the ways in which users might interact with this new feature. Doing this would help me make sure I include all necessary key frames I would need as I created wireframes for my prototype.",
+    tightSpacingAfter: true,
   },
   {
     type: "image",
@@ -212,6 +216,7 @@ export const whatsappSchedulingContent: Block[] = [
     title: "Low - Mid Fidelity Wireframes",
     description:
       "I went ahead with drafting annotated low fidelity frames that would help visualise how this new feature would fit in WhatsApp's existing interface.",
+    tightSpacingAfter: true,
   },
   {
     type: "image",
@@ -228,6 +233,7 @@ export const whatsappSchedulingContent: Block[] = [
     title: "High Fidelity Frames",
     description:
       "After figuring out how the feature could work as well as placement, I proceeded to design high-fidelity frames. It was imperative that this new feature fit seamlessly into WhatsApp's interface. The same colors, fonts and graphics were used.",
+    tightSpacingAfter: true,
   },
   {
     type: "image",

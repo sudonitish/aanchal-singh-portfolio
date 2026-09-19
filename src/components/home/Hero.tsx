@@ -45,8 +45,8 @@ export default function Hero() {
         <Nav />
 
         <div className="mt-10 flex max-w-full flex-col gap-4 sm:mt-[45px] lg:mt-16 lg:max-w-[911px] lg:gap-5">
-          <div className="flex flex-col gap-2 lg:gap-2">
-            <p className="font-heading text-[12px] leading-[14px] tracking-[2px] text-black/60 uppercase sm:text-[11px]">
+          <div className="flex flex-col gap-1.5 lg:gap-1.5">
+            <p className="font-heading text-[10px] leading-[11px] tracking-[2px] text-black/60 uppercase sm:text-[10px]">
               {personalInfo.tagline}
             </p>
             <h1 className="font-sans text-[26px] leading-[32px] font-semibold tracking-[-0.5px] whitespace-normal text-body sm:text-[35px] sm:leading-[42px] sm:tracking-[-2px] sm:whitespace-pre-line lg:text-[48px] lg:leading-[56px] lg:tracking-[-3px]">
@@ -60,19 +60,19 @@ export default function Hero() {
             </h1>
           </div>
 
-          <p className="font-heading max-w-full text-[16px] leading-[24px] font-medium tracking-[-0.4px] text-body sm:text-[16px] sm:leading-[22px] lg:max-w-[753px] lg:text-[19px] lg:leading-[27px] lg:tracking-[-0.8px]">
+          <p className="font-heading max-w-full text-[13px] leading-[19px] font-medium tracking-[-0.4px] text-body sm:text-[13px] sm:leading-[22px] lg:max-w-[753px] lg:text-[19px] lg:leading-[27px] lg:tracking-[-0.8px]">
             {personalInfo.subtext}
           </p>
 
           {device !== null && !device.isMobile && (
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-wrap gap-[10px]">
               <HeroCta />
             </div>
           )}
         </div>
 
         {device !== null && device.isMobile && (
-          <div className="mt-auto flex gap-3">
+          <div className="mt-auto flex gap-[10px]">
             <HeroCta primaryClassName="flex-1" />
           </div>
         )}

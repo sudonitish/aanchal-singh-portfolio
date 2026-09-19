@@ -3,7 +3,7 @@ import { expectations, expectationsHeading } from "@/data/content/about/data";
 
 export default function Expectations() {
   return (
-    <section className="flex flex-col gap-[30px]">
+    <section className="flex flex-col gap-6">
       <SectionHeading label={expectationsHeading.eyebrow ?? ""} />
 
       <div className="group relative py-10">
@@ -26,7 +26,7 @@ export default function Expectations() {
           </text>
         </svg>
 
-        <div className="relative grid gap-4 pt-16 sm:grid-cols-2 sm:pt-[90px] lg:grid-cols-4 lg:pt-[115px]">
+        <div className="relative grid gap-[13px] pt-16 sm:grid-cols-2 sm:pt-[90px] lg:grid-cols-4 lg:pt-[115px]">
           {expectations.map((item) => (
             <div
               key={item.category}
@@ -35,17 +35,17 @@ export default function Expectations() {
             >
               <span
                 aria-hidden
-                className="absolute top-0 right-[18px] text-[60px] leading-[95px] font-normal tracking-[-5.675px] text-black/[0.07]"
+                className="absolute top-0 right-[18px] text-[48px] leading-[76px] font-normal tracking-[-5.675px] text-black/[0.07]"
               >
                 {item.index}
               </span>
-              <span className="absolute top-[48px] left-[30px] text-[10px] font-semibold tracking-[2px] text-black/[0.28] uppercase">
+              <span className="absolute top-[48px] left-[30px] text-[8px] font-semibold tracking-[2px] text-black/[0.28] uppercase">
                 {item.category}
               </span>
-              <p className="absolute top-[83px] left-[30px] w-[175px] text-[18px] leading-[23px] font-bold tracking-[-0.312px] text-surface-dark">
+              <p className="absolute top-[83px] left-[30px] w-[175px] text-[14px] leading-[18px] font-bold tracking-[-0.312px] text-surface-dark">
                 {item.heading}
               </p>
-              <p className="absolute top-[178px] left-[30px] max-w-[calc(100%-60px)] text-[14px] leading-[21px] text-muted">
+              <p className="absolute top-[178px] left-[30px] max-w-[calc(100%-60px)] text-[11px] leading-[17px] text-muted">
                 {item.body}
               </p>
             </div>

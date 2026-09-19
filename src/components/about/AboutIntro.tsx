@@ -39,10 +39,10 @@ export default function AboutIntro() {
 
         <div className="flex flex-1 flex-col items-center justify-center gap-12 py-12 sm:py-[51px] min-[1200px]:items-start min-[1200px]:justify-center min-[1200px]:py-16 min-[1200px]:pt-32">
           <div className="flex w-full flex-col gap-4 min-[1200px]:w-[50%]">
-            <span className="font-heading text-[16px] leading-[16px] font-medium tracking-normal text-body uppercase min-[1200px]:text-[13px] min-[1200px]:leading-[13px]">
+            <span className="font-heading text-[13px] leading-[13px] font-medium tracking-normal text-body uppercase">
               {aboutPage.eyebrow}
             </span>
-            <p className="font-heading text-[22px] leading-[30px] font-normal tracking-normal text-body sm:text-[21px] sm:leading-[27px] lg:text-[24px] lg:leading-[32px]">
+            <p className="font-heading text-[18px] leading-6 font-normal tracking-normal text-body sm:text-[18px] sm:leading-6 lg:text-[24px] lg:leading-[32px]">
               {aboutPage.introPrefix}
               <span className="font-brush text-[1.67em] leading-none">
                 {aboutPage.introName.charAt(0)}

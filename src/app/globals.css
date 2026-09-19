@@ -10,6 +10,16 @@ html {
   }
 }
 
+.spacing-custom {
+  margin-top: var(--spacing-mobile);
+}
+
+@media (min-width: 640px) {
+  .spacing-custom {
+    margin-top: var(--spacing-desktop);
+  }
+}
+
 :root {
   --background: #ffffff;
   --foreground: #4f4f4f;
@@ -18,7 +28,8 @@ html {
   --color-brand-foreground: #fcfcfc;
   --color-hero-from: #a1f0ff;
   --color-hero-to: #ebe2d4;
-  --color-logo-hover: #b8860b;
+  --color-logo-hover: #ddb431;
+  --color-logo-hover-center: #8f7341;
   --color-gold: #a9824f;
   --color-maroon: #863234;
   --color-badge-border: #251548;
@@ -86,6 +97,7 @@ html {
   --color-hero-from: var(--color-hero-from);
   --color-hero-to: var(--color-hero-to);
   --color-logo-hover: var(--color-logo-hover);
+  --color-logo-hover-center: var(--color-logo-hover-center);
   --color-gold: var(--color-gold);
   --color-maroon: var(--color-maroon);
   --color-badge-border: var(--color-badge-border);
