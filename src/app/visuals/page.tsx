@@ -13,15 +13,15 @@ const placeholderTiles = Array.from({ length: 20 }, (_, i) => i);
 export default function VisualsPage() {
   return (
     <>
-      <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-10">
+      <div className="px-5 pt-6 sm:pt-[26px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-8">
         <Nav />
       </div>
-      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-20 sm:py-16 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px]">
+      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-16 sm:py-[51px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px]">
         <div className="flex flex-col gap-5">
-          <h1 className="text-4xl font-semibold text-ink sm:text-5xl lg:text-[60px]">
+          <h1 className="text-4xl font-semibold text-ink sm:text-[38px] lg:text-[48px]">
             Design Showcase
           </h1>
-          <p className="max-w-2xl text-lg text-[#6b6d75] sm:text-2xl">
+          <p className="max-w-2xl text-lg text-[#6b6d75] sm:text-[19px]">
             A collection of design explorations, creative experiments, and
             visual storytelling
           </p>
@@ -71,9 +71,12 @@ export default function VisualsPage() {
           {placeholderTiles.map((tile) => (
             <div
               key={tile}
-              className="aspect-[502/350] rounded-card bg-surface-4"
-              aria-hidden
-            />
+              className="flex aspect-[502/350] items-center justify-center rounded-card bg-surface-4"
+            >
+              <span className="font-dm-sans text-lg font-semibold text-[#6b6d75] sm:text-[14px]">
+                Coming soon...
+              </span>
+            </div>
           ))}
         </div>
       </div>

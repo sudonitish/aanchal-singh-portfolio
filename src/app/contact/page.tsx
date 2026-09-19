@@ -15,10 +15,10 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-10">
+      <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-10">
         <Nav />
       </div>
-      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-20 sm:py-16 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[246px]">
+      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-20 sm:py-16 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[197px]">
         <h1 className="sr-only">{contactPage.heading}</h1>
 
         <div className="flex flex-col gap-5 rounded-card border border-[#E9E9E9] p-4 sm:p-8">

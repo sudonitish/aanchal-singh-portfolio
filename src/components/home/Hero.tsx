@@ -25,7 +25,7 @@ export default function Hero() {
 
   return (
     <section
-      className="grid min-h-[600px] overflow-hidden lg:min-h-[950px]"
+      className="grid min-h-[600px] overflow-hidden lg:min-h-[760px]"
       style={{
         background:
           "linear-gradient(180deg, var(--color-hero-from) 26.44%, var(--color-hero-to) 72.6%)",
@@ -41,31 +41,31 @@ export default function Hero() {
         <source src={assets.heroVideo} type="video/mp4" />
       </video>
 
-      <div className="col-start-1 row-start-1 flex h-full flex-col px-5 pt-8 pb-8 sm:pt-12 sm:pb-10 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[150px] lg:pt-20 lg:pb-0">
+      <div className="col-start-1 row-start-1 flex h-full flex-col px-5 pt-8 pb-8 sm:pt-[38px] sm:pb-8 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-16 lg:pb-0">
         <Nav />
 
-        <div className="mt-10 flex max-w-full flex-col gap-4 sm:mt-14 lg:mt-20 lg:max-w-[911px] lg:gap-[25px]">
-          <div className="flex flex-col gap-2 lg:gap-2.5">
-            <p className="font-heading text-[12px] leading-[14px] tracking-[2px] text-black/60 uppercase sm:text-[14px]">
+        <div className="mt-10 flex max-w-full flex-col gap-4 sm:mt-[45px] lg:mt-16 lg:max-w-[911px] lg:gap-5">
+          <div className="flex flex-col gap-2 lg:gap-2">
+            <p className="font-heading text-[12px] leading-[14px] tracking-[2px] text-black/60 uppercase sm:text-[11px]">
               {personalInfo.tagline}
             </p>
-            <h1 className="font-sans text-[26px] leading-[32px] font-semibold tracking-[-0.5px] whitespace-normal text-body sm:text-[44px] sm:leading-[52px] sm:tracking-[-2px] sm:whitespace-pre-line lg:text-[60px] lg:leading-[70px] lg:tracking-[-3px]">
+            <h1 className="font-sans text-[26px] leading-[32px] font-semibold tracking-[-0.5px] whitespace-normal text-body sm:text-[35px] sm:leading-[42px] sm:tracking-[-2px] sm:whitespace-pre-line lg:text-[48px] lg:leading-[56px] lg:tracking-[-3px]">
               {personalInfo.headline.line1}
               <br />
               {personalInfo.headline.line2Prefix}
-              <span className="font-brush text-[42px] leading-[38px] font-normal tracking-[-0.5px] sm:text-[58px] sm:leading-[52px] sm:tracking-[-2px] lg:text-[80px] lg:leading-[70px] lg:tracking-[-3px]">
+              <span className="font-brush text-[42px] leading-[38px] font-normal tracking-[-0.5px] sm:text-[46px] sm:leading-[42px] sm:tracking-[-2px] lg:text-[64px] lg:leading-[56px] lg:tracking-[-3px]">
                 {personalInfo.headline.emphasis}
               </span>
               {personalInfo.headline.post}
             </h1>
           </div>
 
-          <p className="font-heading max-w-full text-[16px] leading-[24px] font-medium tracking-[-0.4px] text-body sm:text-[20px] sm:leading-[28px] lg:max-w-[753px] lg:text-[24px] lg:leading-[34px] lg:tracking-[-0.8px]">
+          <p className="font-heading max-w-full text-[16px] leading-[24px] font-medium tracking-[-0.4px] text-body sm:text-[16px] sm:leading-[22px] lg:max-w-[753px] lg:text-[19px] lg:leading-[27px] lg:tracking-[-0.8px]">
             {personalInfo.subtext}
           </p>
 
           {device !== null && !device.isMobile && (
-            <div className="flex flex-wrap gap-[15px]">
+            <div className="flex flex-wrap gap-3">
               <HeroCta />
             </div>
           )}

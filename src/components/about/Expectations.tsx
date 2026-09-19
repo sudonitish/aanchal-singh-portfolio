@@ -26,7 +26,7 @@ export default function Expectations() {
           </text>
         </svg>
 
-        <div className="relative grid gap-4 pt-16 sm:grid-cols-2 sm:pt-28 lg:grid-cols-4 lg:pt-36">
+        <div className="relative grid gap-4 pt-16 sm:grid-cols-2 sm:pt-[90px] lg:grid-cols-4 lg:pt-[115px]">
           {expectations.map((item) => (
             <div
               key={item.category}

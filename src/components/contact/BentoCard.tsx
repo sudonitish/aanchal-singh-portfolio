@@ -8,7 +8,7 @@ interface BentoCardProps {
 }
 
 export default function BentoCard({ card, spanFull }: BentoCardProps) {
-  const height = card.row === 1 ? "h-[120px] lg:h-[331px]" : "h-[140px] lg:h-[415px]";
+  const height = card.row === 1 ? "h-[120px] lg:h-[265px]" : "h-[140px] lg:h-[332px]";
   const hasHoverIcon = Boolean(card.hover?.icon);
   const isPhone = card.id === "phone";
   const isEmail = card.id === "email";
@@ -19,7 +19,7 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
     <Link
       href={card.href}
       style={{ flexGrow: card.flex, flexBasis: 260 }}
-      className={`group relative flex flex-col items-center justify-center gap-4 overflow-hidden rounded-card p-6 transition-colors duration-300 ease-out lg:min-w-[260px] lg:flex-1 ${
+      className={`group relative flex flex-col items-center justify-center gap-4 overflow-hidden rounded-card p-6 transition-colors duration-300 ease-out lg:min-w-[260px] lg:flex-1 lg:gap-[13px] lg:p-[19px] ${
         spanFull ? "col-span-2" : ""
       } ${height} ${card.bg} ${
         hasHoverIcon ? "hover:bg-white" : ""
@@ -60,7 +60,7 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
 
         {card.variant === "chip" && (
           <span
-            className={`hidden rounded-full px-4 py-1.5 text-sm font-semibold tracking-[-0.35px] transition-all duration-300 ease-out lg:inline-flex ${
+            className={`hidden rounded-full px-4 py-1.5 text-sm font-semibold tracking-[-0.35px] transition-all duration-300 ease-out lg:inline-flex lg:px-[13px] lg:py-[5px] lg:text-[11px] ${
               isPhone ? "group-hover:scale-[2.27] group-hover:-translate-y-8" : ""
             } ${card.chipBg} ${card.chipTextClass}`}
           >
@@ -71,14 +71,14 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
 
       {card.variant === "label" && card.primary && (
         <span
-          className={`hidden text-sm font-semibold tracking-[-0.35px] transition-all duration-500 ease-out lg:block ${
+          className={`hidden text-sm font-semibold tracking-[-0.35px] transition-all duration-500 ease-out lg:block lg:text-[11px] ${
             isVisuals
-              ? "absolute left-1/2 -translate-x-1/2 translate-y-16 text-black opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
+              ? "absolute left-1/2 -translate-x-1/2 translate-y-[51px] text-black opacity-0 group-hover:translate-y-0 group-hover:opacity-100"
               : "text-white"
           }`}
           style={
             isVisuals
-              ? { top: `calc(50% + ${hoverIconSize / 2 + 16}px)` }
+              ? { top: `calc(50% + ${hoverIconSize / 2 + 13}px)` }
               : undefined
           }
         >
@@ -88,16 +88,16 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
 
       {card.variant === "dual" && (
         <span
-          className={`relative hidden h-[38px] w-[141px] items-center justify-center overflow-hidden rounded-[20px] lg:flex ${card.chipBg}`}
+          className={`relative hidden h-[30px] w-[113px] items-center justify-center overflow-hidden rounded-[16px] lg:flex ${card.chipBg}`}
         >
           <span
-            className="absolute text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] opacity-100 transition-all duration-300 group-hover:-translate-y-6 group-hover:opacity-0"
+            className="absolute text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] opacity-100 transition-all duration-300 group-hover:-translate-y-[19px] group-hover:opacity-0 lg:text-[11px]"
             style={{ transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)" }}
           >
             {card.primary}
           </span>
           <span
-            className="absolute translate-y-6 text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100"
+            className="absolute translate-y-[19px] text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100 lg:text-[11px]"
             style={{ transitionTimingFunction: "cubic-bezier(0.34, 1.56, 0.64, 1)" }}
           >
             {card.secondary}
@@ -114,9 +114,9 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
           )}
           <span
             aria-hidden
-            className="absolute right-5 bottom-5 hidden h-10 w-10 items-center justify-center rounded-full bg-white/90 text-black transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-[#20719A] group-hover:text-white lg:flex"
+            className="absolute right-4 bottom-4 hidden h-8 w-8 items-center justify-center rounded-full bg-white/90 text-black transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:bg-[#20719A] group-hover:text-white lg:flex"
           >
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="none">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none">
               <path
                 d="M7 17L17 7M17 7H9M17 7V15"
                 stroke="currentColor"

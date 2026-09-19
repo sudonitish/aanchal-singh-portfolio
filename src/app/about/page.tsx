@@ -17,7 +17,7 @@ export default function AboutPage() {
   return (
     <>
       <AboutIntro />
-      <div className="flex flex-col gap-20 px-5 py-10 sm:gap-28 sm:py-16 min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[246px] lg:gap-[150px]">
+      <div className="flex flex-col gap-20 px-5 py-10 sm:gap-[90px] sm:py-[51px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[197px] lg:gap-[120px]">
         <HowIDesign />
         <MoreAboutMe />
         <Expectations />

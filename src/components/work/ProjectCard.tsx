@@ -23,7 +23,7 @@ const toneClasses = {
 
 export default function ProjectCard({ project, size = "grid" }: ProjectCardProps) {
   const tone = toneClasses[project.tone];
-  const barHeight = "min-h-[60px] sm:h-[75px]";
+  const barHeight = "min-h-[58px] sm:h-[70px]";
 
   return (
     <Link
@@ -40,10 +40,10 @@ export default function ProjectCard({ project, size = "grid" }: ProjectCardProps
       />
 
       <div className="col-start-1 row-start-1 flex h-full w-full flex-col justify-between">
-        <div className="flex justify-end p-3 sm:p-6">
+        <div className="flex justify-end p-3 sm:p-[19px]">
           {project.live && (
             <span
-              className={`font-badge z-10 flex items-center gap-1.5 rounded-card border bg-black/[0.02] px-2.5 py-1.5 text-[12px] leading-[16px] backdrop-blur-md sm:px-3 sm:py-2 sm:text-[14px] sm:leading-[18px] ${tone.badge}`}
+              className={`font-badge z-10 flex items-center gap-1.5 rounded-card border bg-black/[0.02] px-2.5 py-1.5 text-[12px] leading-[16px] backdrop-blur-md sm:px-[10px] sm:py-[6px] sm:text-[11px] sm:leading-[14px] ${tone.badge}`}
             >
               <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
               {projectCardCopy.liveLabel}
@@ -52,14 +52,14 @@ export default function ProjectCard({ project, size = "grid" }: ProjectCardProps
         </div>
 
         <div
-          className={`flex items-center justify-between gap-3 px-4 py-3 backdrop-blur-md sm:gap-4 sm:px-10 sm:py-0 ${barHeight} ${tone.overlay}`}
+          className={`flex items-center justify-between gap-3 px-4 py-5 backdrop-blur-md sm:gap-[13px] sm:px-8 sm:py-0 ${barHeight} ${tone.overlay}`}
         >
           <h3
-            className={`font-heading text-[14px] leading-[1.3] font-semibold sm:text-[20px] sm:leading-7 ${tone.title}`}
+            className={`font-heading text-[14px] leading-[1.3] font-semibold sm:text-[16px] sm:leading-[22px] ${tone.title}`}
           >
             {project.name}
           </h3>
-          <span className="shrink-0 rounded-full bg-white px-4 py-1.5 text-[13px] leading-[18px] font-medium text-black sm:px-5 sm:py-2 sm:text-[14px]">
+          <span className="shrink-0 rounded-full bg-white px-4 py-1.5 text-[13px] leading-[18px] font-medium text-black shadow-sm transition-all duration-300 group-hover:-translate-y-1 group-hover:shadow-md sm:px-4 sm:py-[6px] sm:text-[11px]">
             {projectCardCopy.viewLabel}
           </span>
         </div>

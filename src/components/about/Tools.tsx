@@ -7,7 +7,7 @@ export default function Tools() {
     <section className="flex flex-col gap-[30px]">
       <SectionHeading label={toolsLabel} />
 
-      <div className="flex flex-wrap items-center gap-6 sm:gap-[35px]">
+      <div className="flex flex-wrap items-center gap-6 sm:gap-7">
         {tools.map((tool) => (
           <div
             key={tool.name}

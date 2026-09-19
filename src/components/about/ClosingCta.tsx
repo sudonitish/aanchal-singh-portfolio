@@ -4,7 +4,7 @@ import { closingCta } from "@/data/content/about/data";
 export default function ClosingCta() {
   return (
     <section
-      className="relative overflow-hidden rounded-[38px] bg-surface-dark px-6 py-16 sm:px-14 sm:py-20 lg:px-[70px] lg:py-[70px]"
+      className="relative overflow-hidden rounded-[38px] bg-surface-dark px-6 py-16 sm:px-[45px] sm:py-16 lg:px-14 lg:py-14"
     >
       <div
         aria-hidden
@@ -26,7 +26,7 @@ export default function ClosingCta() {
         </span>
 
         <div className="flex flex-col gap-6">
-          <h2 className="max-w-[900px] text-[36px] leading-[44px] font-extrabold tracking-[-1.938px] text-[#F8F5F0] sm:text-[52px] sm:leading-[64px] lg:text-[75px] lg:leading-[97px]">
+          <h2 className="max-w-[900px] text-[36px] leading-[44px] font-extrabold tracking-[-1.938px] text-[#F8F5F0] sm:text-[42px] sm:leading-[51px] lg:text-[60px] lg:leading-[78px]">
             {closingCta.headingFragments.map((fragment, index) => (
               <span
                 key={index}
@@ -42,12 +42,12 @@ export default function ClosingCta() {
               </span>
             ))}
           </h2>
-          <p className="max-w-[720px] text-[18px] leading-[28px] text-white/55 sm:text-[24px] sm:leading-[37px]">
+          <p className="max-w-[720px] text-[18px] leading-[28px] text-white/55 sm:text-[19px] sm:leading-[30px]">
             {closingCta.subtext}
           </p>
         </div>
 
-        <div className="flex flex-wrap items-center gap-6 sm:gap-10">
+        <div className="flex flex-wrap items-center gap-6 sm:gap-8">
           <Link
             href={closingCta.primary.href}
             className="inline-flex items-center gap-3 rounded-pill bg-accent-strong px-8 py-5 text-[18px] font-semibold text-[#0F1A0D] transition-opacity hover:opacity-90"

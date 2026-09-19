@@ -31,7 +31,7 @@ export default function Home() {
       />
       <Hero />
       <WorkExperience />
-      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-24 sm:py-16 lg:gap-[150px] min-[640px]:px-[40px] min-[1020px]:px-[100px] min-[1200px]:px-[120px] min-[1500px]:px-[320px]">
+      <div className="flex flex-col gap-16 px-5 py-10 sm:gap-[77px] sm:py-[51px] lg:gap-[120px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[256px]">
         <div id="work" className="scroll-mt-24">
           <LatestWork />
         </div>

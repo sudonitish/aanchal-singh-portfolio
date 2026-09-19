@@ -62,26 +62,26 @@ function EndMessage({ isMobile }: { isMobile: boolean | null }) {
   }
 
   return (
-    <div className="group h-[62px] w-[577px] min-w-0 max-w-full overflow-hidden">
-      <div className="flex w-full flex-col transition-transform duration-300 ease-in-out group-hover:-translate-y-[62px]">
-        <div className="flex h-[62px] w-full flex-nowrap items-baseline justify-center gap-2 whitespace-nowrap pb-2">
+    <div className="group h-[50px] w-[462px] min-w-0 max-w-full overflow-hidden">
+      <div className="flex w-full flex-col transition-transform duration-300 ease-in-out group-hover:-translate-y-[50px]">
+        <div className="flex h-[50px] w-full flex-nowrap items-baseline justify-center gap-1.5 whitespace-nowrap pb-1.5">
           <p className="font-sans text-[18px] leading-6 font-medium text-accent-teal">
             {footerContent.endMessage.pre}
           </p>
-          <span className="flex items-baseline gap-1.5">
+          <span className="flex items-baseline gap-[5px]">
             <span className="font-cursive text-[30px] leading-6 text-gold">
               {footerContent.endMessage.emphasis}
             </span>
             <Image
               src={assets.confettiLinesIcon}
               alt=""
-              width={29.2}
-              height={39.58}
+              width={23}
+              height={32}
               aria-hidden
             />
           </span>
         </div>
-        <div className="flex h-[62px] w-full items-center justify-center">
+        <div className="flex h-[50px] w-full items-center justify-center">
           <p className="font-cursive text-[32px] leading-6 whitespace-nowrap text-accent-teal">
             {footerContent.hoverMessage}
             <span className="text-[48px] leading-9">.</span>
@@ -105,36 +105,36 @@ function SongsWithTakeMeBack({ isMobile }: { isMobile: boolean | null }) {
 
   return (
     <div className="group grid place-items-center">
-      <div className="z-0 col-start-1 row-start-1 flex items-center gap-5 transition-opacity duration-300 group-hover:opacity-0">
+      <div className="z-0 col-start-1 row-start-1 flex items-center gap-4 transition-opacity duration-300 group-hover:opacity-0">
         <Image
           src={assets.musicIcon}
           alt=""
-          width={63}
-          height={63}
-          className="h-[63px] w-[63px]"
+          width={50}
+          height={50}
+          className="h-[50px] w-[50px]"
           aria-hidden
         />
-        <div className="w-[280px] overflow-hidden lg:w-[400px]">
+        <div className="w-[224px] overflow-hidden lg:w-[320px]">
           <MarqueeTrack />
         </div>
         <Image
           src={assets.musicIcon}
           alt=""
-          width={63}
-          height={63}
-          className="h-[63px] w-[63px]"
+          width={50}
+          height={50}
+          className="h-[50px] w-[50px]"
           aria-hidden
         />
       </div>
       <button
         type="button"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-        className="pointer-events-none relative z-10 col-start-1 row-start-1 flex cursor-pointer items-center justify-center gap-[11px] opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100"
+        className="pointer-events-none relative z-10 col-start-1 row-start-1 flex cursor-pointer items-center justify-center gap-[9px] opacity-0 transition-opacity duration-300 group-hover:pointer-events-auto group-hover:opacity-100"
       >
         <span className="font-cursive text-[40px] leading-6 text-accent-teal">
           {footerContent.takeMeBack}
         </span>
-        <Image src={assets.arrowIcon} alt="" width={40} height={40} aria-hidden />
+        <Image src={assets.arrowIcon} alt="" width={32} height={32} aria-hidden />
       </button>
     </div>
   );
@@ -149,17 +149,17 @@ export default function Footer() {
 
   return (
     <footer
-      className="relative mx-4 mt-10 mb-4 min-h-[320px] overflow-hidden rounded-card bg-cover bg-bottom px-4 py-10 sm:mt-20 sm:min-h-[400px] sm:px-6"
+      className="relative mx-4 mt-10 mb-4 min-h-[318px] overflow-hidden rounded-card bg-cover bg-bottom px-4 pt-10 pb-0 sm:mt-16 sm:min-h-[318px] sm:px-0 sm:pt-16 sm:pb-0"
       style={{
         backgroundImage: `url(${assets.footerBg})`,
         backgroundColor: "var(--color-footer-fallback)",
       }}
     >
-      <div className="flex w-full min-w-0 flex-col items-center gap-10 sm:gap-[55px] sm:py-10">
-        <div className="flex w-full min-w-0 flex-col items-center gap-5 sm:gap-[25px]">
+      <div className="flex w-full min-w-0 flex-col items-center gap-10 sm:gap-11">
+        <div className="flex w-full min-w-0 flex-col items-center gap-5 sm:gap-5">
           <EndMessage isMobile={isMobile} />
 
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-7">
+          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-[22px]">
             {links.map((link) => (
               <a
                 key={link.type}
@@ -173,22 +173,24 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="flex w-full flex-col items-center gap-6 sm:flex-row sm:justify-between sm:gap-4">
-          <span className="flex items-center gap-2 font-sans text-[12px] leading-5 font-medium text-ink sm:gap-3 sm:text-[14px]">
+        <div className="flex w-full flex-col items-center gap-6 sm:flex-row sm:justify-between sm:gap-[13px]">
+          <span className="flex items-center gap-2 px-4 py-2 font-sans text-[12px] leading-5 font-medium text-ink backdrop-blur-[2px] sm:gap-[10px] sm:px-4 sm:py-2 sm:text-[14px]">
             {footerContent.madeWithLabel}
             <Image
               src={assets.headphoneCoffeeIcon}
               alt=""
               width={81}
               height={30}
-              className="h-6 w-[65px] sm:h-[30px] sm:w-[81px]"
+              className="h-6 w-[65px] sm:h-6 sm:w-[65px]"
               aria-hidden
             />
           </span>
 
-          <SongsWithTakeMeBack isMobile={isMobile} />
+          <div className="px-4 py-2 backdrop-blur-[2px] sm:px-4 sm:py-2">
+            <SongsWithTakeMeBack isMobile={isMobile} />
+          </div>
 
-          <span className="font-sans text-[12px] leading-5 font-medium text-ink sm:text-[14px]">
+          <span className="px-4 py-2 font-sans text-[12px] leading-5 font-medium text-ink backdrop-blur-[2px] sm:px-4 sm:py-2 sm:text-[14px]">
             &copy; {START_YEAR} Aanchal.Portfolio
           </span>
         </div>
