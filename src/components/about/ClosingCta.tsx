@@ -21,7 +21,7 @@ export default function ClosingCta() {
       </div>
 
       <div className="relative flex flex-col gap-6">
-        <span className="text-[11px] font-bold tracking-[2.4px] text-accent-strong uppercase">
+        <span className="text-[12px] font-bold tracking-[2.4px] text-accent-strong uppercase">
           {closingCta.eyebrow}
         </span>
 

@@ -12,10 +12,10 @@ export default function Nav() {
   const pathname = normalize(usePathname());
 
   return (
-    <nav className="flex w-fit max-w-full items-center gap-1 overflow-x-auto rounded-full border border-brand/25 bg-white/60 px-2 py-1.5 backdrop-blur-[6px] sm:gap-[19px] sm:px-[10px] sm:py-1.5">
+    <nav className="flex w-fit max-w-full items-center gap-[5px] overflow-x-auto rounded-full border border-brand/25 bg-white/60 px-[10px] py-[8px] backdrop-blur-[6px] sm:gap-[24px] sm:px-[13px]">
       <Link
         href="/"
-        className="group flex h-[19px] w-[19px] shrink-0 items-center justify-center rounded-full bg-white sm:h-[21px] sm:w-[21px]"
+        className="group flex h-[24px] w-[24px] shrink-0 items-center justify-center rounded-full sm:h-[26px] sm:w-[26px]"
       >
         <svg
           viewBox="0 0 32 32"
@@ -45,7 +45,7 @@ export default function Nav() {
                 target.scrollIntoView({ behavior: "smooth" });
                 history.pushState(null, "", link.href);
               }}
-              className={`flex h-[18px] shrink-0 items-center justify-center rounded-[6px] px-1.5 text-[10px] leading-[14px] font-semibold transition-colors sm:h-5 sm:text-[11px] sm:leading-[17px] ${isActive ? "text-brand" : "text-accent hover:text-brand"
+              className={`flex h-[18px] shrink-0 items-center justify-center rounded-[6px] px-1.5 text-[12px] leading-[14px] font-semibold transition-colors sm:h-5 sm:text-[12px] sm:leading-[17px] ${isActive ? "text-brand" : "text-accent hover:text-brand"
                 }`}
             >
               {link.label}

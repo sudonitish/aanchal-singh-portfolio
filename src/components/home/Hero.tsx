@@ -7,13 +7,19 @@ import { homePage } from "@/data/content/home/data";
 import { assets } from "@/data/config/assets";
 import { useDeviceType } from "@/hooks/useDeviceType";
 
-function HeroCta({ primaryClassName = "" }: { primaryClassName?: string }) {
+function HeroCta({
+  primaryClassName = "",
+  secondaryClassName = "",
+}: {
+  primaryClassName?: string;
+  secondaryClassName?: string;
+}) {
   return (
     <>
       <Button href="/#work" variant="solid" className={primaryClassName}>
         {homePage.heroCta.primary}
       </Button>
-      <Button href={personalInfo.resumeHref} variant="outline">
+      <Button href={personalInfo.resumeHref} variant="outline" className={secondaryClassName}>
         {homePage.heroCta.secondary}
       </Button>
     </>
@@ -46,7 +52,7 @@ export default function Hero() {
 
         <div className="mt-10 flex max-w-full flex-col gap-4 sm:mt-[45px] lg:mt-16 lg:max-w-[911px] lg:gap-5">
           <div className="flex flex-col gap-1.5 lg:gap-1.5">
-            <p className="font-heading text-[10px] leading-[11px] tracking-[2px] text-black/60 uppercase sm:text-[10px]">
+            <p className="font-heading text-[12px] leading-[13px] tracking-[2px] text-black/60 uppercase sm:text-[12px]">
               {personalInfo.tagline}
             </p>
             <h1 className="font-sans text-[26px] leading-[32px] font-semibold tracking-[-0.5px] whitespace-normal text-body sm:text-[35px] sm:leading-[42px] sm:tracking-[-2px] sm:whitespace-pre-line lg:text-[48px] lg:leading-[56px] lg:tracking-[-3px]">
@@ -60,7 +66,7 @@ export default function Hero() {
             </h1>
           </div>
 
-          <p className="font-heading max-w-full text-[13px] leading-[19px] font-medium tracking-[-0.4px] text-body sm:text-[13px] sm:leading-[22px] lg:max-w-[753px] lg:text-[19px] lg:leading-[27px] lg:tracking-[-0.8px]">
+          <p className="font-heading max-w-[570px] text-[13px] leading-[19px] font-medium tracking-[-0.4px] text-body sm:text-[13px] sm:leading-[22px] lg:text-[19px] lg:leading-[27px] lg:tracking-[-0.8px]">
             {personalInfo.subtext}
           </p>
 
@@ -73,7 +79,7 @@ export default function Hero() {
 
         {device !== null && device.isMobile && (
           <div className="mt-auto flex gap-[10px]">
-            <HeroCta primaryClassName="flex-1" />
+            <HeroCta primaryClassName="flex-1" secondaryClassName="flex-1" />
           </div>
         )}
       </div>

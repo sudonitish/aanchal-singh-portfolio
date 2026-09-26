@@ -34,7 +34,7 @@ export default function AboutIntro() {
         aria-hidden
       />
 
-      <div className="relative flex flex-1 flex-col px-5 pt-6 sm:pt-[26px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-8">
+      <div className="relative flex flex-1 flex-col px-5 pt-8 sm:pt-[38px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-16">
         <Nav />
 
         <div className="flex flex-1 flex-col items-center justify-center gap-12 py-12 sm:py-[51px] min-[1200px]:items-start min-[1200px]:justify-center min-[1200px]:py-16 min-[1200px]:pt-32">

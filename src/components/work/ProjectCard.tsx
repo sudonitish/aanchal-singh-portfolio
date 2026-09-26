@@ -45,7 +45,14 @@ export default function ProjectCard({ project, size = "grid" }: ProjectCardProps
             <span
               className={`font-badge z-10 flex items-center gap-[5px] rounded-card border bg-black/[0.02] px-2.5 py-1.5 text-[10px] leading-[13px] backdrop-blur-md sm:px-[10px] sm:py-[6px] ${tone.badge}`}
             >
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+              <span className="live-blink relative flex h-[13px] w-[13px] shrink-0 items-center justify-center">
+                <span
+                  className="live-ping absolute rounded-full"
+                  style={{ background: "rgba(156, 240, 181, 0.5)" }}
+                  aria-hidden
+                />
+                <span className="relative h-[6px] w-[6px] rounded-full bg-[#58CF78]" />
+              </span>
               {projectCardCopy.liveLabel}
             </span>
           )}

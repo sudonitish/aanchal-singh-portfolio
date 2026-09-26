@@ -15,7 +15,7 @@ export default function ContactPage() {
 
   return (
     <>
-      <div className="px-5 pt-6 sm:pt-8 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-10">
+      <div className="px-5 pt-8 sm:pt-[38px] min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[120px] lg:pt-16">
         <Nav />
       </div>
       <div className="flex flex-col gap-16 px-5 py-10 sm:gap-20 sm:py-16 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[197px]">
