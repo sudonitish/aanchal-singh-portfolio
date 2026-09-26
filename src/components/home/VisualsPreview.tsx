@@ -6,10 +6,12 @@ import SectionHeading from "@/components/ui/SectionHeading";
 import { homePage } from "@/data/content/home/data";
 
 const visuals = [
-  "/assets/visuals/visual-1.png",
-  "/assets/visuals/visual-2.png",
-  "/assets/visuals/visual-3.png",
-  "/assets/visuals/visual-4.png",
+  { src: "/assets/visuals/visual-1.mp4", type: "video" as const },
+  { src: "/assets/visuals/visual-4.mp4", type: "video" as const },
+  { src: "/assets/visuals/visual-5.mp4", type: "video" as const },
+  { src: "/assets/visuals/visual-6.mp4", type: "video" as const },
+  { src: "/assets/visuals/visual-2.png", type: "image" as const },
+  { src: "/assets/visuals/visual-3.png", type: "image" as const },
 ];
 
 const AUTOPLAY_INTERVAL_MS = 4000;
@@ -74,28 +76,39 @@ export default function VisualsPreview() {
           ref={trackRef}
           className="flex snap-x snap-mandatory gap-[33px] overflow-x-auto scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
-          {visuals.map((src) => (
+          {visuals.map((visual) => (
             <div
-              key={src}
+              key={visual.src}
               data-slide
               className="relative aspect-[405/303] w-full shrink-0 snap-center overflow-hidden rounded-[20px] bg-surface-1 sm:w-[calc(33.333%-22px)]"
             >
-              <Image
-                src={src}
-                alt=""
-                fill
-                aria-hidden
-                loading="lazy"
-                className="object-cover"
-                sizes="(min-width: 640px) 33vw, 100vw"
-              />
+              {visual.type === "video" ? (
+                <video
+                  src={visual.src}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : (
+                <Image
+                  src={visual.src}
+                  alt=""
+                  fill
+                  aria-hidden
+                  loading="lazy"
+                  className="object-cover"
+                  sizes="(min-width: 640px) 33vw, 100vw"
+                />
+              )}
             </div>
           ))}
         </div>
         <div className="flex items-center justify-center gap-2">
-          {visuals.map((src, index) => (
+          {visuals.map((visual, index) => (
             <button
-              key={src}
+              key={visual.src}
               type="button"
               onClick={() => scrollToSlide(index)}
               aria-label={`Go to visual ${index + 1}`}

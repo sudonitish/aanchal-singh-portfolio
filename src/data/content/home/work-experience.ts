@@ -14,7 +14,7 @@ export const clientLogos: ClientLogo[] = [
     src: `${assets.workLogosDir}/valueresearch.svg`,
     width: 97.78,
     height: 25.67,
-    opacity: 0.4,
+    opacity: 1,
   },
   {
     name: "Dynamic Mavens Consultancy",
@@ -28,7 +28,7 @@ export const clientLogos: ClientLogo[] = [
     src: `${assets.workLogosDir}/stimulus.svg`,
     width: 98.16,
     height: 52.35,
-    opacity: 0.4,
+    opacity: 1,
   },
   {
     name: "Brewing Gadgets",
@@ -49,13 +49,13 @@ export const clientLogos: ClientLogo[] = [
     src: `${assets.workLogosDir}/bajaj.svg`,
     width: 31.29,
     height: 38.38,
-    opacity: 0.4,
+    opacity: 1,
   },
   {
     name: "StelMart",
     src: `${assets.workLogosDir}/stelmart.svg`,
     width: 109.29,
     height: 22.14,
-    opacity: 0.4,
+    opacity: 1,
   },
 ];

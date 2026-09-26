@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/visuals" },
 };
 
-const placeholderTiles = Array.from({ length: 20 }, (_, i) => i);
+const placeholderTiles = Array.from({ length: 18 }, (_, i) => i);
 
 export default function VisualsPage() {
   return (
@@ -29,13 +29,43 @@ export default function VisualsPage() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <div className="relative aspect-[502/350] overflow-hidden rounded-card border border-[#FBECD6] bg-white">
-            <Image
-              src="/assets/visuals/visual-1.png"
-              alt=""
-              fill
-              aria-hidden
-              className="object-cover"
-              sizes="(min-width: 1024px) 33vw, 50vw"
+            <video
+              src="/assets/visuals/visual-1.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+          <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
+            <video
+              src="/assets/visuals/visual-4.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+          <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
+            <video
+              src="/assets/visuals/visual-5.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
+            />
+          </div>
+          <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
+            <video
+              src="/assets/visuals/visual-6.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
@@ -51,16 +81,6 @@ export default function VisualsPage() {
           <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
             <Image
               src="/assets/visuals/visual-3.png"
-              alt=""
-              fill
-              aria-hidden
-              className="object-cover"
-              sizes="(min-width: 1024px) 33vw, 50vw"
-            />
-          </div>
-          <div className="relative aspect-[502/350] overflow-hidden rounded-card bg-surface-4">
-            <Image
-              src="/assets/visuals/visual-4.png"
               alt=""
               fill
               aria-hidden
