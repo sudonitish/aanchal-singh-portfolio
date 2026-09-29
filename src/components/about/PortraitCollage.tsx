@@ -59,6 +59,7 @@ function Polaroid({ spot, index }: { spot: PolaroidSpot; index: number }) {
         height: `${spot.height}%`,
         animationDelay: `${index * 0.35}s`,
         animationDuration: `${3.5 + (index % 3) * 0.4}s`,
+        animationPlayState: hovered ? "paused" : "running",
       }}
     >
       <button

@@ -90,6 +90,7 @@ export interface ExpectationItem {
   index: string;
   category: string;
   heading: string;
+  headingMaxWidth: number;
   body: string;
 }
 
@@ -98,24 +99,28 @@ export const expectations: ExpectationItem[] = [
     index: "01",
     category: "Care",
     heading: "Users matter as much as outcomes.",
+    headingMaxWidth: 120,
     body: "I never lose sight of who I'm designing for - even under deadlines and shifting briefs.",
   },
   {
     index: "02",
     category: "Attention",
     heading: "I notice what others walk past.",
+    headingMaxWidth: 108,
     body: "The micro-copy, the loading state, the edge case. Details aren't extra - they're the product.",
   },
   {
     index: "03",
     category: "Intention",
     heading: "Empathy + structure + intention - every screen.",
+    headingMaxWidth: 138,
     body: "Not just the hero flows. Every state, every moment of interaction gets all three.",
   },
   {
     index: "04",
     category: "Simplicity",
     heading: "If users have to think twice, I go back.",
+    headingMaxWidth: 120,
     body: "I aim for experiences that feel intuitive, grounded, and easy — so users don't have to think twice.",
   },
 ];
@@ -137,6 +142,7 @@ export const tools: ToolTile[] = [
 export interface HeadingFragment {
   text: string;
   variant?: "accent" | "muted-italic";
+  breakAfter?: boolean;
 }
 
 export const closingCta = {
@@ -144,9 +150,11 @@ export const closingCta = {
   headingFragments: [
     { text: "You probably value " },
     { text: "clarity", variant: "accent" },
-    { text: ". Or good " },
+    { text: "." , breakAfter: true },
+    { text: " Or good " },
     { text: "design", variant: "accent" },
-    { text: ". Or details that " },
+    { text: "." , breakAfter: true },
+    { text: " Or details that " },
     { text: "don't shout.", variant: "muted-italic" },
   ] as HeadingFragment[],
   subtext:
