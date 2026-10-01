@@ -30,7 +30,7 @@ Status legend: `[ ]` pending · `[x]` done · `[~]` blocked/needs input
 
 ## Contact Page
 
-- [x] 1. Animation + card size (height/width) not matching — cards sized from the 1920px design (row 1: 530/330/464 × 331, row 2: 375/375/574 × 415) as proportional grid columns with a fixed row aspect-ratio, so all cards in a row stay equal height and scale together from 640px up; body capped at 1142px (÷1.25), gaps/icons scaled ÷1.25. Email card now rests 10px low and zooms to center on hover. Download Resume pill rebuilt as a two-row track with a damped rubber-bounce in both directions.
+- [~] 1. Animation + card size (height/width) not matching — PARTIALLY DONE: the Behance card's hover gradient at the top is not final (approximated from Figma by eye; the exact look still needs matching). Everything else below is done. Cards sized from the 1920px design (row 1: 530/330/464 × 331, row 2: 375/375/574 × 415) as proportional grid columns with a fixed row aspect-ratio, so all cards in a row stay equal height and scale together from 640px up; body capped at 1142px (÷1.25), gaps/icons scaled ÷1.25. Email card now rests 10px low and zooms to center on hover. Download Resume pill rebuilt as a two-row track with a damped rubber-bounce in both directions.
 
 ## Case Study
 
