@@ -16,9 +16,7 @@ export const contactAssets = {
   iconPhone: `${CONTACT_DIR}/icon-phone.svg`,
   iconEmail: `${CONTACT_DIR}/icon-email.svg`,
   iconVisuals: `${CONTACT_DIR}/icon-visuals.svg`,
-  iconVisualsHovered: `${CONTACT_DIR}/icon-visuals-hovered.svg`,
   iconWork: `${CONTACT_DIR}/icon-work.svg`,
-  iconWorkHovered: `${CONTACT_DIR}/icon-work-hovered.svg`,
   iconResume: `${CONTACT_DIR}/icon-resume.svg`,
 };
 

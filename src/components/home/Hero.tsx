@@ -66,7 +66,7 @@ export default function Hero() {
             </h1>
           </div>
 
-          <p className="font-heading max-w-[570px] text-[13px] leading-[19px] font-medium tracking-[-0.4px] text-body sm:text-[13px] sm:leading-[22px] lg:text-[19px] lg:leading-[27px] lg:tracking-[-0.8px]">
+          <p className="font-heading max-w-[570px] text-[13px] leading-[19px] font-medium tracking-[-0.4px] text-body sm:text-[13px] sm:leading-[22px] lg:text-[18px] lg:leading-[26px] lg:tracking-[-0.8px]">
             {personalInfo.subtext}
           </p>
 

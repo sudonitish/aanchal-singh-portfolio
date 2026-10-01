@@ -21,7 +21,7 @@ export default function VisualsPage() {
           <h1 className="text-4xl font-semibold text-ink sm:text-[38px] lg:text-[48px]">
             Design Showcase
           </h1>
-          <p className="max-w-2xl text-lg text-[#6b6d75] sm:text-[19px]">
+          <p className="max-w-2xl text-lg text-[#6b6d75] sm:text-[18px]">
             A collection of design explorations, creative experiments, and
             visual storytelling
           </p>
@@ -93,7 +93,7 @@ export default function VisualsPage() {
               key={tile}
               className="flex aspect-[502/350] items-center justify-center rounded-card bg-surface-4"
             >
-              <span className="font-dm-sans text-[14px] font-semibold text-[#6b6d75]">
+              <span className="font-dm-sans text-[14px] font-semibold sm:text-[18px] text-[#6b6d75]">
                 Coming soon...
               </span>
             </div>

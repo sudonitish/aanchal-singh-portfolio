@@ -225,3 +225,59 @@ body {
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+@keyframes track-up {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-30.8px);
+  }
+  45% {
+    transform: translateY(-22.4px);
+  }
+  62% {
+    transform: translateY(-24.6px);
+  }
+  78% {
+    transform: translateY(-23.8px);
+  }
+  90% {
+    transform: translateY(-24.1px);
+  }
+  100% {
+    transform: translateY(-24px);
+  }
+}
+
+@keyframes track-down {
+  0% {
+    transform: translateY(-24px);
+  }
+  25% {
+    transform: translateY(6.8px);
+  }
+  45% {
+    transform: translateY(-1.6px);
+  }
+  62% {
+    transform: translateY(0.6px);
+  }
+  78% {
+    transform: translateY(-0.2px);
+  }
+  90% {
+    transform: translateY(0.1px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.track-up {
+  animation: track-up 0.75s ease-out forwards;
+}
+
+.track-down {
+  animation: track-down 0.75s ease-out forwards;
+}

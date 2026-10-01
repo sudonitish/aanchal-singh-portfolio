@@ -25,12 +25,12 @@ Status legend: `[ ]` pending · `[x]` done · `[~]` blocked/needs input
 
 ## Visuals Section
 
-- [ ] 1. Body text should be 18px on home + visuals page
-- [ ] 2. Spacing issue
+- [x] 1. Body text should be 18px on home + visuals page — home hero description set to 18px on desktop (mobile stays 13px, line-height 26px), visuals page description 18px, "Coming soon..." tiles 14px mobile / 18px desktop. Applied as final rendered size (not ÷1.25). Hero max-width (570px) was tuned for 19px text — line wrap may need a re-check.
+- [~] 2. Spacing issue — UNCLEAR, NOT DONE. Point doesn't say which spacing (header-to-grid, tile gaps, page padding); needs clarification from designer.
 
 ## Contact Page
 
-- [ ] 1. Animation + card size (height/width) not matching
+- [x] 1. Animation + card size (height/width) not matching — cards sized from the 1920px design (row 1: 530/330/464 × 331, row 2: 375/375/574 × 415) as proportional grid columns with a fixed row aspect-ratio, so all cards in a row stay equal height and scale together from 640px up; body capped at 1142px (÷1.25), gaps/icons scaled ÷1.25. Email card now rests 10px low and zooms to center on hover. Download Resume pill rebuilt as a two-row track with a damped rubber-bounce in both directions.
 
 ## Case Study
 
