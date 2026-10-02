@@ -213,6 +213,8 @@ export interface LeadListBlock {
   title: string;
   lead?: string;
   items: { label: string; text: string }[];
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface InterviewFindingsBlock {
