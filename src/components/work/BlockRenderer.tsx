@@ -68,6 +68,7 @@ export default function BlockRenderer({ blocks, wideGutter = 150 }: BlockRendere
             prev.type === "interviewFindings" ||
             prev.type === "divider" ||
             prev.type === "briefHeader" ||
+            prev.type === "reflectionHeader" ||
             prev.type === "imageGrid" ||
             prev.type === "imageStack" ||
             prev.type === "splitList" ||
@@ -82,6 +83,7 @@ export default function BlockRenderer({ blocks, wideGutter = 150 }: BlockRendere
             prev.type === "interviewFindings" ||
             prev.type === "divider" ||
             prev.type === "briefHeader" ||
+            prev.type === "reflectionHeader" ||
             prev.type === "imageGrid" ||
             prev.type === "imageStack" ||
             prev.type === "splitList" ||
@@ -160,6 +162,11 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 <h2 className="text-[28px] font-extrabold leading-[1.2] text-black sm:text-[32px] sm:leading-[38px]">
                   {block.title}
                 </h2>
+                {block.lineBelowTitle && (
+                  <div className="-my-2.5 w-full">
+                    <SectionDivider />
+                  </div>
+                )}
                 {block.subtitle && (
                   <p className="text-[14px] uppercase leading-[18px] tracking-wide text-[#8C8C8C]">
                     {block.subtitle}
@@ -199,7 +206,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                       >
                         {card.text}
                       </span>
-                      <span className="font-dm-sans text-[11px] text-[#64748B]">{card.label}</span>
+                      <span className="text-[11px] text-[#64748B]">{card.label}</span>
                     </div>
                   ))}
                 </div>
@@ -369,7 +376,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                         </div>
                       )}
                       <div className="flex flex-col gap-1.5">
-                        <h3 className="font-dm-sans text-[14px] font-bold leading-[22px] text-black">
+                        <h3 className="text-[14px] font-bold leading-[22px] text-black">
                           {item.title}
                         </h3>
                         <p className="text-[13px] leading-[18px] text-[#8C8C8C]">
@@ -523,7 +530,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
             const labelEl = block.label && (
               <span
                 style={{
-                  fontFamily: "Inter",
+                  fontFamily: "var(--font-heading)",
                   fontStyle: "normal",
                   fontWeight: 600,
                   fontSize: "19px",
@@ -536,12 +543,22 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
             );
             if (!block.background && !block.paddingX && !block.paddingY && !block.fullBleed) {
               return labelEl ? (
-                <div key={index} className="flex flex-col gap-4">
+                <div
+                  key={index}
+                  className="flex flex-col gap-4"
+                  style={block.labelGap !== undefined ? { gap: block.labelGap } : undefined}
+                >
                   {labelEl}
                   {image}
                 </div>
               ) : (
-                <div key={index}>{image}</div>
+                <div
+                  key={index}
+                  className={block.maxWidth ? "mx-auto" : undefined}
+                  style={block.maxWidth ? { maxWidth: block.maxWidth } : undefined}
+                >
+                  {image}
+                </div>
               );
             }
             return (
@@ -694,7 +711,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
             const eyebrowEl = (
               <span
                 style={{
-                  fontFamily: "Inter",
+                  fontFamily: "var(--font-heading)",
                   fontStyle: "normal",
                   fontWeight: 600,
                   fontSize: "8px",
@@ -713,7 +730,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               <h2
                 className="max-w-full"
                 style={{
-                  fontFamily: "Inter",
+                  fontFamily: "var(--font-heading)",
                   fontStyle: "normal",
                   fontWeight: 600,
                   fontSize: "clamp(26px, 5vw, 52px)",
@@ -726,7 +743,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               </h2>
             );
             const paragraphStyle = {
-              fontFamily: "Inter",
+              fontFamily: "var(--font-heading)",
               fontStyle: "normal",
               fontWeight: 400,
               fontSize: "14px",
@@ -757,7 +774,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                 <div
                   key={index}
                   className="grid w-full grid-cols-1 gap-[24px] text-left lg:grid-cols-[1fr_1fr] lg:gap-x-[87px] lg:gap-y-[24px]"
-                  style={{ fontFamily: "Inter" }}
+                  style={{ fontFamily: "var(--font-heading)" }}
                 >
                   <div className="flex flex-col items-start gap-[12px]">
                     {eyebrowEl}
@@ -773,7 +790,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               <div
                 key={index}
                 className="grid w-full grid-cols-1 gap-[24px] text-left lg:grid-cols-[1fr_1fr] lg:gap-x-[87px] lg:gap-y-[24px]"
-                style={{ fontFamily: "Inter" }}
+                style={{ fontFamily: "var(--font-heading)" }}
               >
                 {block.eyebrow && (
                   <div className="flex flex-col items-start gap-[12px] lg:col-span-2">
@@ -791,14 +808,14 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               <div
                 key={index}
                 className="grid w-full grid-cols-1 gap-[24px] text-left lg:grid-cols-[591fr_825fr] lg:gap-[213px]"
-                style={{ fontFamily: "Inter" }}
+                style={{ fontFamily: "var(--font-heading)" }}
               >
                 <div className="flex h-full flex-col items-start gap-[24px]">
                   <div className="flex flex-col items-start gap-[12px]">
                     {block.eyebrow && (
                       <span
                         style={{
-                          fontFamily: "Inter",
+                          fontFamily: "var(--font-heading)",
                           fontStyle: "normal",
                           fontWeight: 600,
                           fontSize: "8px",
@@ -815,7 +832,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                     )}
                     <h2
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "var(--font-heading)",
                         fontStyle: "normal",
                         fontWeight: 600,
                         fontSize: "clamp(26px, 5vw, 52px)",
@@ -834,7 +851,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                             <p
                               key={i}
                               style={{
-                                fontFamily: "Inter",
+                                fontFamily: "var(--font-heading)",
                                 fontStyle: "normal",
                                 fontWeight: 400,
                                 fontSize: "14px",
@@ -855,7 +872,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                               />
                               <p
                                 style={{
-                                  fontFamily: "Inter",
+                                  fontFamily: "var(--font-heading)",
                                   fontStyle: "normal",
                                   fontWeight: 500,
                                   fontSize: "14px",
@@ -871,7 +888,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                       ) : (
                         <p
                           style={{
-                            fontFamily: "Inter",
+                            fontFamily: "var(--font-heading)",
                             fontStyle: "normal",
                             fontWeight: 400,
                             fontSize: "14px",
@@ -890,7 +907,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                     <p
                       key={item.label}
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "var(--font-heading)",
                         fontStyle: "normal",
                         fontWeight: 600,
                         fontSize: "14px",
@@ -916,12 +933,12 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               <div
                 key={index}
                 className="grid w-full grid-cols-1 gap-[24px] text-left lg:grid-cols-[1fr_1fr] lg:gap-x-[87px]"
-                style={{ fontFamily: "Inter" }}
+                style={{ fontFamily: "var(--font-heading)" }}
               >
                 <div className="flex flex-col items-start gap-[24px]">
                   <h2
                   style={{
-                    fontFamily: "Inter",
+                    fontFamily: "var(--font-heading)",
                     fontStyle: "normal",
                     fontWeight: 600,
                     fontSize: "clamp(26px, 5vw, 52px)",
@@ -935,7 +952,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                   {block.lead && (
                     <p
                       style={{
-                        fontFamily: "Inter",
+                        fontFamily: "var(--font-heading)",
                         fontStyle: "normal",
                         fontWeight: 600,
                         fontSize: "14px",
@@ -953,7 +970,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                     >
                       <p
                         style={{
-                          fontFamily: "Inter",
+                          fontFamily: "var(--font-heading)",
                           fontStyle: "normal",
                           fontWeight: 600,
                           fontSize: "14px",
@@ -965,7 +982,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                       </p>
                       <p
                         style={{
-                          fontFamily: "Inter",
+                          fontFamily: "var(--font-heading)",
                           fontStyle: "normal",
                           fontWeight: 400,
                           fontSize: "14px",
@@ -1024,6 +1041,29 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                       className="h-auto w-full rounded-[20px]"
                     />
                   )}
+                  {block.cards && (
+                    <div className="grid grid-cols-1 overflow-hidden rounded-[20px] border border-black/[0.08] sm:grid-cols-2">
+                      {block.cards.map((card) => (
+                        <div key={card.src} className="group relative">
+                          <Image
+                            src={card.src}
+                            alt={card.alt}
+                            width={card.width}
+                            height={card.height}
+                            className="h-auto w-full"
+                          />
+                          <Image
+                            src={card.hoverSrc}
+                            alt=""
+                            aria-hidden
+                            width={card.width}
+                            height={card.height}
+                            className="absolute inset-0 h-full w-full opacity-0 transition-opacity duration-500 ease-in-out group-hover:opacity-100"
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  )}
                 </div>
               </div>
             );
@@ -1032,7 +1072,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
             return (
               <div
                 key={index}
-                className="flex flex-col items-start justify-between gap-[26px] border-b border-black/[0.08] pb-4 sm:flex-row sm:items-center"
+                className="flex flex-col items-start justify-between gap-[26px] sm:flex-row sm:items-center"
               >
                 <div className="flex flex-1 flex-col gap-6">
                   <div className="flex items-center gap-4">
@@ -1041,7 +1081,7 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
                     </span>
                     <span className="h-px flex-1 bg-black/[0.08]" />
                   </div>
-                  <h2 className="text-[32px] leading-[48px] font-extrabold text-[#1A202C] sm:text-[32px] sm:leading-[48px]">
+                  <h2 className="max-w-[330.4px] text-[32px] leading-[48px] font-extrabold text-[#1A202C] sm:text-[32px] sm:leading-[48px]">
                     {block.title}
                   </h2>
                 </div>

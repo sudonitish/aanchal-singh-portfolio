@@ -36,12 +36,16 @@ export default function InterviewFindings({
           <span className="h-px flex-1 bg-black/[0.08]" />
         </div>
       )}
-      <div className="grid gap-[19px] lg:grid-cols-2 lg:items-stretch">
+      <div className="grid gap-[19px] lg:grid-cols-[41.2%_1fr] lg:gap-x-[64px] lg:items-stretch">
       <div className="flex flex-col gap-4 text-left">
-        <h2 className="text-[19px] font-extrabold leading-[1.2] text-black sm:text-[19px]">
-          {heading}
-        </h2>
-        <p className="text-[13px] leading-relaxed text-[#8C8C8C]">{description}</p>
+        <div className="flex flex-col gap-[12px]">
+          <h2 className="text-[19.2px] leading-[26.4px] font-bold text-[#1A202C]">
+            {heading}
+          </h2>
+          <p className="text-[11.2px] leading-[18.4px] font-normal text-[#8C8C8C]">
+            {description}
+          </p>
+        </div>
 
         <div className="flex flex-col gap-1.5">
           {findings.map((finding, index) => {
@@ -86,7 +90,7 @@ export default function InterviewFindings({
             <span
               key={finding.pill}
               aria-hidden
-              className="h-1 w-8 rounded-full transition-colors"
+              className={`h-1 rounded-full transition-[width,background-color] duration-500 ease-in-out ${index === active ? "w-[25.6px]" : "w-[12.8px]"}`}
               style={{ background: index === active ? accentColor : "#D9D9D9" }}
             />
           ))}

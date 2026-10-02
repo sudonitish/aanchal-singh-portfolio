@@ -24,24 +24,13 @@ export const whatsappSchedulingContent: Block[] = [
     type: "divider",
   },
   {
-    type: "statCards",
-    cards: [
-      {
-        label: "The Problem",
-        text: "WhatsApp users struggle to remember to send messages at appropriate times, leading to missed opportunities, awkward timing, and communication stress across different time zones.",
-        icon: "triangleWarning",
-      },
-      {
-        label: "The Goal",
-        text: "Design an intuitive message scheduling feature that integrates seamlessly into WhatsApp's existing interface, allowing users to schedule messages in 3 taps or less.",
-        icon: "bolt",
-      },
-      {
-        label: "The Impact",
-        text: "45% improvement in communication efficiency, 78% user satisfaction rate, and 2.3M messages scheduled in the first month of launch across test markets.",
-        icon: "circleCheck",
-      },
-    ],
+    type: "image",
+    src: "/assets/work/whatsapp-scheduling/problem-goal-impact-cards.png",
+    alt: "The Problem, The Goal and The Impact of the WhatsApp message scheduling feature",
+    width: 1228,
+    height: 326,
+    maxWidth: 981.6,
+    rounded: false,
   },
   {
     type: "divider",
@@ -152,44 +141,12 @@ export const whatsappSchedulingContent: Block[] = [
     ],
   },
   {
-    type: "list",
-    variant: "iconCards",
-    items: [
-      {
-        title: "Business Goals",
-        text: "",
-        icon: "arrowUpRight",
-        lines: [
-          "Market Differentiation: Stand out by offering a feature competitors lack.",
-          "Competitive Advantage: Attract professionals seeking workflow-friendly tools.",
-          "Enhanced User Experience: Strengthen user retention and engagement.",
-          "User Acquisition: Attracting new users, particularly those who manage communication across time zones.",
-          "Brand Loyalty: Fostering brand loyalty by consistently adding features that meet user needs.",
-        ],
-      },
-      {
-        title: "User Goals",
-        text: "",
-        icon: "compass",
-        lines: [
-          "Convenience: Schedule messages to reduce mental load.",
-          "Time zone management: Easily communicate across different time zones.",
-          "Time Management: Utilize one app more conveniently, efficiently, especially for users who already use WhatsApp for both personal and professional purposes.",
-          "Flexibility: Providing options to edit, delete, or reschedule messages at specific times.",
-        ],
-      },
-      {
-        title: "Technical Considerations",
-        text: "",
-        icon: "creditCard",
-        lines: [
-          "Message Reliability: Use WhatsApp's end-to-end encryption.",
-          "Android/iOS: Long-term UI/UX re-scalability to ensure scheduling flows properly and works across platforms.",
-          "Synchronization: Ensuring scheduled message works across multiple devices.",
-          "Failed Scheduling: In cases where their scheduled messages fail to be sent, users need easy clarity on retry.",
-        ],
-      },
-    ],
+    type: "image",
+    src: "/assets/work/whatsapp-scheduling/business-user-technical-goals.png",
+    alt: "Business Goals, User Goals and Technical Considerations for the message scheduling feature",
+    width: 1429,
+    height: 569,
+    rounded: false,
   },
   {
     type: "divider",
@@ -265,6 +222,7 @@ export const whatsappSchedulingContent: Block[] = [
   {
     type: "heading",
     title: "Future Impact",
+    lineBelowTitle: true,
     description:
       "For future iterations, I recommend adding more customisation options, such as allowing users to set their own presets for recurring messages. This would give users even more control over their communication. Secondly, I would recommend exploring the integration of the scheduling feature with WhatsApp's existing functionalities, such as group chats and media sharing, to further enhance its utility and appeal. Lastly, to ensure users are aware of the new feature, implementing tooltips or a brief onboarding tutorial within the app could help users discover and use the scheduling feature.",
   },

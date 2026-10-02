@@ -46,12 +46,18 @@ export const chaseContent: Block[] = [
     title: "Research",
     stat: "5 interviews · 4 audience segments · 4 key insights",
     sectionLabel: "01 / Audience",
-    image: {
-      src: "/assets/work/chase-sports-adventure-commerce/audience-segments.png",
-      alt: "Four audience segments: Competitive Athletes, Outdoor Adventurers, Casual Sports Fans, Weekend Warriors",
-      width: 1332,
-      height: 383,
-    },
+    cards: [
+      ["1", "Competitive Athletes"],
+      ["2", "Outdoor Adventurers"],
+      ["3", "Casual Sports Fans"],
+      ["4", "Weekend Warriors"],
+    ].map(([n, name]) => ({
+      src: `/assets/work/chase-sports-adventure-commerce/audience-${n}-default.png`,
+      hoverSrc: `/assets/work/chase-sports-adventure-commerce/audience-${n}-hover.png`,
+      alt: `Audience segment ${n}: ${name}`,
+      width: 666,
+      height: 191,
+    })),
   },
   {
     type: "interviewFindings",
@@ -100,6 +106,7 @@ export const chaseContent: Block[] = [
     alt: "Persona: Raj Sharma, 26, Marketing Manager, Delhi",
     width: 842,
     height: 595,
+    maxWidth: 673.6,
     spacingAfter: 120,
     spacingAfterMobile: 60,
   },
@@ -173,6 +180,8 @@ export const chaseContent: Block[] = [
     eyebrow: "03 / Reflection",
     title: "What this project taught me",
     stat: "4 reflections · 3 weeks of learning",
+    spacingAfter: 56,
+    spacingAfterMobile: 56,
   },
   {
     type: "image",

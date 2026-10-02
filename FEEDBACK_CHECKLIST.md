@@ -34,29 +34,29 @@ Status legend: `[ ]` pending · `[x]` done · `[~]` blocked/needs input
 
 ## Case Study
 
-- [ ] 1. Top pill not consistent across all case studies
-- [ ] 2. Everything should use Inter font
-- [ ] 3. Heading should be 60px, body text 16px (all case studies)
-- [ ] 4. Line width/height should match Figma
-- [ ] 5. Hero section bottom widget size inconsistent (image to be provided)
+- [x] 1. Top pill not consistent across all case studies — pill resized by 125% rule (px 16.8, py 7.2, 12.8px text, leading-none), pill→H1 gap 64px, hero glow moved to top 260/h 220, pill color/border/dot now follow each case study's separator dot color, hero glow opacity lightened (Zoho/Screener 0.33, NTES/Chase 0.65)
+- [x] 2. Everything should use Inter font — case study content wrapper uses Inter (font-display); DM Sans removed; inline fontFamily "Inter" → var(--font-heading). Nav/Footer left as-is per user
+- [ ] 3. Heading should be 60px, body text 16px (all case studies) — not applied: font sizes were already reduced (125% rule) so the page looks good at 100% zoom
+- [ ] 4. Line width/height should match Figma — not applied: sizes were already reduced (125% rule) so the page looks good at 100% zoom
+- [ ] 5. Hero section bottom widget size inconsistent (image to be provided) — unclear which widget; image not provided yet
 - [ ] 6. Image size not matching
-- [ ] 7. Heading line-width consistent; heading size 48px, body size 14px
+- [ ] 7. Heading line-width consistent; heading size 48px, body size 14px — not applied: font sizes were already reduced (125% rule) so the page looks good at 100% zoom
 - [ ] 8. Rest of images to be taken from designer
-- [ ] 9. Side padding should match
-- [ ] 10. Zoho: "Design decisions" section + "What I learnt" section — use image as-is
-- [ ] 11. Remove divider line
-- [ ] 12. NTES: heuristic evaluation section — use image as-is; visual hierarchy section needs animation
-- [ ] 13. NTES: missing "Screen Designs" heading
-- [ ] 14. Hero section color per case study
-- [ ] 15. Screener: "old design" heading missing
-- [ ] 16. Screener: problem + solution sections have wrong images
-- [ ] 17. Screener: illustration section heading wrong, same with component
-- [ ] 18. WhatsApp: card size not consistent
-- [ ] 19. Thank-you section spacing — check all case studies
-- [ ] 20. Chase + NTES prototype animation not matching
-- [ ] 21. Chase: "Method" section — pagination + dimension issues
-- [ ] 22. Chase: user persona image too big
-- [ ] 23. Chase: reflection section is wrong
+- [ ] 9. Side padding should match — not applied: padding already reduced exactly per Figma (125% rule) so it looks the same at 100% zoom
+- [x] 10. Zoho: "Design decisions" section + "What I learnt" section — use image as-is — "Design decisions" section replaced with the provided full-width image (repeatable-pattern-detail-ipad.png); "What I learnt" not checked
+- [ ] 11. Remove divider line — unclear which divider(s)
+- [x] 12. NTES: heuristic evaluation section — use image as-is; visual hierarchy section needs animation — heuristic section replaced with provided full-bleed image, margin above doubled (240/120); visual hierarchy animation not done
+- [ ] 13. NTES: missing "Screen Designs" heading — unclear (heading was removed earlier on user's instruction; confirm re-add and placement)
+- [x] 14. Hero section color per case study — colors already match, no change needed
+- [x] 15. Screener: "old design" heading missing — added "Old Design" label above old design image; "Old Design"/"New Design" labels have 2px gap to image
+- [x] 16. Screener: problem + solution sections have wrong images — swapped new-design-mobile.png and new-design-desktop-filters.png (src, size, alt)
+- [ ] 17. Screener: illustration section heading wrong, same with component — unclear what is wrong; 2px gap below Illustrations/Components labels applied (matches Old/New Design)
+- [x] 18. WhatsApp: card size not consistent — Problem/Goal/Impact cards and Business/User/Technical goals cards replaced with provided images (first capped at max-w 981.6px = 1227÷1.25, centered)
+- [x] 19. Thank-you section spacing — check all case studies — other case studies already correct; NTES margin above Thank you reduced by 125px (256 → 131 desktop, 66 mobile) since image already contains 125 spacing
+- [ ] 20. Chase + NTES prototype animation not matching — Chase Qualitative Interviews section done (indicator bars 25.6/12.8px active/inactive, 41.2%/64px two-column, heading/description per Figma at 125% scale); NTES animation unclear — images to be provided
+- [x] 21. Chase: "Method" section — pagination + dimension issues — two-column 41.2% / 64px gap, heading + description sizes per Figma (125% scale), pagination bars active 25.6px / inactive 12.8px
+- [x] 22. Chase: user persona image too big — max-w 673.6px (842÷1.25), centered
+- [x] 23. Chase: reflection section is wrong — heading max-w 330.4px (413÷1.25), bottom border removed, spacing below header 56px (70÷1.25)
 
 ---
 

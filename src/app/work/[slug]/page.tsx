@@ -6,6 +6,7 @@ import { projectsMeta } from "@/data/content/work/data";
 import { getProjectBySlug } from "@/data/content/work-details/data";
 import { getProjectMetadata, getProjectJsonLd } from "@/data/content/work-details/meta";
 import { getBreadcrumbJsonLd } from "@/lib/breadcrumb";
+import type { Block } from "@/lib/content";
 
 interface PageProps {
   params: Promise<{ slug: string }>;
@@ -25,6 +26,10 @@ export default async function ProjectPage({ params }: PageProps) {
   const project = getProjectBySlug(slug);
   if (!project) notFound();
 
+  const pillColor =
+    project.content.find(
+      (b): b is Extract<Block, { type: "divider" }> => b.type === "divider" && !!b.withDot,
+    )?.dotColor ?? "#06B6D4";
   const jsonLd = getProjectJsonLd(slug);
   const breadcrumbJsonLd = getBreadcrumbJsonLd([
     { name: "Work", href: "/#work" },
@@ -49,14 +54,16 @@ export default async function ProjectPage({ params }: PageProps) {
         </div>
         <div
           aria-hidden
-          className="pointer-events-none absolute left-1/2 top-[220px] h-[161px] w-screen -translate-x-1/2 blur-[90px]"
+          className="pointer-events-none absolute left-1/2 top-[260px] h-[220px] w-screen -translate-x-1/2 blur-[90px]"
           style={{ background: project.heroBg ?? "rgba(251, 236, 214, 1)" }}
         />
-        <div className="relative py-24">
+        <div className="font-display relative py-24">
           <article>
             <div className="relative mx-auto flex max-w-[1120px] flex-col items-center gap-4 px-5 text-center">
-              <span className="font-dm-sans flex h-[27px] items-center gap-[5px] rounded-full border border-[#06B6D4]/80 px-[14px] text-[10px] font-semibold text-[#06B6D4]">
-                <span className="h-[6px] w-[6px] rounded-full bg-[#06B6D4]" />
+              <span className="mb-12 flex items-center gap-[5px] rounded-full border px-[16.8px] py-[7.2px] text-[12.8px] leading-none font-semibold"
+                style={{ color: pillColor, borderColor: pillColor }}
+              >
+                <span className="h-[6px] w-[6px] rounded-full" style={{ background: pillColor }} />
                 {project.tag}
               </span>
               <h1 className="text-[32px] font-extrabold leading-[1.15] text-black sm:text-[48px] lg:text-[58px] lg:leading-[70px]">

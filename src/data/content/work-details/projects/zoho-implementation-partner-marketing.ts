@@ -90,22 +90,14 @@ export const zohoContent: Block[] = [
     spacingAfter: 120,
     spacingAfterMobile: 60,
   },
-    {
-    type: "imageGrid",
-    images: [
-      {
-        src: "/assets/work/zoho-implementation-partner-marketing/repeatable-pattern-detail.png",
-        alt: "Repeatable page template detail",
-        width: 845,
-        height: 710,
-      },
-      {
-        src: "/assets/work/zoho-implementation-partner-marketing/repeatable-pattern-ipad.png",
-        alt: "Repeatable page template shown on iPad Pro",
-        width: 1122,
-        height: 732,
-      },
-    ],
+  {
+    type: "image",
+    src: "/assets/work/zoho-implementation-partner-marketing/repeatable-pattern-detail-ipad.png",
+    alt: "Repeatable page template detail and iPad Pro view",
+    width: 1920,
+    height: 790,
+    rounded: false,
+    fullBleed: true,
     spacingAfter: 120,
     spacingAfterMobile: 60,
   },

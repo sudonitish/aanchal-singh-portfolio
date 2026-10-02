@@ -40,7 +40,7 @@ export const projectsMeta: ProjectMeta[] = [
     live: true,
     featured: true,
     wideGutter: 100,
-    heroBg: "rgba(37, 103, 128, 0.5)",
+    heroBg: "rgba(37, 103, 128, 0.33)",
   },
   {
     slug: "value-research-stock-screener",
@@ -53,7 +53,7 @@ export const projectsMeta: ProjectMeta[] = [
     live: true,
     featured: true,
     wideGutter: 100,
-    heroBg: "rgba(252, 74, 100, 0.5)",
+    heroBg: "rgba(252, 74, 100, 0.33)",
   },
   {
     slug: "whatsapp-message-scheduling",
@@ -79,7 +79,7 @@ export const projectsMeta: ProjectMeta[] = [
     tone: "dark",
     live: false,
     featured: true,
-    heroBg: "rgba(255, 231, 205, 1)",
+    heroBg: "rgba(255, 231, 205, 0.65)",
   },
   {
     slug: "chase-sports-adventure-commerce",
@@ -93,6 +93,6 @@ export const projectsMeta: ProjectMeta[] = [
     live: false,
     featured: true,
     wideGutter: 245,
-    heroBg: "rgba(229, 255, 156, 1)",
+    heroBg: "rgba(229, 255, 156, 0.65)",
   },
 ];

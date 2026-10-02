@@ -11,6 +11,8 @@ export interface HeadingBlock {
   subtitle?: string;
   description?: string;
   descriptionLead?: string;
+  /** Fading separator line between the title and the description. */
+  lineBelowTitle?: boolean;
   tightSpacingAfter?: boolean;
   noSpacingAfter?: boolean;
   spacingAfter?: number;
@@ -68,6 +70,10 @@ export interface ImageBlock {
   src: string;
   alt: string;
   label?: string;
+  /** Gap between label and image in px. Defaults to 16. */
+  labelGap?: number;
+  /** Max width of the image in px; centered when set. */
+  maxWidth?: number;
   width: number;
   height: number;
   background?: string;
@@ -146,6 +152,14 @@ export interface ResearchHeaderBlock {
     width: number;
     height: number;
   };
+  /** Cards shown in a 2-column grid; the hover image fades in on hover. */
+  cards?: {
+    src: string;
+    hoverSrc: string;
+    alt: string;
+    width: number;
+    height: number;
+  }[];
 }
 
 export interface ReflectionHeaderBlock {
@@ -153,6 +167,8 @@ export interface ReflectionHeaderBlock {
   eyebrow: string;
   title: string;
   stat: string;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
 }
 
 export interface ProblemSolutionBlock {
