@@ -54,7 +54,7 @@ export const personalInfo: PersonalInfo = {
       type: "linkedin",
       label: "LinkedIn",
       value: "Aanchal Singh",
-      href: "https://www.linkedin.com/in/aanchalsingh",
+      href: "https://www.linkedin.com/in/aanchalsinghh?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
       type: "resume",

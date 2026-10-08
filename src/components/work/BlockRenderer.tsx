@@ -2,6 +2,7 @@ import Image from "next/image";
 import type { CSSProperties } from "react";
 import type { Block } from "@/lib/content";
 import InterviewFindings from "@/components/work/InterviewFindings";
+import ImageToggle from "@/components/work/ImageToggle";
 import {
   CaseStudyIcon,
   CaseStudyIconBadge,
@@ -51,7 +52,8 @@ export default function BlockRenderer({ blocks, wideGutter = 150 }: BlockRendere
         const isSelfPadded =
           (block.type === "image" &&
             (block.fullBleed || block.paddingX || block.paddingY || block.background)) ||
-          (block.type === "imageStack" && block.fullBleed);
+          (block.type === "imageStack" && block.fullBleed) ||
+          (block.type === "imageRow" && !!block.paddingX);
         const prev = blocks[index - 1];
         const noGap =
           index > 0 &&
@@ -70,6 +72,7 @@ export default function BlockRenderer({ blocks, wideGutter = 150 }: BlockRendere
             prev.type === "briefHeader" ||
             prev.type === "reflectionHeader" ||
             prev.type === "imageGrid" ||
+            prev.type === "imageRow" ||
             prev.type === "imageStack" ||
             prev.type === "splitList" ||
             prev.type === "leadList")
@@ -85,6 +88,7 @@ export default function BlockRenderer({ blocks, wideGutter = 150 }: BlockRendere
             prev.type === "briefHeader" ||
             prev.type === "reflectionHeader" ||
             prev.type === "imageGrid" ||
+            prev.type === "imageRow" ||
             prev.type === "imageStack" ||
             prev.type === "splitList" ||
             prev.type === "leadList")
@@ -595,6 +599,69 @@ function BlockItem({ block, index }: { block: Block; index: number }) {
               </div>
             );
           }
+
+          case "imageRow":
+            return (
+              <div
+                key={index}
+                className={`flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:gap-x-[var(--row-gap)] ${
+                  block.paddingX
+                    ? "px-5 min-[640px]:px-[32px] min-[1020px]:px-[80px] min-[1200px]:px-[96px] min-[1500px]:px-[var(--section-x)]"
+                    : ""
+                }`}
+                style={
+                  block.paddingX
+                    ? ({
+                        "--section-x": `${block.paddingX}px`,
+                        "--row-gap": `${((block.gap ?? 0) / block.rowWidth) * 100}%`,
+                      } as CSSProperties)
+                    : ({
+                        "--row-gap": `${((block.gap ?? 0) / block.rowWidth) * 100}%`,
+                      } as CSSProperties)
+                }
+              >
+                {block.images.map((img) => (
+                  <div
+                    key={img.src}
+                    className="w-full sm:w-[var(--row-share)]"
+                    style={
+                      {
+                        "--row-share": `${(img.width / block.rowWidth) * 100}%`,
+                      } as CSSProperties
+                    }
+                  >
+                    <Image
+                      src={img.src}
+                      alt={img.alt}
+                      width={img.width}
+                      height={img.height}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                ))}
+                {block.toggle && (
+                  <div
+                    className="w-full sm:w-[var(--row-share)]"
+                    style={
+                      {
+                        "--row-share": `${
+                          100 -
+                          ((block.images.reduce((sum, img) => sum + img.width, 0) +
+                            (block.gap ?? 0) * block.images.length) /
+                            block.rowWidth) *
+                            100
+                        }%`,
+                      } as CSSProperties
+                    }
+                  >
+                    <ImageToggle
+                      images={block.toggle.images}
+                      intervalMs={block.toggle.intervalMs}
+                    />
+                  </div>
+                )}
+              </div>
+            );
 
           case "imageGrid":
             return (

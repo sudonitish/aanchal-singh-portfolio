@@ -281,3 +281,21 @@ body {
 .track-down {
   animation: track-down 0.75s ease-out forwards;
 }
+
+@keyframes toggle-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes toggle-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}

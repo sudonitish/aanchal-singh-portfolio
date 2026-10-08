@@ -31,7 +31,7 @@ export const projectsMeta: ProjectMeta[] = [
   {
     slug: "zoho-implementation-partner-marketing",
     name: "Designing a Scalable Marketing Experience for a Zoho Implementation Partner",
-    tag: "UX Case Study",
+    tag: "UX Case Study - Dynamic Mavens × Zoho",
     description:
       "A landing page and four service pages — from raw content documents into a conversion-focused system.",
     cardImage: "/assets/homepage/zoho.jpg",
@@ -45,7 +45,7 @@ export const projectsMeta: ProjectMeta[] = [
   {
     slug: "value-research-stock-screener",
     name: "Designing for the Decision, Not the Database",
-    tag: "UX Case Study",
+    tag: "UX Case Study - Value Research stock screener",
     description: "Redesigning the Value Research stock screener.",
     cardImage: "/assets/homepage/value-research.jpg",
     cardBg: "bg-black",

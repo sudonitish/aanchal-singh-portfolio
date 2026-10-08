@@ -86,6 +86,33 @@ export interface ImageBlock {
   spacingAfterMobile?: number;
 }
 
+export interface ImageRowBlock {
+  type: "imageRow";
+  /** Design width of the whole row in px; each image takes width / rowWidth of the row. */
+  rowWidth: number;
+  /** Gap between columns in design px (same scale as rowWidth). */
+  gap?: number;
+  images: {
+    src: string;
+    alt: string;
+    width: number;
+    height: number;
+  }[];
+  /** Extra column that crossfades between its images; takes the width left over in the row. */
+  toggle?: {
+    images: {
+      src: string;
+      alt: string;
+      width: number;
+      height: number;
+    }[];
+    intervalMs?: number;
+  };
+  paddingX?: number;
+  spacingAfter?: number;
+  spacingAfterMobile?: number;
+}
+
 export interface ImageGridBlock {
   type: "imageGrid";
   images: {
@@ -245,6 +272,7 @@ export type Block =
   | ReflectionHeaderBlock
   | BriefHeaderBlock
   | ImageGridBlock
+  | ImageRowBlock
   | ImageStackBlock
   | SplitListBlock
   | LeadListBlock;

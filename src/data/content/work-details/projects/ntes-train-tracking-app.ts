@@ -47,11 +47,122 @@ export const ntesContent: Block[] = [
     spacingAfterMobile: 60,
   },
   {
+    type: "imageRow",
+    rowWidth: 1599,
+    gap: 141.6,
+    paddingX: 138,
+    images: [
+      {
+        src: "/assets/work/ntes-train-tracking-app/visual-hierarchy-1.png",
+        alt: "Visual hierarchy: the answer, not the loudest thing on the screen",
+        width: 551,
+        height: 617,
+      },
+    ],
+    toggle: {
+      images: [
+        {
+          src: "/assets/work/ntes-train-tracking-app/visual-hierarchy-old.jpeg",
+          alt: "Current NTES train status page, where the running status is the smallest element",
+          width: 1596,
+          height: 1138,
+        },
+        {
+          src: "/assets/work/ntes-train-tracking-app/visual-hierarchy-new.jpeg",
+          alt: "Redesigned Live Tracking screen with the running status as the hero",
+          width: 1600,
+          height: 1082,
+        },
+      ],
+    },
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
+  },
+  {
+    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
+  },
+  {
+    type: "imageRow",
+    rowWidth: 1599,
+    gap: 141.6,
+    paddingX: 138,
+    images: [
+      {
+        src: "/assets/work/ntes-train-tracking-app/information-architecture-1.png",
+        alt: "Information architecture: navigation works, prioritization doesn't",
+        width: 551,
+        height: 672,
+      },
+    ],
+    toggle: {
+      images: [
+        {
+          src: "/assets/work/ntes-train-tracking-app/information-architecture-old.jpeg",
+          alt: "Current NTES home page with an ad and a sidebar of equally weighted links",
+          width: 1600,
+          height: 890,
+        },
+        {
+          src: "/assets/work/ntes-train-tracking-app/information-architecture-new.jpeg",
+          alt: "Redesigned home built around PNR status, find trains and live tracking",
+          width: 1600,
+          height: 1147,
+        },
+      ],
+    },
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
+  },
+  {
+    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
+  },
+  {
+    type: "imageRow",
+    rowWidth: 1599,
+    gap: 141.6,
+    paddingX: 138,
+    images: [
+      {
+        src: "/assets/work/ntes-train-tracking-app/accessibility-1.png",
+        alt: "Accessibility: passes the scan, fails the person",
+        width: 551,
+        height: 676,
+      },
+    ],
+    toggle: {
+      images: [
+        {
+          src: "/assets/work/ntes-train-tracking-app/accessibility-old.jpeg",
+          alt: "Current NTES train status page evaluated for accessibility",
+          width: 1600,
+          height: 994,
+        },
+        {
+          src: "/assets/work/ntes-train-tracking-app/accessibility-new.jpeg",
+          alt: "Redesigned Live Tracking screen with larger type, status pills and better contrast",
+          width: 1600,
+          height: 1145,
+        },
+      ],
+    },
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
+  },
+  {
+    type: "divider",
+    spacingAfter: 120,
+    spacingAfterMobile: 60,
+  },
+  {
     type: "image",
-    src: "/assets/work/ntes-train-tracking-app/findings-overview.png",
-    alt: "Findings overview: visual hierarchy, navigation priority, accessibility and display ads",
-    width: 1599,
-    height: 3420,
+    src: "/assets/work/ntes-train-tracking-app/findings-overview-2.png",
+    alt: "Findings overview, continued",
+    width: 1598,
+    height: 552,
     paddingX: 138,
     spacingAfter: 254,
     spacingAfterMobile: 127,
@@ -62,6 +173,7 @@ export const ntesContent: Block[] = [
     alt: "For 20 million people, small changes compound",
     width: 1576,
     height: 414,
+    rounded: false,
     paddingX: 138,
     spacingAfter: 254,
     spacingAfterMobile: 127,

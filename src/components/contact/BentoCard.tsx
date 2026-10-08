@@ -126,17 +126,17 @@ export default function BentoCard({ card, spanFull }: BentoCardProps) {
 
       {card.variant === "dual" && (
         <span
-          className={`relative hidden h-[24px] w-[113px] items-center justify-center overflow-hidden rounded-[16px] min-[640px]:flex ${card.chipBg}`}
+          className={`relative hidden h-[24px] w-[120px] items-center justify-center overflow-hidden rounded-[16px] min-[640px]:flex ${card.chipBg}`}
         >
           <span
             className={`absolute inset-x-0 top-0 flex flex-col ${
               phase === "in" ? "track-up" : phase === "out" ? "track-down" : ""
             }`}
           >
-            <span className="flex h-[24px] items-center justify-center text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] min-[640px]:text-[11px]">
+            <span className="flex h-[24px] items-center justify-center whitespace-nowrap text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] min-[640px]:text-[11px]">
               {card.primary}
             </span>
-            <span className="flex h-[24px] items-center justify-center text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] min-[640px]:text-[11px]">
+            <span className="flex h-[24px] items-center justify-center whitespace-nowrap text-sm font-semibold tracking-[-0.35px] text-[#D3FFF9] min-[640px]:text-[11px]">
               {card.secondary}
             </span>
           </span>
