@@ -1,5 +1,5 @@
 export interface ContactLink {
-  type: "email" | "phone" | "linkedin" | "resume";
+  type: "email" | "phone" | "linkedin" | "instagram" | "behance" | "resume";
   label: string;
   value: string;
   href: string;
@@ -36,7 +36,7 @@ export const personalInfo: PersonalInfo = {
   subtext:
     "Currently serving a UX/UI designer turning complexity into calm, usable experiences. I obsess over flow, clarity, and interfaces that just work - so users don't have to think twice.",
   bio: "I'm Aanchal Singh - a UX/UI designer who enjoys turning complexity into calm and confusion into flow. I believe good design shouldn't demand attention; it should quietly earn trust.",
-  resumeHref: "/resume.pdf",
+  resumeHref: "/aanchal-singh-resume.pdf",
   contact: [
     {
       type: "email",
@@ -57,10 +57,22 @@ export const personalInfo: PersonalInfo = {
       href: "https://www.linkedin.com/in/aanchalsinghh?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     },
     {
+      type: "instagram",
+      label: "Instagram",
+      value: "designeratease",
+      href: "https://www.instagram.com/designeratease?cplk=MTI5ZXFja2l6M2gxZw==",
+    },
+    {
+      type: "behance",
+      label: "Behance",
+      value: "aanchalsinghh",
+      href: "https://www.behance.net/aanchalsinghh",
+    },
+    {
       type: "resume",
       label: "Resume",
       value: "Download Resume",
-      href: "/resume.pdf",
+      href: "/aanchal-singh-resume.pdf",
     },
   ],
 };

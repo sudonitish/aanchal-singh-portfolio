@@ -33,6 +33,8 @@ export interface BentoCard {
 const email = personalInfo.contact.find((c) => c.type === "email")!;
 const phone = personalInfo.contact.find((c) => c.type === "phone")!;
 const linkedin = personalInfo.contact.find((c) => c.type === "linkedin")!;
+const instagram = personalInfo.contact.find((c) => c.type === "instagram")!;
+const behance = personalInfo.contact.find((c) => c.type === "behance")!;
 const resume = personalInfo.contact.find((c) => c.type === "resume")!;
 
 export const bentoCards: BentoCard[] = [
@@ -78,7 +80,7 @@ export const bentoCards: BentoCard[] = [
   },
   {
     id: "visuals",
-    href: "/visuals",
+    href: instagram.href,
     bg: "bg-black",
     row: 2,
     width: 375,
@@ -94,7 +96,7 @@ export const bentoCards: BentoCard[] = [
   },
   {
     id: "work",
-    href: "/#work",
+    href: behance.href,
     bg: "bg-[#0057FF]",
     row: 2,
     width: 375,
